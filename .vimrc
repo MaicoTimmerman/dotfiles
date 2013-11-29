@@ -33,6 +33,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+set ttimeoutlen=50              " Stop the delay in airline when leaving insertmode.
 Bundle 'sparkup'
 
 " Sparkup, very easy html programming
