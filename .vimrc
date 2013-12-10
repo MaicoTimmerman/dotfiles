@@ -27,6 +27,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tComment'
 Bundle 'bling/vim-airline'
+Bundle 'dag/vim2hs'
 " Change the powerline icons to the correct terms.
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -46,6 +47,7 @@ set history=50                  " keep 50 commands 50 patterns in the history
 set incsearch                   " do incremental searching
 set smartindent                 " Do smart autoindenting when starting a new line.
 set tabstop=4                   " Number of spaces that a <tab> counts for.
+set softtabstop=4               " Number of spaces that a <tab> counts for.
 set expandtab                   " Use number of spaces for <tab>
 set shiftwidth=4                " Number of spaces for 'cindent', >>, << and autoindent
 set number                      " Adds the linenumber infront of the line
