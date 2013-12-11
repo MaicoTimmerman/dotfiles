@@ -3,7 +3,9 @@
 
 #cd aliases
 alias cduva="cd ~/Dropbox/uva/"
-alias cdpt="cd ~/Dropbox/uva/pt/javascript"
+alias cderlang="cd ~/Dropbox/uva/pt/erlang"
+alias cdhaskell="cd ~/Dropbox/uva/pt/haskell"
+alias cdcv="cd ~/Dropbox/Curriculum\ Vitea"
 alias cdata="cd /media/DATA/"
 alias cdlua="cd ~/Dropbox/uva/tutoraat/blok2/duopresentatie"
 
@@ -33,3 +35,9 @@ alias ftbmc="java -jar ~/Desktop/FTB_Launcher.jar"
 
 #open browser
 alias html="chromium-browser"
+
+#Vim
+alias vim="vim -O"
+
+#Dwarf Fortress
+alias dwarf="./df/startlnp"
