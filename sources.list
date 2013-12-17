@@ -1,0 +1,86 @@
+#############################################################
+################### OFFICIAL UBUNTU REPOS ###################
+#############################################################
+
+###### Ubuntu Main Repos
+deb http://nl.archive.ubuntu.com/ubuntu/ raring main restricted universe multiverse 
+deb-src http://nl.archive.ubuntu.com/ubuntu/ raring main restricted universe multiverse 
+
+###### Ubuntu Update Repos
+deb http://nl.archive.ubuntu.com/ubuntu/ raring-security main restricted universe multiverse 
+deb http://nl.archive.ubuntu.com/ubuntu/ raring-updates main restricted universe multiverse 
+deb-src http://nl.archive.ubuntu.com/ubuntu/ raring-security main restricted universe multiverse 
+deb-src http://nl.archive.ubuntu.com/ubuntu/ raring-updates main restricted universe multiverse 
+
+###### Ubuntu Partner Repo
+deb http://archive.canonical.com/ubuntu raring partner
+deb-src http://archive.canonical.com/ubuntu raring partner
+
+##############################################################
+##################### UNOFFICIAL  REPOS ######################
+##############################################################
+
+###### 3rd Party Binary Repos
+
+#### Dropbox - http://dropbox.com
+## Run this command: sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+deb http://linux.dropbox.com/ubuntu/ raring main
+
+#### Google Chrome Browser - http://www.google.com/linuxrepositories/
+## Run this command: wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+deb http://dl.google.com/linux/chrome/deb/ stable main
+
+#### MPlayer Daily Builds PPA - https://launchpad.net/~motumedia/+archive/mplayer-daily
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 06438B87
+deb http://ppa.launchpad.net/motumedia/mplayer-daily/ubuntu raring main
+
+#### Oracle Java (JDK) Installer PPA - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+deb http://ppa.launchpad.net/webupd8team/java/ubuntu raring main
+
+#### Steam for Linux - http://store.steampowered.com/about/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+deb [arch=i386] http://repo.steampowered.com/steam/ precise steam
+
+#### Ubuntu Tweak PPA - http://ubuntu-tweak.com/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0624A220
+deb http://ppa.launchpad.net/tualatrix/ubuntu raring main
+
+#### UNetbootin - http://unetbootin.sourceforge.net/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
+deb http://ppa.launchpad.net/gezakovacs/ppa/ubuntu raring main
+
+#### X Updates - https://launchpad.net/~ubuntu-x-swat/+archive/x-updates/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AF1CDFA9
+deb http://ppa.launchpad.net/ubuntu-x-swat/x-updates/ubuntu raring main
+
+#### Xorg Edgers PPA - https://launchpad.net/~xorg-edgers
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8844C542  
+deb http://ppa.launchpad.net/xorg-edgers/ppa/ubuntu raring main
+
+
+####### 3rd Party Source Repos
+
+#### MPlayer Daily Builds PPA (Source) - https://launchpad.net/~motumedia/+archive/mplayer-daily
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 06438B87
+deb-src http://ppa.launchpad.net/motumedia/mplayer-daily/ubuntu raring main
+
+#### Oracle Java (JDK) Installer PPA (Source) - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu raring main
+
+#### Ubuntu Tweak PPA (Source) - http://ubuntu-tweak.com/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0624A220
+deb-src http://ppa.launchpad.net/tualatrix/ubuntu raring main
+
+#### UNetbootin (Source) - http://unetbootin.sourceforge.net/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
+deb-src http://ppa.launchpad.net/gezakovacs/ppa/ubuntu raring main
+
+#### X Updates (Source) - https://launchpad.net/~ubuntu-x-swat/+archive/x-updates/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AF1CDFA9
+deb-src http://ppa.launchpad.net/ubuntu-x-swat/x-updates/ubuntu raring main
+
+#### Xorg Edgers PPA (Source) - https://launchpad.net/~xorg-edgers
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8844C542  
+deb-src http://ppa.launchpad.net/xorg-edgers/ppa/ubuntu raring main
