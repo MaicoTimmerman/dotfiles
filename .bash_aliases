@@ -3,41 +3,19 @@
 
 #cd aliases
 alias cduva="cd ~/Dropbox/uva/"
-alias cderlang="cd ~/Dropbox/uva/pt/erlang"
-alias cdhaskell="cd ~/Dropbox/uva/pt/haskell"
 alias cdcv="cd ~/Dropbox/Curriculum\ Vitea"
 alias cdata="cd /media/DATA/"
-alias cdlua="cd ~/Dropbox/uva/tutoraat/blok2/duopresentatie"
-
-#ls alias
-alias ls="ls -Xh --color=auto"
-
-#remove confirm alias
+alias cdwebdb="cd ~/Dropbox/uva/webdb/public_html"
+alias ls="ls -h --color=auto"
 alias rm="/bin/trashit"
-
-#get-flash-videos alias
+alias xclip="xclip -selection clipboard"
 alias flash="~/./Flash/get_flash_videos"
-
-#Power aliases
 alias poweroff="sudo poweroff"
 alias reboot="sudo reboot"
-
-#screensaver
 alias screensaver="cmatrix -saxb -u 2"
-
-#github aliases
 alias gitpush="git push origin master"
 alias gitcommit="git commit -a"
-
-#Minecraft alias
 alias minecraft="java -jar ~/Desktop/Minecraft.jar"
 alias ftbmc="java -jar ~/Desktop/FTB_Launcher.jar"
-
-#open browser
 alias html="chromium-browser"
-
-#Vim
 alias vim="vim -O"
-
-#Dwarf Fortress
-alias dwarf="./df/startlnp"
