@@ -1,1123 +1,3 @@
-mv family.pro family.pl
-ls
-vim family.pl 
-cdpt
-vim testprograms/
-prolog
-cdpt
-cd testprograms/
-ls
-git status
-cd ..
-;s
-git status
-cd ..
-git status
-git add prolog/
-git status
-gitcommit
-gitpush
-prolog
-cdpt
-ls
-cd testprograms/
-ls
-cat sudoku1.pl 
-prolog
-cd
-cdpt
-gitcommit
-git add testprograms/sudoku3.pl
-gitcommit
-gitpush
-cd
-mv test.java > test.html
-mv test.java test.html
-ls test
-ls -a
-touch test.html
-vim test.html 
-ssh maico.informatica.daltonalkmaar.nl:2222
-cdpt
-ls
-cd testprograms/
-ls
-vim sudoku
-vim .
-prolog -f sudoku3.pl 
-vim .
-prolog -f sudoku3.pl 
-prolog
-sudo apt-cache search clpfd
-cdpt
-cd testprograms/
-ls
-prolog -f sudoku3.pl 
-vim sudoku3.pl
-prolog -f sudoku3.pl 
-alsamixer
-alsa
-alsa reload
-sudo alsa reload
-cdpt
-cd testprograms/
-ls
-prolog -f sudoku3.pl 
-cat sudoku3.pl 
-vim sudoku3.pl 
-prolog -f sudoku3.pl 
-cdtex
-cduva
-cd latex/
-ls
-mkdir beamer
-cd beamer/
-ls
-touch test
-mv test.tex
-mv test test.tex
-vim test.tex 
-texmaker test.tex
-pdflatex test.tex 
-evince test.pdf 
-cd /usr/share
-cd texmf
-ls
-cd tex/latex/beamer/base/
-ls
-cd themes/
-ls
-cd color/
-ls
-cd ..
-cd outer/
-ls
-cd ..
-cd theme/
-ls
-cat beamerthemeGoettingen.sty 
-cdua
-cduva
-ls
-cd aco
-cd pidac/latex/
-ls
-cat main.tex
-cd ..
-cd week5
-ls
-cd latex/
-ls
-cat main.tex 
-vim .bash_aliases 
-pdflatex --help
-pdflatex -no lua.tex
-pdflatex --h
-pdflatex --help
-cdlua
-pdflatex lua.tex 
-vim lua.tex 
-pdflatex lua.tex 
-ls
-vim lua.tex
-pdflatex lua.tex
-vim ~/
-cdduo
-cdlua
-vim lua.tex 
-pdflatex lua.tex
-ls
-vim lua.tex
-pdflatex lua.tex
-texmaker lua.tex
-vim lua.tex
-pdflatex lua.tex
-cdlua
-pdflatex lua.tex
-cat lua.sty
-pdflatex lua.tex
-ls
-cat ~/Dropbox/uva/aco/week5/latex/main.tex 
-pdflatex lua.tex
-cat ~/Dropbox/uva/aco/week5/latex/main.tex 
-cat ~/Dropbox/uva/aco/week5/latex/mips.sty
-cat lua.sty
-pdflatex lua.tex
-cat ~/Dropbox/uva/aco/week5/latex/mips.sty
-cat lua.sty
-pdflatex lua.tex
-vim lua.sty
-pdflatex lua.tex
-vim lua.sty
-pdflatex lua.tex
-vim lua.sty
-pdflatex lua.tex
-cat ~/Dropbox/uva/aco/week5/latex/mips.sty
-cat lua.sty
-pdflatex lua.tex
-cat ~/Dropbox/uva/aco/week5/latex/main.tex 
-vim ~/Dropbox/uva/aco/week5/latex/main.tex 
-:q
-cdlua
-pdflatex lua.tex
-evince lua.pdf 
-ls
-vim lua.tex 
-pdflatex lua.tex
-evince lua.pdf 
-vim lua.tex
-pdflatex lua.tex
-evince lua.pdf 
-vim lua.tex
-pdflatex lua.tex
-evince lua.pdf 
-vim lua.tex
-pdflatex lua.tex
-evince lua.pdf 
-vim lua.tex
-pdflatex lua.tex
-vim lua.tex
-pdflatex lua.tex
-vim lua.tex
-evince lua.tex &
-evince lua.pdf &
-vim lua.tex
-pdflatex lua.tex
-vim lua.tex
-pdflatex lua.tex
-vim tex.lua
-vim lua.tex
-pdflatex lua.tex
-ls
-pdflatex lua.tex
-apt --version
-apt -version
-cdlua
-pdflatex lua.tex
-ls
-rm lua.dvi *.log lua.snm lua.toc lua.vrb
-ls
-rm lua.aux lua.out lua.nav
-ls
-pdflatex lua.tex
-ls
-pdflatex lua.tex
-evince lua.pdf
-pdflatex lua.tex
-evince lua.pdf
-pdflatex lua.tex
-evince lua.pdf
-pdflatex lua.tex
-lua
-sudo apt-get install lua5.2
-touch test.lua
-vim test.lua
-pdflatex lua.tex
-evince lua.pdf
-reboot
-cdpt
-ls
-cd testprograms/
-ls
-cp sudoku3.pl sudoku9x9.pl
-cat sudoku
-cat sudoku1.pl 
-rm sudoku1.pl 
-mv sudoku3.pl sudoku2x2.pl
-vim sudoku9x9.pl 
-git status
-git rm sudoku1.pl sudoku3.pl
-git add sudoku*
-git status
-gitcommit
-gitpush
-clear
-ls
-cdlua
-vim lua.tex
-cdpt
-cd testprograms/
-ls
-cat sudoku2x2.pl 
-ls
-prolog -f sudoku2x2.pl 
-vim sudoku2x2.pl
-cat sudoku2x2.pl 
-prolog -f sudoku2x2.pl 
-ls
-mv grammar.pl grammar_mod.pl
-mv grammar\ \(1\).pl grammar.pl
-ls
-vim grammar.pl
-ls
-cat grammar_mod.pl 
-sudo apt-get install touchegg
-vim .
-touchegg
-vim .config
-reboot
-cdlua
-ls
-cat test.lua
-lua
-cdata
-ls
-cd videos/series/legend.of.korra/
-ls
-cd The.Legend.of.Korra.S02E1
-cd The.Legend.of.Korra.S02E10.720p.h264.AAC/
-ls
-cd ..
-ls *
-minecraft
-cdlua
-pdflatex lua.tex
-lua
-pympress
-cdlua
-pdflatex lua.tex
-[A
-pdflatex lua.tex
-evince lua.pdf 
-git status
-git rm beamerthemeAmsterdam.sty
-ls
-git status
-git add lua.sty
-rm test.lua 
-git status
-git add lua.tex
-ls -a
-git add *.png
-cd ..
-ls
-cd ..
-ls
-cd ..
-git status
-cd tutoraat/
-git status
-ls
-ls -a
-vim .gitignore
-git status
-git add .gitignore
-git commit -m
-git commit
-gitpush
-vim .config/touchegg/touchegg.conf 
-sudo apt-get remove --purge touchegg
-touchegg
-apt-get --help
-apt-get remove --help
-sudo apt-get remove purge wine
-sudo apt-get purge wine
-cdpt
-ls
-cd testprograms/
-ls
-git status
-git add grammer.pl
-git add grammer_mod.pl
-ls
-git status
-git add grammar.pl
-git add grammar_mod.pl
-gitcommit
-git status
-vim .
-prolog -f grammar
-cat grammar
-cat grammar.pl
-prolgo
-prolog
-vim grammar.pl
-prolog
-git help
-cdpt
-cd testprograms/
-cat sudoku2x2.pl 
-cdpt
-cd testprograms/
-cat sudoku2x2.pl 
-cat sudoku3x3.pl 
-cdpt cd testprgrammas
-cd testprograms/
-ls
-vim grammar.pl
-prolog -f grammar.pl
-vim grammar.pl
-prolog -f grammar.pl
-git mv sudoku9x9.pl sudoku3x3.pl
-git status
-git commit
-git status
-git add grammar.pl
-git status
-git diff
-git diff grammar
-git diff grammar.pl
-git status
-git diff grammar.pl
-git help
-git checkout grammar.pl
-git status
-cat grammar.pl
-git reset HEAD grammar.pl
-ls
-git status
-cat grammar.pl
-git diff grammar.pl
-gitcommit
-git status
-ls
-vim sudoku3x3.pl 
-git status
-git commit sudoku3x3.pl
-ls
-git status
-prolog
-vim grammar.pl
-sleep
-prolog
-prolog -f family.pl 
-prolog -f grammar.pl
-cdpt
-cd testprograms/
-cat family.pl 
-cat grammar.pl
-cat grammar_mod.pl
-cat grammar.pl
-ipythpn
-ipython
-cdata
-cd videos/series/
-ls -lt
-cd legend.of.korra/
-ls -a
-ls -l
-sudo gparted
-swapon -s
-ls
-minecraft
-poweroff
-ls
-cdpt
-ls
-cd testprograms/
-vim sudoku2x2.pl 
-prolog -f sudoku2x2.pl 
-cdpt
-cd testprograms/
-cat sudoku2x2.pl 
-vim sudoku3x3.pl 
-git status
-git checkout sudoku3x3.pl
-ls
-cdpt
-cd testprograms/
-ls
-prolog -f grammar.pl
-vim grammar.pl
-prolog -f grammar.pl
-vim grammar.pl
-ipython 
-dpkg -l | grep linux-headers
-uname -a
-uname -r
-dpkg -l | grep nvidia
-dpkg -l | grep bumblebee
-primusrun glxspheres
-optirun glxspheres
-lsb_release a
-lsb_release -a
-./.bash_logo
-ls
-ls -a
-cat .bash_logo_acsii 
-vim .
-cat .bash_logo_acsii 
-vim .bashrc
-ls -a
-mv .bash_logo_acsii .bash_logo_ascii
-vim .bash_logo
-cdlua
-pdflatex lua.tex
-ls
-pdflatex lua.tex 
-ipython
-cdpt
-gitpush
-git status
-git diff testprograms/grammar.pl
-cdlua
-evince lua.pdf
-pdflatex lua.tex 
-git commit
-git add lualogo.png
-feh
-git status
-gitcommit
-gitpush
-clear
-ls
-cduva
-cd aco/week6/latex/
-ls
-cat main.tex
-cd ../../pidac
-ls
-cd latex/
-ls
-cat main.tex
-pympress
-cdpt
-cd testprograms/
-ls
-vim
-vim .
-touch grammar_simple.pl
-vim grammar_simple.pl 
-git status
-git add grammar_simple.pl
-git diff grammar
-git diff grammar.pl
-git checkout grammar.pl
-git status
-git commit
-git status
-vim grammar_simple.pl 
-prolog -f grammar_simple.pl 
-vim
-git commit
-git commit -a
-ls
-git status
-vim .
-prolog -f grammar_simple.pl 
-vim .
-cdpt
-cd testprograms/
-ls
-prolog grammar_mod.pl 
-prolog -f grammar_mod.pl 
-vim
-cdata
-cd videos/series/
-ls
-mkdir the.walking.dead
-ls
-cd the.walking.dead/
-cd ../..
-ls
-cd ../downloads/
-ls
-\rm *.msi
-ls
-\rm Timen4Chrome.crx contacts.csv ccsetup404.exe jdk-7u25-windows-x64.exe setpoint652_smart.exe SkypeSetup.exe unetbootin-windows-585.exe WiFi_Universiteit_van_Amsterdam_Wrapper.exe reisadvies.ics desktop.ini linuxmint-15-cinnamon-dvd-64bit.iso Adjust-Taskbar-Thumbnail-Delay-Time-in-Windows-7* Microsoft\ ToolkitZ\[A4\].zip 
-ls
-rm -rf Adjust-Taskbar-Thumbnail-Delay-Time-in-Windows-7/ Microsoft\ Office\ Proffesional\ Plus\ 2010\ Corporate\ Final\ Full\ Activated\ -NoGRp/
-ls
-cd ..
-cd ~/.Trash
-ls
-\rm -rf \(2013_11_15-17_54_29\)_*
-ls
-cd ..
-cdata
-cd downloads/
-ls
-\rm -rf chromeinstall-7u25.exe LinuxLive\ USB\ Creator\ 2.8.24.exe tb_InnoGames_International.exe 
-cat streamerswitch.asx 
-\rm streamerswitch.asx 
-evince *
-ls
-\rm data-incasso_collegegelden-nl.pdf Uitslagformulier.pdf productvoorwaa
-evince productvoorwaarden-maandabonnement.pdf 
-\rm productvoorwaarden-maandabonnement.pdf 
-ls
-open tickets_173686.html 
-chromium-browser tickets_173686.html 
-ls
-rm tickets_173686.html 
-ls
-cd ~/.Trash/
-rm \(2013_11_15-17_57_12\)_tickets_173686.html 
-ls
-cdpt
-cd testprograms/
-ls
-prolog -f natural_language.pl 
-vim test.pl
-prolog -f test.pl
-vim test.pl
-prolog -f test.pl
-vim test.pl
-prolog -f test.pl
-prolog -h
-prolog -s test.pll
-prolog -s test.pl
-vim natural_language.pl 
-cdpt
-alsamixer
-cdpt
-ls
-cd testprograms/
-ls
-cat natural_language.pl 
-ls
-cat grammar_simple.pl 
-prolog -f test.pl 
-cdpt
-cd testprograms/
-ls
-cat test.pl 
-cdpt cd testprograms
-ls
-cd testprograms/
-ls
-prolog -f grammar_mod.pl 
-ls
-cat grammar_mod.pl 
-ls
-cat grammar.pl
-prolog -f grammar.
-prolog -f grammar.pl
-touch test.pl
-vim test.pl
-prolog -f test.pl
-cat
-cat grammar.ok
-cat grammar.pl
-prolog -f grammar.pl
-ls
-vim natural_language.pl 
-cat grammar.pl
-cat grammar_mod.pl 
-deluge-console 
-deluge-console 
-deluge
-cat Downloads/natural_language.pl 
-cdata
-ls
-cd videos/series/the.walking.dead/
-ls
-cd The\ Walking\ Dead\ S04E05\ HDTV\ x264-2HD\[ettv\]/
-ls
-vlc the.walking.dead.s04e05.hdtv.x264-2hd.mp4 
-cdata
-cd videos/series/the.walking.dead/
-vlc The\ Walking\ Dead\ S04E05\ HDTV\ x264-2HD\[ettv\]/
-cdpt
-ls
-mkdir latex
-cat prolog.sh 
-touch deel1.tex
-vim dell1.tex
-ls
-mv dell1.tex deel1.tex 
-cat deel1.tex 
-ls
-pdflatex deel1.tex 
-evince deel1.pdf 
-vim deel1.tex 
-pdflatex deel1.tex 
-vim deel1.tex 
-pdflatex deel1.tex 
-evince deel1.pdf 
-vim deel1.tex 
-pdflatex deel1.tex 
-evince deel1.pdf 
-vim deel1.tex 
-pdflatex deel1.tex 
-evince deel1.pdf 
-vim deel1.tex 
-pdflatex deel1.tex 
-evince deel1.pdf 
-git status
-git add deel1.tex
-git add testprograms/*
-git add testprograms/natural_language.pl
-git status
-gitcommit
-git push
-gitpush
-git status
-cdpt
-ls
-vim deel1.tex 
-pdflatex 
-vim deel1.tex 
-pdflatex deel1.tex 
-vim deel1.tex 
-pdflatex deel1.tex 
-vim deel1.tex 
-pdflatex deel1.tex 
-vim deel1.tex 
-pdflatex deel1.tex 
-vim deel1.tex 
-pdflatex deel1.tex 
-cdpt
-cd testprograms/
-ls
-vim .
-cd ..
-ls
-pdflatex deel1.tex 
-evince deel1.pdf 
-vim deel1.tex 
-evince deel1.pdf 
-pdflatex deel1.tex 
-evince deel1.pdf 
-kino
-sudo apt-get install kin
-sudo apt-get install kino
-kino
-mplayer Videos/BMW\ driving\ experience\ slotemakers.mp4 
-sudo apt-get install avidemux
-avidemux
-sudo apt-get purge kino
-yamb
-sudo apt-cache search yamb
-cdpt
-ls
-git status
-git commit
-git commit -a
-evince deel1.pdf 
-vim deel1.tex 
-git commit -a
-gitpush
-avidemux2_gtk 
-handbrake
-sudo apt-cache search handbrake
-sudo apt-get install handbrake-gtk
-apropos handbrake
-man handbrake
-sudo apt-get install handbrake-gtk
-handbrake-gtk
-HandBrake
-HandBrakeCLI 
-HandBrakeCLI --help
-htop
-cdpt
-cd testprograms/
-vim natural_language.pl 
-mv ~/Downloads/natural_language.pl .
-vim natural_language.pl 
-git status
-git rm test.pl
-ls
-cat test.pl 
-rm test.pl 
-ls
-vim natural_language.pl 
-prolog -f natural_language.pl 
-ls
-cd ~/.vimbackups/
-ls
-cat natural_language.pl~ 
-ls
-mv natural_language.pl~ ~/Dropbox/uva/pt/prolog/testprograms/natural_language.pl 
-cdpt
-cd testprograms/
-git status
-git add natural_language.pl
-git commit
-git status
-git add ../../.gitignore
-git commit
-git push
-git status
-cd ..
-cd tutoraat/
-git status
-cd ..
-cd ~
-cd ..
-ls
-cduva
-cd ~
-ls
-\rm test.html 
-ls
-cd .git-credential-cache/
-ls
-cat socket 
-./socket 
-cd ..
-ls
-cdata
-ls
-cd downloads/
-ls
-cdata
-cd videos/series/the.walking.dead/
-ls
-mv The\ Walking\ Dead\ S04E05\ HDTV\ x264-2HD\[ettv\]/ the.walking.dead.s04e05
-cd the.walking.dead.s04e05/
-ls
-\rm Torrent\ Downloaded\ From\ ExtraTorrent.cc.txt 
-ls
-mplayer the.walking.dead.s04e05.hdtv.x264-2hd.mp4 
-cd ../
-ls
-mv the.walking.dead.s04e05/ The.Walking.Dead.S04E05.H264.AAC
-ls
-cd The.Walking.Dead.S04E05.H264.AAC/
-ls
-mv the.walking.dead.s04e05.hdtv.x264-2hd.mp4 the.walking.dead.s04e05.hdtv.x264.mp4 
-cd ../../legend.of.korra/
-ls
-mv The.Legend.of.Korra.S02E14.720p.x264.AAC
-mv The.Legend.of.Korra.S02E14.720p.WEBRip.x264.AAC-Secludedly/ The.Legend.of.Korra.S02E14.720p.x264.AAC 
-ls
-cd The.Legend.of.Korra.S02E14.720p.x264.AAC/
-ls
-feh
-\rm SECLUDEDLY.WORDPRESS.COM.jpg 
-ls
-mv The.Legend.of.Korra.S02E14.720p.WEBRip.x264.AAC-Secludedly.mp4 The.Legend.of.Korra.S02E14.720p.x264.AAC.mp4 
-ls
-cd ../The.Legend.of.Korra.S02E02.720p.h264.AAC/
-ls
-cd ..
-ls *
-cd ..
-ls
-cd the.walking.dead/
-ls
-cd ..
-mv the.walking.dead/ The.Walking.Dead/
-mv legend.of.korra/ Legend.of.Korra
-ls
-gnome-system-monitor 
-reboot
-cdpt
-cd testprograms/
-ls
-vim natural_language.pl 
-vim
-ls
-cdpt
-ls
-vim deel1.tex
-vim deel2.pl
-gedit vim deel2.pl
-gedit deel2.pl
-deluged
-gnome-system-monitor 
-cd /etc/default/
-ls
-cd ..
-ls
-cd init.d
-ls
-ls de
-htop
-ls
-cdpt
-ls
-cp deel2.pl
-cp deel2.pl deel3.pl
-vim deel3.pl
-git status
-git add deel3.pl
-git commit
-prolog -f deel3.pl
-vim deel3.pl
-prolog -f deel3.pl
-cdpt
-ls
-vim deel3.pl 
-cdpt
-prolog -f deel3.pl
-prolog -f deel2.pl
-vim deel3.pl
-vim deel2.pl.BAK 
-mv deel2.pl.BAK deel2.BAK.pl
-vim deel2.BAK.pl 
-cdpt
-vim deel3.pl 
-cp deel2.pl deel2.pl.BAK
-cp deel3.pl deel2.pl
-vim deel2.pl
-vim .
-rm deel2.BAK.pl 
-ls
-ls -l
-git status
-git add deel3.pl
-gitcommit
-git push
-alias
-git push origin master
-ls
-evince deel1.pdf 
-vim deel1.tex 
-pdflatex deel1.tex
-cdlua
-cat lua.tex
-cdpt
-vim deel1.tex
-pdflatex deel1.tex 
-vim deel1.tex 
-pdflatex deel1.tex 
-vim deel1.tex 
-pdflatex deel1.tex 
-evince deel1.pdf 
-evince deel1.pdf &
-vim deel1.tex 
-cat deel3.pl 
-prolog -f deel3.pl
-vim deel1.tex
-pdflatex deel1.tex 
-vim deel2.pl 
-vim deel3.pl 
-gitcommit
-git commit deel2.pl deel3.pl
-gitcommit
-gitpush
-ls
-./prolog.sh 
-ls
-cd latex/
-ls
-cd ..
-\rm -f latex/
-\rm -r latex/
-ls
-git status
-cd ..
-ls
-cat README 
-:q
-cd Downloads/
-tar -zxvf Prolog_10542590.tar.gz 
-ls
-\rm -rf Prolog_10542590.tar.gz 
-\rm -rf Python_1_10542590.tar.gz 
-ls
-\rm -rf *tar.gz
-\rm -rf *zip
-ls
-cd 10542590/
-ls
-cat *
-62;9;c
-~~ls
-ls
-cd ..
-cdpt
-ls
-cd ~/Do
-cd ~/Downloads/
-ls
-\rm -rf *.py *.pl
-ls
-\rm -rf *.py~
-ls
-chromium-browser bookmarks_11_10_13.html 
-cat bookmarks_11_10_13.html 
-vim bookmarks_11_10_13.html 
-ls
-\rm -rf bookmarks_11_10_13.html 
-ls
-cdpt
-cd ~
-vim .bash_alias
-vim .bash_aliases
-erl
-sudo apt-cache search erlang
-cdpt
-ls
-mkdir slides
-mv * slides/
-ls
-cd slides/
-mv testprograms/ ../
-ls
-evince *.pdf
-libreoffice *.ppt
-erl
-sudo apt-get install erlang-base
-erl
-ls
-cd .. 
-cd testprograms/
-ls
-cat basic.erl
-vim basic.erl
-erl
-cat *
-ls
-git status
-cd ..
-ls
-git status
-cd ..
-ls
-git status
-ls
-vim .gitignore
-gitcommit
-gitpush
-ls
-cd erlang
-ls
-git add testprograms/*.erl
-ls
-git status
-gitcommit
-gitpush
-sudo poweroff
-smbclient
-smbclient //diskstation/maico
-poweroff
-dpkg -l | indicator
-dpkg -l | grep indicator
-sudo apt-get install indicator-sound
-sudo apt-get install indicator-sound-gtk2 
-cd /opt/
-ls
-ls spotify/
-ls spotify/spotify-client/
-ls spotify/spotify-client/Data/
-ls spotify/spotify-client/Data/libudev.so.0 
-ls spotify/spotify-client/Data/
-cat spotify/spotify-client/Data/libudev.so.0 
-\rm -rf spotify/
-\sudo rm -rf spotify/
-ls
-sudo apt-get purge spotify-client
-sudo apt-get autoremove
-sudo apt-get autoclean
-gtk-window-decorator 
-dpkg -l | D
-dpkg -l 
-dpkg -l | grep gtk
-lxappearance 
-cdpt
-cd ../prolog/
-ls
-vim deel3.pl 
-prolog -f deel3.pl 
-erl
-clear
-cdpt
-ls
-cd testprograms/
-ls
-cat *
-vim .
-ls
-vim translate_service.erl 
-erl
-cdpt
-cd ..
-ls
-cd dwl
-ls
-libreoffice Uitwerkingbewijzenvolledigeinductie.doc 
-ls
-cduva
-cd tutoraat/
-ls
-vim README.md 
-cd ..
-cd pt
-ls
-git vm README README.md
-git mv README README.md
-vim README.md 
-gitcommit
-gitpush
-ls
-cdpt
-ls
-cd testprograms/
-ls
-cat yet_again.erl 
-erl
-screensaver 
-touch
-ls
-cat yet_again.
-cat yet_again.erl 
-vim .
-erl
-vim .
-erl
-git status
-git commit yet_again.erl
-gitpush
-vim .
-er
-erl
-gitcommit
-gitpush
-cd ../../..
-cd pt
-ls
-cat README.md 
-cd ..
-cd tutoraat/
-ls
-cat README.md 
-vim README.md 
-gitcommit
-gitpush
-cdpt
-cd testprograms/
-ls
-vim yet_again.
-vim yet_again.erl
-erl
-elr
-erl
-vim yet_again.erl 
-cd ../..
-ls
-cat README.md 
-ls
-cd ../ip
-ls
-cat README 
-cp ../pt/README.md .
-ls
-mv README.md README
-git mv README README.md
-git status
-git diff week7/inleveren/Opgave7.java
-gitcommit
-ls
-vim README.md 
-gitcommit
-gitpush
-cdpt
-cd testprograms/
-ls
-cat double.erl 
-cduva
-cd tutoraat/
-ls
-git status
-sudo kill 2290
-dpkg
-dpkg --purge spotify
-sudo dpkg --purge spotify
-sudo dpkg --purge spotify-client
-dpkg -l | grep spotify
-spotify
-sudo apt-get install picard
-picard
-SUDO apt-get purge deluge
-sudo apt-get purge deluge
-sudo apt-get autoremove
-ls
-cdata
-ls
-ls downloads/
 ls
 cd mus
 cd music
@@ -1998,3 +878,1123 @@ vim
 cdpt
 cd ../erlang/boxes.erl
 vim ../erlang/boxes.erl
+git config --global user.name "Maico Timmerman"
+git config --global user.email "maico.timmerman@gmail.com"
+git --version
+git config --global credential.helper cache
+git config
+git config --global
+cd ~/.ssh
+ls
+gedit id_rsa.pub 
+cd ../Dropbox/uva/webdb/
+ls
+cd public_html/
+git pull
+git diff
+git diff master master@{1}
+cd
+ls
+git clone ssh://git@gitlab-fnwi.uva.nl:1337/10542590/dotfiles.git dotfiles
+ls
+cd dotfiles/
+ls
+ls -la
+cat sources.list 
+ls
+ls -la
+cp .bash* ~/
+cp -r .vim* ~/
+sudo apt-get dropbox
+sudo apt-get install dropbox
+rhythmbox
+sudo apt-get install skype
+sudo apt-get install skype-bin
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+cd Dropbox/
+ls
+cd uva/
+ls
+cd webdb
+ls
+cd public_html/
+ls
+git pull
+git status
+ssh
+ssh keygen
+sshkeygen
+ssh-keygen
+ls
+cd ~/.ssh
+ls
+sudo apt-get install chrome
+sudo apt-get install google-chrome-stable 
+gksudo gedit
+gksudo gedit /etc/apt/sources.list
+cd /etc/apt/
+cat sources.list
+cd sources.list.d/
+ls
+\rm -rf *
+sudo \rm -rf *
+ls
+sudo apt-get update
+sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 614C4B38
+wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 816950D8
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1378B444
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 06438B87
+sudo wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0624A220
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4C9D234C
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AF1CDFA9
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8844C542  sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 614C4B38
+wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 816950D8
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1378B444
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 06438B87
+sudo wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0624A220
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4C9D234C
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AF1CDFA9
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8844C542  
+sudo apt-get update
+sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 614C4B38
+wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 816950D8
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1378B444
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 06438B87
+sudo wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0624A220
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4C9D234C
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AF1CDFA9
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8844C542  
+sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 614C4B38
+wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 816950D8
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1378B444
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 06438B87
+sudo wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0624A220
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4C9D234C
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AF1CDFA9
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8844C542  
+sudo apt-get update
+sudo apt-get dist-upgrade 
+sudo apt-get update
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+sudo apt-get update
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 16126D3A3E5C1192
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install ubuntu-tweak 
+ssh -p 4010 maico@in10.fnwi.uva.nl
+ssh -p 4010 maico@in10.webdb.fnwi.uva.nl
+cd Downloads/sparkup-20091205/
+cd vim
+cp -R ftplugin/ ~/.vim/
+ls ~/.vim/ftplugin/
+\rm ~/.vim/ftplugin/
+\rm -r ~/.vim/ftplugin/
+cp -R ftplugin/ ~/.vim/
+vim
+vim test.html
+ls
+vim
+ls -la
+cd .vim
+ls
+ls -la
+cd ../dotfiles/
+ls
+ls -la
+cd .vim
+ls
+ls -la
+ls
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim
+ls
+cd ..
+ls
+cd ..
+cd .vim
+cd bundle/
+ls
+cd vundle/
+ls
+cd ..
+vim
+vim test.html
+sudo apt-get install flashplugin-installer 
+sudo apt-get install libreoffice
+libre
+libreoffice 
+sudo apt-get install skype
+bumblebee
+bumblebeed
+sudo apt-get install bbswitch
+groupadd bumblebee
+gpasswd -a $USER bumblebee 
+sudo gpasswd -a $USER bumblebee 
+groups
+groupmod bumblebee 
+sudo groupmod bumblebee 
+jobs
+htop
+sudo apt-get install htop
+htop
+glxspheres
+sudo apt-get installvirtualgl
+sudo apt-get install virtualgl
+sudo apt-get install primu
+sudo apt-get install primus
+cd Downloads/
+ls
+sudo gnome-font-viewer Ubuntu+Mono+derivative+Powerline.ttf 
+vim test.html
+cp ~/.Skype/maico.timmerman/main.db ~/.Skype/maico.timmerman/main.db.bak
+ls
+cd ~/.Skype/maico.timmerman/
+ls
+\ls
+\ls --color=auto
+\ls -X --color=auto
+vim ~/.bash_aliases
+cat ~/.bash_aliases 
+ls ~/
+ls -a ~/
+vim ~/.vimrc
+vim
+ls -a
+sudo find / | grep fonts
+cd .fonts
+ls
+ls -a
+sudo fc-cache -f -v
+vim
+cd Downloads/
+ls
+sudo gnome Ubuntu+Mono+derivative+Powerline.ttf 
+sudo gnome-font-viewer Ubuntu+Mono+derivative+Powerline.ttf 
+git clone https://github.com/Lokaltog/powerline-fonts.git fonts
+cd fonts
+ls
+cd UbuntuMono/
+ls
+sudo gnome-font-viewer *.ttf
+sudo gnome-font-viewer Ubuntu\ Mono\ derivative\ Powerline.ttf 
+sudo gnome-font-viewer Ubuntu\ Mono\ derivative\ Powerline\ Bold.ttf 
+sudo gnome-font-viewer Ubuntu\ Mono\ derivative\ Powerline\ Bold\ Italic.ttf 
+sudo gnome-font-viewer Ubuntu\ Mono\ derivative\ Powerline\ Italic.ttf 
+sudo apt-get install vlc
+ls
+history | grep ss
+histoery 1917
+history 1917
+history 
+history
+history --help
+history | grep ssh
+ssh -p 4010 maico@in10.webdb.fnwi.uva.nl
+vim ~/.vimrc
+sudo apt-get install newsbeuter 
+ls
+ls -la
+newsbeuter 
+ls -a
+cd .newsbeuter/
+ls
+newsbeuter
+newsbeuter -u http://yify-torrents.com/rss/0/720p/All/0
+ls -a
+cd ..
+ls
+cd .config/
+ls
+cd ../.newsbeuter/
+touch urls
+vim urls 
+newsbeuter 
+vim urls
+newsbeuter 
+htop
+sudo vim /etc/default/apport 
+sudo service apport stop
+ls
+cdwebdb
+alias
+vim .bash_aliases 
+cdwebdb
+ls
+git pull
+cdwebdb
+pwd | xclip
+sudo apt-get install xclip
+pwd | xclip
+https://www.facebook.com/feeds/notifications.php?id=100000519977759&viewer=100000519977759&key=AWjGMZmPFAkObBrF&format=rss20[B
+pwd | xclip
+echo test | xclip
+vim ~/.bash_aliases
+cp ~/.bash_aliases ~/dotfiles/
+cd ~/dotfiles/
+git status
+git commit -a
+gitpush
+echo test | xclip -selection=clipboard
+echo test | xclip -selection clipboard
+test
+cdwebdb
+pwd | xclip
+xclip --help
+xclip
+xclip -h
+cdwebdb
+pwd | xclip
+test
+cdwebdb
+pwd | xclip
+/home/maico/Dropbox/uva/webdb/public_html
+cd sites-available/
+ls
+sudo vim webdb
+sudo apt-get install php5
+hostname
+hostname -F
+nano
+apt-get update
+sudo apt-get update
+sudo apt-get install apache2
+apache2
+sudo service apache2 restart
+cd /etc/apache2
+ls
+cd sites-available/
+ls
+cd ..
+cd sites-enabled/
+ls
+cd ..
+ls
+cd sites-
+cd sites-available/
+ls
+cp default webdb
+sudo cp default webdb
+ls
+sudo vim webdb
+ls
+cat webdb
+sudo a2dissite default && sudo a2ensite webdb
+sudo service restart apache2
+sudo service apache2 restart
+cdwebdb
+ls
+vim index.php 
+cat index.php 
+ls
+ls -a
+ls -l
+ls
+cd /etc/apache2
+ls
+vim apache2.conf 
+ls
+find . | grep mod_dir.c
+find . | grep mod_dir
+find . | grep DirectoryIndex
+apropos search in file
+grep DirectoryIndex .
+grep DirectoryIndex 
+grep 
+grep --help
+grep -r DirectoryIndex .
+find . | grep cgi
+ls
+find . |  grep .htaccess
+find / |  grep .htaccess
+sudo find / |  grep .htaccess
+sudo vim sites-available/webdb 
+sudo service apache2 restart
+ls
+cd webdb
+cdwebdb
+ls
+cd ..
+ls -la
+ls -lra
+cd ..
+ls -l
+ls
+cd -
+ls
+cd /etc/apache2
+ls
+vim sites-available/webdb 
+apache2 --v
+apache2 -v
+cd /var
+ls -a
+ls -l
+ls -l ~/Dropbox
+sudo adduser maico www-data
+sud/home/maico/Dropbox/uva/webdb/public_html
+sudo chown maico:www-data /home/maico/Dropbox/uva/webdb/public_html
+sudo chmod 777 /home/maico/Dropbox/uva/webdb/public_html
+sudo chmod g+s /home/maico/Dropbox/uva/webdb/public_html
+apache2 logs
+apache2 -t
+sudo chmod -R g+s /home/maico/Dropbox/uva/webdb/public_html
+sudo chmod -R 777 /home/maico/Dropbox/uva/webdb/public_html
+sudo chown -R maico:www-data /home/maico/Dropbox/uva/webdb/public_html
+ls
+cd www
+ls
+cat index.html 
+ls -l
+sudo vim index.html 
+cd /etc/apache
+cd /etc/apache2
+ls
+sudo a2dissite webdb && sudo a2ensite default && sudo service apache2 restart
+ls /var/www/index.html 
+ls -l /var/www/
+ls -r /var/
+ls -R /var/
+ls -Rl /var/
+cdwebdb
+ls
+ls ..
+ls
+cd ..
+ls
+chmod -R 755 public_html/
+ls
+ls -l
+vimdiff /etc/apache2/sites-available/default /etc/apache2/sites-available/webdb
+sudo vimdiff /etc/apache2/sites-available/default /etc/apache2/sites-available/webdb
+cd /etc/apache2/sites-available/
+ls
+vim ~/.vimrc
+sudo vimdiff /etc/apache2/sites-available/default /etc/apache2/sites-available/webdb
+ls
+cd ../sites-enabled/
+ls
+a2dissite default
+sudo a2dissite default
+sudo service apache2 reload
+sudo service apache2 restart
+sudo a2ensite webdb
+sudo service apache2 restart
+ls
+cat webdb 
+ls -l /usr/lib/cgi-bin/
+ls -l /usr/lib/
+ls
+cat webdb
+cd ..
+ls
+cd conf.d/
+ls
+cat other-vhosts-access-log 
+cd ..
+ls
+Listen
+sudo apt-cache search httpd
+cd /home/maico/Dropbox/uva/webdb/public_html/
+ls
+ls -l
+ls
+sudo vim index.php 
+chmod -R 755 /home/maico/Dropbox/uva
+ls
+cd /etc/apache2
+ls
+sudo vim sites-available/
+sudo vim /etc/hosts
+sudo a2ensite webdb
+sudo touch httpd.conf
+sudo vim httpd.conf 
+sudo service apache2 restart
+ls
+a2ensite default
+sudo a2ensite default
+sudo service apache2 restart
+/etc/init.d/httpd restart
+chmod -R 755 ~/Dropbox/*
+ls
+cd sites-available/
+ls
+vim webdb
+sudo vim webdb
+vimdiff default webdb
+sudo vimdiff default webdb
+sudo a2dissite default
+sudo service apache2 restart
+sudo -e default
+ls
+a2dissite webdb
+vim webdb
+sudo vim webdb
+cd ..
+cd sites-enabled/
+ls
+sudo a2dissite webdb
+sudo a2ensite default
+ls
+cd ..
+ls
+sudo mv -r ~/Dropbox/uva/webdb/public_html/ /var/www/
+sudo mv -R ~/Dropbox/uva/webdb/public_html/ /var/www/
+sudo mv ~/Dropbox/uva/webdb/public_html/ /var/www/
+sudo service apache2 restart
+ls
+cd /var/www
+ls
+mv public_html/* .
+sudo mv public_html/* .
+ls -la
+cd public_html/
+ls
+ls -a
+mv .git/ ..
+sudo mv .git/ ..
+ls
+cd ..
+ls
+\rm index.html
+sudo \rm index.html
+ls
+git status
+git checkout -- *
+ls
+sudo rm -r public_html/
+ls
+git status
+git checkout -- *
+sudo git checkout -- *
+ls
+git status
+vim index.php
+touch admin.php
+su
+sudo -i
+su
+sudo touch admin.php
+sudo touch account.php
+sudo touch contant.php
+sudo mv contant.php contact.php
+sudo touch register.php
+ls
+git status
+git add *.php
+sudo touch product.php
+sudo touch checkout.php
+git add *.php
+git status
+git commit
+git push
+git push origin master
+git pull
+git status
+git pull
+git commit -a
+sudo vim style/mainsheet.css 
+git add mainsheet.css
+git add style/mainsheet.css
+git pull
+git status
+git commit
+git pull
+sudo git pull
+ls
+cd /var/www
+ls
+\rm -rf *
+sudo \rm -rf *
+ls
+touch index.html
+sudo vim index.html
+ls
+cd ..
+ls
+cd
+ls
+git clone ssh://git@gitlab-fnwi.uva.nl:1337/webdb14-in10/webshop.git webshop
+ls
+ls -a
+cd webshop
+ls
+git status
+sudo mv * /var/www/
+sudo rm /var/www/index.html
+ls
+vim index.php
+ls
+sudo cp -r /var/www/* .
+ls
+vim index.php
+ls -a
+ls -l
+cd ..
+chmod -R 755 webshop
+sudo chmod -R 755 webshop
+cd webshop
+vim index.php
+vim style/mainsheet.css 
+ls -lr
+ls style/
+ls -l style/
+cd ..
+ls
+chown -R webshop maico
+chown -R maico webshop
+sudo chown -R maico webshop
+ls -l
+cd webshop/
+ls
+ls -l
+cd ..
+ls
+chmod -R 644 webshop/
+sudo chmod -R 644 webshop/
+ls
+ls -l
+cd webshop/
+ls
+cd webshop/
+sudo chmod -R 644 webshop/
+ls -a
+ls -la
+mkdir test
+ls
+ls -l
+sudo \rm -rf webshop
+ls
+sudo \rm -rf webshop test
+ls
+git clone ssh://git@gitlab-fnwi.uva.nl:1337/webdb14-in10/webshop.git
+git status
+cd webshop/
+ls
+git clone
+git status
+sudo \rm -rf /var/www/*
+ls
+ls /var
+ls /var/www/
+ls /var/www
+cd /etc/apache2/
+ls
+vim apache2.conf 
+su
+ls
+cd webshop/
+ls
+git status
+git pull
+ls
+git pull
+sudo apt-cache search java
+sudo apt-cache search java isntaller
+sudo apt-cache search java installer
+sudo apt-get install oracle-jdk7-installer 
+vim ~/.bash_aliases
+webdbssh 
+ls
+exit
+cd Downloads/
+ls
+sudo dpkg -i linux-vpn-installer-debian-based-systemen.deb 
+cd /usr/local/nc/
+ls
+mv ~/Downloads/certificaat-uvavpn.der .
+sudo mv ~/Downloads/certificaat-uvavpn.der .
+ls
+vim ~/.bash_aliases
+uvavpn
+cd webshop
+ls
+git branch
+git branch maico
+git branch
+git checkout maico
+vim index.php 
+ls
+git status
+touch admin.php
+vim admin.php
+cat index.php > admin.php
+vim admin.php
+cp header.php admin_header.php
+vim admin_header.php
+ls
+mv admin.php admin_index.php
+git add admin*
+git status
+cat admin_index.php 
+cat admin_header.php 
+cp admin_index.php adminfacatures.php
+cp admin_index.php klanten.php
+cp admin_index.php admin_producten.php
+ls
+mv adminfacatures.php admin_facatures.php
+ls
+git add admin*
+vim admin_index.php 
+vim admin_header.php 
+git status
+git add admin_header.php
+git diff klanten.php
+git add klanten.php
+ls
+git status
+git commit
+git push
+git pull
+git status
+git checkout master
+git pull
+git checkout maico
+git status
+ls
+git status
+ls -l
+vim admin_index.php
+git status
+webdbssh
+cdwebdb
+cd webshop/
+ls
+vim index.php
+vim header.php
+vim index.php producten.php zoeken.php account.php 
+ls
+git status
+git mv admin_index.php adminIndex.php
+git mv admin_header.php adminHeader.php
+git mv admin_producten.php adminProducten.php
+git mv admin_facatures.php adminFactures.php
+git status
+vim adminIndex.php 
+uvavpn
+alias
+ls
+vim adminIndex.php 
+git status
+vim adminIndex.php 
+git commit -a
+git add adminIndex.php
+git status
+vim adminIndex.php 
+vim adminProducten.php 
+vim adminIndex.php 
+git status
+git add admin*
+git commit -a
+git status
+sudo cat /etc/mtab
+ls
+sudo find / | grep fstab
+vim /etc/fstab
+sudo vim /etc/fstab
+poweroff
+mount
+cd /media/maico/
+ls
+mkdir DATA
+sudo mkdir DATA
+ls
+cdata
+ls
+sudo rm -r /media/maico/DATA/
+html adminIndex.php 
+vim ~/.bash_aliases
+ls
+cd webshop
+ls
+git status
+git pull
+git push origin maico
+git pull origin maico
+git status
+git push origin maico
+git branch
+ls
+cd style
+ls
+git cp mainsheet.css adminSheet.css
+cp mainsheet.css adminSheet.css
+s
+ls
+mv adminSheet.css adminsheet.css
+ls
+vim adminsheet.css 
+length Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch
+python
+vim style/mainsheet.css 
+git status
+cd webshop
+ls
+html adminIndex.php 
+html localhost
+ls
+vim adminIndex.php 
+ls
+git mv adminHeader.php adminheader.php
+git mv adminFactures.php adminfactures.php
+git mv adminIndex.php adminindex.php
+ls
+git mv adminProducten.php adminproducten.php
+ls -l
+vim  adminindex.php 
+vim adminheader.php 
+vim adminproducten.php 
+vim adminfactures.php 
+ls
+ls -l
+cp adminfactures.php adminklanten.php
+vim adminklanten.php 
+vim adminindex.php 
+vim adminfactures.php 
+vim adminproducten.php 
+git status
+git add style/adminsheet.css
+git add adminklanten.php
+git branch
+git status
+vim adminheader
+vim adminheader.php
+git status
+git commit -a
+git push origin maico
+ls
+vim style/adminsheet.css 
+vim style/adminsheet.css adminindex.php
+vim adminheader.php
+git mv adminfactures.php adminfacturen.php
+git status
+vim style/adminsheet.css adminindex.php
+ls
+git rm style/adminsheet.css
+git rm -f style/adminsheet.css
+ls
+vim admin*.php
+git status
+git commit -a
+git push origin maico
+vim adminindex.php 
+git pull
+git branch
+git checkout maico
+git pull
+vim adminindex.php 
+ls
+git status
+ls
+cd webdb
+cd webshop
+ls
+mkdir admin
+git mv admin* admin/
+ls
+git mv admin*.php admin/
+git status
+git commit
+git push
+git status
+ls
+git pull
+git pull origin maico
+git pull
+git status
+newsbeuter 
+cd webdb
+cd webshop
+ls
+vim admin/* style/mainsheet.css 
+vim ~/.bash_aliases
+vim admin/* style/mainsheet.css 
+vim test.html
+ls
+vim account.php 
+cd admin/
+ls
+cd webshop/
+vim admin/* style/mainsheet.css 
+ls
+git status
+git checkout master
+git status
+vim admin/adminindex.php 
+ls
+cd admin
+ls
+git status
+git pull
+ls
+cd ..
+ls
+vim admin/adminindex.php 
+git status
+git commit admin/adminindex.php
+git push
+git checkout master
+git pull
+git status
+ls
+git status
+ls
+git checkout maico
+git status
+ls
+git pull
+cd webshop/
+git pull origin
+git pull origin master
+git branch
+ls
+git log
+vim *.php
+cd admin
+ls
+vim *.php
+ls
+cd ..
+ls
+git branch
+vim index.php 
+git checkout master
+ls
+vim admin/admin*
+git status
+git pull origin maico
+git status
+ls
+vim verzonden.php 
+git status
+git add verzonden.php
+git add style/mainsheet.css
+git rm adminFactures.php
+git status
+git add admin/*.php
+git status
+git commit
+git pull origin maico
+git status
+ls
+cd admin/
+ls
+cd ..
+ls
+vim -O *.php
+vim *.php
+ls
+cd webshop
+ls
+git status
+git checkout master
+git pull
+git checkout master
+git checkout maico
+git pull
+git pull origin maico
+git checkout master
+git merge maico
+git push origin master
+git checkout maico
+git pull
+git pull origin maico
+git checkout master
+vim style/mainsheet.css 
+git checkout master
+git pull origin master
+git checkout maico
+git pull origin maico
+git checkout maico
+git merge master
+git status
+git push
+sudo vim /etc/apache2/apache2.conf 
+cd /etc/pulse/
+ls
+vim daemon.conf 
+vim client.conf 
+vim default.pa 
+sudo vim default.pa 
+sudo service pulse restart
+sudo service pulseaudio restart
+ls
+cd webshop
+cd ~/webshop/
+ls
+git status
+ls
+git checkout maico
+git merge master
+git checkout master
+git pull
+git checkout maico 
+git merge master
+git start
+git status
+git push
+git push origin master
+git status
+git push origin maico
+ls
+cd /etc/phpmyadmin/
+ls
+cd ..
+cd apache2/
+ls
+vim apache2.conf 
+sudo vim apache2.conf 
+sudo service apache2 restart
+cd /etc/phpmyadmin/
+ls
+vim apache.conf 
+sudo vim config.inc.php 
+sudo service apache2 restart
+sudo apt-get purge phpmyadmin 
+sudo apt-get auto-remove
+sudo apt-get autoremove
+vim /etc/apache2/
+sudo vim /etc/apache2/
+sudo vim /etc/apache2/apache2.conf 
+sudo service apache2 restart
+ls
+cd webshop
+ls
+newsbeuter 
+dpkg -l | grep php5
+dpkg -l | grep phpmyadmin
+dpkg -l | grep mysql
+sudo apt-get install phpmyadmin
+cd webshop
+ls
+git checkout maico
+ls
+vim contact.php
+git status
+vim contact.php 
+ls
+vim style/mainsheet.css contact.php 
+git status
+git commit -a
+vim contact.php 
+git commit --amend -a
+git push
+git config --global push.default simple
+git push
+git push --set-upstream origin maico
+git push
+git status
+newsbeuter 
+sudo apt-get install keepassx
+sudo apt-get install vlc
+newsbeuter 
+ls
+webdbssh 
+ls
+ls -la
+cd Downloads/
+ls
+scp -p 4010 fonts/UbuntuMono/ in10.webdb.fnwi.uva.nl
+scp -p 4010 fonts/UbuntuMono/ in10.webdb.fnwi.uva.nl:/home/maico
+cd fonts/
+ls
+git status
+git remote
+git remote origin
+git remote -v
+ls
+pwd
+vim contact.php 
+git commit .
+git push
+cd webshop
+git status
+git pull
+git branch
+vim contact.php 
+git status
+git commit .
+git push
+webdbssh 
+cdata
+ls
+cd /media/
+ls
+cd maico/
+ls
+cd DATA/
+ls
+cd downloads/
+ls
+cd Arrow/
+ls
+cd Season\ 
+cd Season\ 2
+ls
+for f in * do
+vim ~/rename.sh
+chmod +x ~/rename.sh 
+~/./rename.sh HDTV.  
+vim /home/maico/rename.sh 
+~/./rename.sh HDTV.  
+ls
+vim /home/maico/rename.sh 
+~/./rename.sh Arrow Arrow
+vim /home/maico/rename.sh 
+~/rename.sh s S
+~/rename.sh S s
+vim /home/maico/rename.sh 
+~/rename.sh S s
+~/rename.sh -x S s
+vim /home/maico/rename.sh 
+~/rename.sh s S
+~/rename.sh -x s S
+cd ../Season\ 1/
+ls
+ls -la
+\rm ........4 
+cd
+cp rename.sh dotfiles/
+cd dotfiles/
+git status
+git add rename.sh
+git commit
+vim rename.sh 
+git commit --amend
+git commit . --amend
+git push
+cp rename.sh ~/rename.sh 
+cd 
+ls
+cat rename.sh 
+ls
+vim /home/maico/.bash_aliases 
+uvavpn 
+alias

@@ -27,14 +27,15 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tComment'
 Bundle 'bling/vim-airline'
-Bundle 'dag/vim2hs'
 " Change the powerline icons to the correct terms.
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+
 set ttimeoutlen=50              " Stop the delay in airline when leaving insertmode.
+Bundle 'dag/vim2hs'
 Bundle 'sparkup'
 
 " Sparkup, very easy html programming
@@ -51,7 +52,6 @@ set softtabstop=4               " Number of spaces that a <tab> counts for.
 set expandtab                   " Use number of spaces for <tab>
 set shiftwidth=4                " Number of spaces for 'cindent', >>, << and autoindent
 set number                      " Adds the linenumber infront of the line
-set backupdir=~/.vimbackups/    " set backup folder for ~ files to ~/.vimbackups
 set colorcolumn=120             " Make the 120th colomn red
 set showmatch                   " Show matching bracket
 set hidden                      " Hides current buffer on opening a new file instead of closing
@@ -62,8 +62,8 @@ set visualbell                  " don't beep
 set noerrorbells                " don't beep
 set laststatus=2                " always show the statusbar.
 set t_Co=256                    " set color scheme to 256
-
-
+command W w                     " use W to (w)rite aswell
+set nobackup                    " set no backups
 
 
 "ignore *.ext files
@@ -95,14 +95,6 @@ endif
 " Also load indent files, to automatically do language-dependent indenting.
 filetype plugin indent on
 
-" Makes backups of the file with $FILENAME$ + ~ when no vms for file
-if has("vms")
-    set nobackup
-else
-    set backup
-endif
-
-
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
@@ -115,3 +107,9 @@ if has('autocmd')
     " For all text files set 'textwidth' to 78 characters.
     autocmd FileType text setlocal textwidth=118
 endif
+
+" Fix the difficult-to-read default setting for diff text highlighting.  The
+" " bang (!) is required since we are overwriting the DiffText setting. The
+" highlighting  for Todo also looks nice (yellow) if you don't like the MatchParen
+" colors.
+highlight! link DiffText MatchParen

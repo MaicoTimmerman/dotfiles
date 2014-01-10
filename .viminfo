@@ -8,34 +8,56 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/10
+~MSle0~/absol
 
 # Last Substitute Search Pattern:
 ~MSle0&4
 
 # Last Substitute String:
-$\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$", "\" %s")
+$\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)\\%(\/\/\\|#\\) \\?\\(\\_.\\{-}\\)\\$", "\/\/ %s")
 
 # Command Line History (newest to oldest):
 :q
-:SyntasticCheck
 :w
-:help yank
+:Q
 :W
+:wq
+:'<,'>q
+:set filetype=php
+:set filetype=html
+:q!
+:qa
+:tq
+:set syntax html
+:sytax html
+:tabn
+:e style/mainsheet.css
+:retab
+:e
+:qq
+:s
+://feeds.feedburner.com/tweakers/mixed
+:wq!
+:vert help vms
+:w!
+:help backup
+:help 'backupdir'
+:Wq!
+:e test.htmk
+:BundleInstall
+:SyntasticCheck
+:help yank
 :undo
 :redo
 :help syntastic
 :e ~/.vimrc
 :sign
 :help syntatic
-:q!
-:Q
 :badd
 :bnew
 :echo fugitive#head()
 :let g:airline_powerline_fonts = 1
 :let g:airline_symbols = {}
-:tabn
 :highlight LineNr ctermbg=Black
 :tab #
 :tab 1
@@ -54,8 +76,6 @@ $\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$",
 :e .
 :colorscheme
 :colorscheme slate
-:wq
-:qa
 :Wq
 :vert help 'noshowmode'
 :set noshowmode
@@ -86,7 +106,6 @@ $\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$",
 :NERDTree
 :BundleClose
 :BundleClean
-:BundleInstall
 :NERDTreeClose
 :NERDTreeCWD
 :bclose
@@ -133,7 +152,6 @@ $\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$",
 :.,.+4
 :set rt?
 :set rf?
-:e
 :set ft%
 :help tcomment.txt
 :syntax
@@ -233,6 +251,10 @@ $\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$",
 :sign 1
 
 # Search String History (newest to oldest):
+?/absol
+?/html
+?/htmlkjj/html
+?/DirectoryIndex
 ?/j
 ? \Vif\%#
 ? \Vfor\%#
@@ -294,134 +316,849 @@ $\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$",
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
-	⚠
-"1	LINE	0
-	" required!
+"0	LINE	0
+	        for f in *; do
+	            newname=`echo "$f" | sed "s/$1/$2/g"`
+	            if [ -f $newname ];
+	            then
+	                echo "Cannot rename $f, $newname already exists"
+	            else
+	                mv "$f" "$newname"
+	            fi
+	        done
+""1	LINE	0
+	    
 "2	LINE	0
-	" let Vundle manage Vundle
+	    
+	cmd="ls -h --color=auto"
+	eval $cmd
 "3	LINE	0
-	" let Vundle manage Vundle
-"4	LINE	0
-	" required!
-"5	LINE	0
-	" let Vundle manage Vundle
-"6	LINE	0
-	highlight SyntasticWarningLine guibg=black
-"7	LINE	0
-	highlight SyntasticErrorLine guibg=black
-"8	LINE	0
 	
+"4	CHAR	0
+	INTO messages (FirstName, LastName, Age)
+	                        VALUES ('Peter', 'Griffin',35)
+"5	LINE	0
+	                    echo "connect done!";
+"6	LINE	0
+	                    echo "test";
+"7	LINE	0
+	                        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+"8	LINE	0
+	                </div>
 "9	LINE	0
-	" Change the powerline icons to the correct terms.
-	let g:airline_powerline_fonts = 1
-	if !exists('g:airline_symbols')
-	    let g:airline_symbols = {}
-	endif
-	let g:airline_symbols.space = "\ua0"
+	                    
 "q	CHAR	0
 	
 "-	CHAR	0
-	red
+	echo 
 
 # File marks:
 'U  1  0  ~/.bash_logo_acsii
-'0  24  26  ~/.vimrc
-'1  1  0  ~/.vim/bundle/Syntastic/plugin/signs.vim
-'2  2  0  ~/Dropbox/uva/pt/erlang/boxes.erl
-'3  1  0  ~/Dropbox/uva/pt/javascript/jsGraph.js
-'4  73  0  ~/.vim/bundle/vim-airline/autoload/airline/themes/dark.vim
-'5  58  0  ~/.vim/bundle/vim-airline/autoload/airline/themes/dark.vim
-'6  1  0  ~/.vim/bundle/vim-airline/autoload/airline/themes/dark.viom
-'7  1  0  ~/temp
-'8  1  0  ~/Dropbox/uva/pt/javascript/jsGraph.
-'9  170  0  ~/.vim/bundle/vim-airline/autoload/airline.vim
+'0  7  29  ~/.bash_aliases
+'1  1  0  ~/dotfiles/.git/COMMIT_EDITMSG
+'2  1  33  ~/dotfiles/rename.sh
+'3  2  0  ~/dotfiles/.git/COMMIT_EDITMSG
+'4  15  13  ~/rename.sh
+'5  13  8  ~/rename.sh
+'6  26  3  ~/rename.sh
+'7  28  22  ~/rename.sh
+'8  28  8  ~/rename.sh
+'9  8  12  ~/rename.sh
 
 # Jumplist (newest first):
--'  24  26  ~/.vimrc
--'  21  0  ~/.vimrc
--'  19  0  ~/.vimrc
--'  68  36  ~/.vimrc
--'  23  32  ~/.vimrc
--'  1  0  ~/.vimrc
--'  73  33  ~/.vimrc
--'  65  24  ~/.vimrc
--'  1  0  ~/.vim/bundle/Syntastic/plugin/signs.vim
--'  2  0  ~/Dropbox/uva/pt/erlang/boxes.erl
--'  8  0  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  10  2  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  1  0  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  10  2  ~/Dropbox/uva/pt/javascript/NERD_tree_1
--'  1  0  ~/Dropbox/uva/pt/javascript/NERD_tree_1
--'  1  0  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  73  0  ~/.vim/bundle/vim-airline/autoload/airline/themes/dark.vim
--'  1  0  ~/.vim/bundle/vim-airline/autoload/airline/themes/dark.vim
--'  58  0  ~/.vim/bundle/vim-airline/autoload/airline/themes/dark.vim
--'  1  0  ~/.vim/bundle/vim-airline/autoload/airline/themes/dark.viom
--'  1  0  ~/temp
--'  1  0  ~/Dropbox/uva/pt/javascript/jsGraph.
--'  170  0  ~/.vim/bundle/vim-airline/autoload/airline.vim
--'  16  0  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  23  2  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  21  2  ~/Dropbox/uva/pt/javascript/NERD_tree_1
--'  9  0  ~/.vimrc
--'  41  2  ~/.vimrc
--'  5  0  ~/.vimrc
--'  25  0  ~/.vim/colors/NERD_tree_1
--'  46  2  ~/.vim/colors/NERD_tree_1
--'  1  0  ~/.vim/colors/NERD_tree_1
--'  183  0  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  2  0  ~/Dropbox/uva/pt/javascript/jsGraph.html
--'  177  0  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  175  4  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  178  0  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  32  45  ~/Dropbox/uva/pt/erlang/boxes.erl
--'  13  0  ~/Dropbox/uva/pt/erlang/boxes.erl
--'  1  0  ~/Dropbox/uva/pt/erlang/boxes.erl
--'  158  31  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  2  3  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  146  8  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  33  0  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  30  0  ~/Dropbox/uva/pt/javascript/jsGraph.js
--'  28  0  ~/.vimrc
--'  1  0  ~/.vimr
--'  31  0  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  28  0  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  37  2  ~/Dropbox/uva/pt/javascript/NERD_tree_1
--'  36  0  ~/.vimrc
--'  2  0  ~/.vimrc
--'  32  0  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  38  2  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  45  2  ~/Dropbox/uva/pt/javascript/NERD_tree_1
--'  40  0  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  47  2  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  53  2  ~/Dropbox/uva/pt/javascript/NERD_tree_1
--'  37  0  ~/.vimrc
--'  94  0  ~/Dropbox/uva/pt/javascript/NERD_tree_3
--'  98  2  ~/Dropbox/uva/pt/javascript/NERD_tree_3
--'  1  0  ~/Dropbox/uva/pt/javascript/NERD_tree_3
--'  1  0  ~/.viminfo
--'  130  0  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  135  2  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  61  2  ~/Dropbox/uva/pt/javascript/NERD_tree_1
--'  3  0  ~/Dropbox/uva/pt/javascript/jsGraph.html
--'  69  2  ~/Dropbox/uva/pt/javascript/NERD_tree_1
--'  45  21  ~/Dropbox/uva/pt/javascript/jsGraph.html
--'  41  12  ~/Dropbox/uva/pt/javascript/jsGraph.html
--'  139  2  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  141  2  ~/Dropbox/uva/pt/javascript/NERD_tree_2
--'  77  2  ~/Dropbox/uva/pt/javascript/NERD_tree_1
--'  2  0  ~/Dropbox/uva/pt/.git/COMMIT_EDITMSG
--'  1  0  ~/Dropbox/uva/pt/.git/COMMIT_EDITMSG
+-'  7  29  ~/.bash_aliases
+-'  1  0  ~/.bash_aliases
+-'  1  0  ~/dotfiles/.git/COMMIT_EDITMSG
+-'  1  33  ~/dotfiles/rename.sh
+-'  5  0  ~/dotfiles/rename.sh
+-'  2  0  ~/dotfiles/.git/COMMIT_EDITMSG
+-'  15  13  ~/rename.sh
+-'  1  0  ~/rename.sh
+-'  13  8  ~/rename.sh
+-'  26  3  ~/rename.sh
+-'  28  22  ~/rename.sh
+-'  4  8  ~/rename.sh
+-'  8  12  ~/rename.sh
+-'  5  0  ~/rename.sh
+-'  1  30  ~/webshop/.git/COMMIT_EDITMSG
+-'  104  8  ~/webshop/contact.php
+-'  100  29  ~/webshop/contact.php
+-'  1  0  ~/webshop/contact.php
+-'  92  51  ~/webshop/contact.php
+-'  91  36  ~/webshop/contact.php
+-'  19  0  ~/webshop/contact.php
+-'  4  46  ~/webshop/.git/COMMIT_EDITMSG
+-'  83  46  ~/webshop/contact.php
+-'  77  16  ~/webshop/contact.php
+-'  82  41  ~/webshop/contact.php
+-'  103  21  ~/webshop/contact.php
+-'  64  12  ~/webshop/contact.php
+-'  73  20  ~/webshop/contact.php
+-'  23  16  ~/webshop/contact.php
+-'  22  16  ~/webshop/contact.php
+-'  78  16  ~/webshop/contact.php
+-'  21  39  ~/webshop/contact.php
+-'  69  55  ~/webshop/contact.php
+-'  66  54  ~/webshop/contact.php
+-'  2  0  ~/webshop/contact.php
+-'  17  0  ~/webshop/contact.php
+-'  263  0  /etc/apache2/apache2.conf
+-'  1  0  /etc/apache2/apache2.conf
+-'  1  0  etc/apache2/apache2.conf
+-'  10  0  NERD_tree_2
+-'  14  2  NERD_tree_2
+-'  1  0  NERD_tree_2
+-'  14  2  NERD_tree_1
+-'  1  0  NERD_tree_1
+-'  23  1  NERD_tree_2
+-'  27  2  NERD_tree_2
+-'  27  2  NERD_tree_1
+-'  64  47  /etc/phpmyadmin/config.inc.php
+-'  1  0  /etc/phpmyadmin/config.inc.php
+-'  9  0  /etc/phpmyadmin/apache.conf
+-'  1  0  /etc/phpmyadmin/apache.conf
+-'  263  0  /etc/apache2/apache2.conf
+-'  1  0  /etc/apache2/apache2.conf
+-'  1  0  etc/apache2/apache2.conf
+-'  10  0  NERD_tree_2
+-'  14  2  NERD_tree_2
+-'  1  0  NERD_tree_2
+-'  14  2  NERD_tree_1
+-'  1  0  NERD_tree_1
+-'  23  1  NERD_tree_2
+-'  27  2  NERD_tree_2
+-'  27  2  NERD_tree_1
+-'  64  47  /etc/phpmyadmin/config.inc.php
+-'  1  0  /etc/phpmyadmin/config.inc.php
+-'  9  0  /etc/phpmyadmin/apache.conf
+-'  1  0  /etc/phpmyadmin/apache.conf
+-'  263  0  /etc/apache2/apache2.conf
+-'  1  0  /etc/apache2/apache2.conf
+-'  1  0  etc/apache2/apache2.conf
+-'  10  0  NERD_tree_2
+-'  14  2  NERD_tree_2
+-'  1  0  NERD_tree_2
+-'  14  2  NERD_tree_1
+-'  1  0  NERD_tree_1
+-'  23  1  NERD_tree_2
+-'  27  2  NERD_tree_2
+-'  27  2  NERD_tree_1
+-'  64  47  /etc/phpmyadmin/config.inc.php
+-'  1  0  /etc/phpmyadmin/config.inc.php
+-'  9  0  /etc/phpmyadmin/apache.conf
+-'  1  0  /etc/phpmyadmin/apache.conf
+-'  263  0  /etc/apache2/apache2.conf
+-'  1  0  /etc/apache2/apache2.conf
+-'  1  0  etc/apache2/apache2.conf
+-'  10  0  NERD_tree_2
+-'  14  2  NERD_tree_2
+-'  1  0  NERD_tree_2
+-'  14  2  NERD_tree_1
+-'  1  0  NERD_tree_1
+-'  23  1  NERD_tree_2
+-'  27  2  NERD_tree_2
+-'  27  2  NERD_tree_1
+-'  64  47  /etc/phpmyadmin/config.inc.php
+-'  1  0  /etc/phpmyadmin/config.inc.php
+-'  9  0  /etc/phpmyadmin/apache.conf
+-'  1  0  /etc/phpmyadmin/apache.conf
+-'  263  0  /etc/apache2/apache2.conf
+-'  104  8  ~/webshop/contact.php
+-'  100  29  ~/webshop/contact.php
+-'  1  0  ~/webshop/contact.php
 
 # History of marks within files (newest to oldest):
 
+> ~/.bash_aliases
+	"	7	29
+	^	7	29
+	.	7	28
+	+	1	10
+	+	1	13
+	+	1	10
+	+	1	10
+	+	1	39
+	+	1	0
+	+	1	21
+	+	5	1
+	+	6	34
+	+	6	32
+	+	6	8
+	+	6	35
+	+	20	0
+	+	1	0
+	+	1	0
+	+	10	15
+	+	5	0
+	+	8	9
+	+	9	15
+	+	10	0
+	+	9	0
+	+	10	0
+	+	9	0
+	+	9	0
+	+	1	53
+	+	3	0
+	+	13	26
+	+	9	15
+	+	7	0
+	+	8	0
+	+	6	34
+	+	10	0
+	+	10	6
+	+	10	22
+	+	10	0
+	+	10	10
+	+	12	48
+	+	12	0
+	+	15	30
+	+	12	81
+	+	1	0
+	+	12	16
+	+	6	22
+	+	20	22
+	+	20	25
+	+	16	8
+	+	16	8
+	+	20	0
+	+	16	8
+	+	16	8
+	+	6	30
+	+	6	0
+	+	6	30
+	+	16	30
+	+	5	17
+	+	6	16
+	+	6	17
+	+	6	16
+	+	9	15
+	+	12	0
+	+	18	37
+	+	18	49
+	+	6	0
+	+	13	0
+	+	9	15
+	+	6	59
+	+	9	15
+	+	6	37
+	+	7	0
+	+	6	37
+	+	15	47
+	+	15	0
+	+	15	0
+	+	6	41
+	+	12	0
+	+	18	0
+	+	20	28
+	+	20	0
+	+	9	14
+	+	6	0
+	+	8	48
+	+	9	0
+	+	10	0
+	+	12	0
+	+	13	0
+	+	15	0
+	+	16	0
+	+	18	0
+	+	20	0
+	+	21	0
+	+	24	0
+	+	11	39
+	+	23	38
+	+	22	66
+	+	23	32
+	+	20	24
+	+	21	16
+	+	7	28
+
+> ~/dotfiles/.git/COMMIT_EDITMSG
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/dotfiles/rename.sh
+	"	1	33
+	^	1	34
+	.	1	33
+	+	4	59
+	+	3	55
+	+	1	33
+
+> ~/rename.sh
+	"	15	13
+	^	15	14
+	.	15	13
+	+	8	31
+	+	4	20
+	+	5	0
+	+	8	8
+	+	4	18
+	+	8	19
+	+	12	3
+	+	5	36
+	+	8	12
+	+	12	0
+	+	28	9
+	+	28	8
+	+	6	27
+	+	10	0
+	+	9	0
+	+	10	26
+	+	11	0
+	+	7	0
+	+	2	5
+	+	1	6
+	+	4	8
+	+	5	0
+	+	28	4
+	+	3	12
+	+	16	4
+	+	18	0
+	+	24	12
+	+	28	12
+	+	27	56
+	+	28	0
+	+	13	0
+	+	15	13
+
+> ~/webshop/.git/COMMIT_EDITMSG
+	"	1	30
+	^	1	31
+	.	1	30
+	+	1	29
+	+	7	6
+	+	1	34
+	+	4	46
+	+	1	30
+
+> ~/webshop/contact.php
+	"	104	8
+	^	100	30
+	.	100	29
+	+	21	17
+	+	21	0
+	+	78	35
+	+	78	43
+	+	78	37
+	+	21	15
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	78	56
+	+	78	45
+	+	104	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	32
+	+	21	0
+	+	104	32
+	+	78	19
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	78	0
+	+	78	0
+	+	104	31
+	+	104	44
+	+	104	57
+	+	104	70
+	+	104	0
+	+	104	0
+	+	78	0
+	+	76	0
+	+	78	0
+	+	22	0
+	+	104	0
+	+	73	82
+	+	106	0
+	+	104	42
+	+	77	43
+	+	78	0
+	+	103	21
+	+	77	43
+	+	80	46
+	+	83	29
+	+	86	36
+	+	83	41
+	+	51	70
+	+	31	50
+	+	37	81
+	+	31	51
+	+	41	61
+	+	47	64
+	+	104	0
+	+	102	30
+	+	91	0
+	+	102	16
+	+	96	20
+	+	94	47
+	+	96	23
+	+	94	47
+	+	93	0
+	+	92	74
+	+	93	40
+	+	103	0
+	+	89	0
+	+	92	0
+	+	91	31
+	+	92	24
+	+	94	48
+	+	96	0
+	+	95	117
+	+	101	0
+	+	92	26
+	+	91	0
+	+	92	72
+	+	31	52
+	+	92	51
+	+	93	0
+	+	99	106
+	+	99	48
+	+	95	80
+	+	101	0
+	+	99	81
+	+	99	52
+	+	99	69
+	+	99	81
+	+	99	81
+	+	100	29
+
+> ~/webshop/style/mainsheet.css
+	"	140	17
+	^	140	18
+	.	140	17
+	+	77	1
+	+	78	0
+	+	115	0
+	+	139	20
+	+	145	0
+	+	141	0
+	+	145	0
+	+	185	20
+	+	186	35
+	+	187	1
+	+	105	27
+	+	110	18
+	+	129	21
+	+	135	0
+	+	144	4
+	+	140	17
+
+> /etc/apache2/apache2.conf
+	"	263	0
+	.	264	0
+	+	57	45
+	+	119	2
+	+	148	27
+	+	165	27
+	+	185	70
+	+	186	24
+	+	264	33
+	+	264	0
+
+> NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> NERD_tree_2
+	"	10	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> etc/apache2/apache2.conf
+	"	1	0
+
+> /etc/phpmyadmin/config.inc.php
+	"	64	47
+	^	64	48
+	.	64	47
+	+	64	47
+
+> /etc/phpmyadmin/apache.conf
+	"	9	0
+
+> /etc/pulse/default.pa
+	"	53	48
+	^	53	49
+	.	53	48
+	+	53	48
+
+> /etc/pulse/client.conf
+	"	1	0
+
+> /etc/pulse/daemon.conf
+	"	1	0
+
+> ~/webshop/.git/MERGE_MSG
+	"	1	0
+
+> ~/webshop/account.php
+	"	1	0
+
+> ~/webshop/header.php
+	"	1	0
+
+> ~/webshop/index.php
+	"	1	0
+
+> ~/webshop/klanten.php
+	"	1	0
+
+> ~/webshop/producten.php
+	"	1	0
+
+> ~/webshop/verzonden.php
+	"	1	0
+
+> ~/webshop/zoeken.php
+	"	1	0
+
+> ~/webshop/admin/adminfacturen.php
+	"	1	0
+
+> ~/webshop/admin/adminheader.php
+	"	1	0
+
+> ~/webshop/admin/adminindex.php
+	"	1	0
+	^	31	80
+	.	31	80
+	+	34	32
+	+	34	0
+	+	25	43
+	+	27	42
+	+	26	50
+	+	33	0
+	+	33	32
+	+	33	0
+	+	32	0
+	+	33	0
+	+	31	80
+
+> ~/webshop/admin/adminklanten.php
+	"	1	0
+
+> ~/webshop/admin/adminproducten.php
+	"	1	0
+
+> ~/test.html
+	"	4	7
+	^	4	8
+	.	5	0
+	+	1	17
+	+	1	0
+	+	5	0
+
+> ~/webshop/adminindex.php
+	"	31	32
+	^	18	30
+	.	19	32
+	+	13	27
+	+	18	31
+	+	18	39
+	+	34	15
+	+	21	26
+	+	33	25
+	+	19	42
+	+	20	43
+	+	32	22
+	+	23	24
+	+	32	0
+	+	31	0
+	+	32	32
+	+	32	32
+	+	32	32
+	+	32	32
+	+	32	0
+	+	32	61
+	+	32	61
+	+	31	29
+	+	28	33
+	+	28	0
+	+	29	0
+	+	30	0
+	+	32	0
+	+	32	32
+	+	32	32
+	+	32	32
+	+	32	32
+	+	32	32
+	+	32	32
+	+	32	32
+	+	32	32
+	+	32	0
+	+	28	0
+	+	25	0
+	+	26	27
+	+	25	0
+	+	9	67
+	+	19	36
+	+	18	25
+	+	19	32
+
+> ~/webshop/adminfacturen.php
+	"	9	67
+	^	9	68
+	.	9	67
+	+	19	0
+	+	9	67
+
+> ~/webshop/adminheader.php
+	"	4	0
+	^	4	27
+	.	11	59
+	+	16	0
+	+	9	52
+	+	10	52
+	+	11	52
+	+	4	26
+	+	16	0
+	+	11	59
+
+> ~/webshop/adminklanten.php
+	"	9	67
+	^	9	68
+	.	9	67
+	+	6	24
+	+	17	22
+	+	19	0
+	+	9	67
+
+> ~/webshop/adminproducten.php
+	"	9	67
+	^	9	68
+	.	9	67
+	+	19	0
+	+	9	68
+	+	13	27
+	+	6	29
+	+	17	25
+	+	9	67
+
+> ~/webshop/style/adminsheet.css
+	"	1	0
+	^	86	20
+	.	89	0
+	+	80	0
+	+	83	16
+	+	82	18
+	+	84	21
+	+	85	22
+	+	85	21
+	+	86	18
+	+	87	14
+	+	89	0
+	+	86	26
+	+	88	0
+	+	86	15
+	+	85	0
+	+	82	12
+	+	85	0
+	+	86	17
+	+	86	0
+	+	85	22
+	+	17	0
+	+	85	0
+	+	86	21
+	+	48	5
+	+	86	16
+	+	89	0
+
+> ~/webshop/adminheader
+	"	1	0
+
+> ~/webshop/adminfactures.php
+	"	17	24
+	^	17	25
+	.	17	24
+	+	19	0
+	+	19	0
+	+	13	27
+	+	6	29
+	+	17	24
+
+> ~/webshop/adminIndex.php
+	"	10	10
+	^	9	64
+	.	9	63
+	+	16	37
+	+	16	23
+	+	20	0
+	+	20	0
+	+	17	34
+	+	17	26
+	+	17	34
+	+	19	11
+	+	19	0
+	+	17	33
+	+	19	19
+	+	4	0
+	+	6	0
+	+	8	0
+	+	10	0
+	+	11	0
+	+	15	0
+	+	16	0
+	+	17	0
+	+	19	0
+	+	21	0
+	+	19	0
+	+	17	0
+	+	13	27
+	+	19	29
+	+	13	27
+	+	18	0
+	+	22	0
+	+	9	63
+
+> /etc/fstab
+	"	11	0
+	.	12	0
+	+	13	0
+	+	12	99
+	+	12	17
+	+	12	0
+
+> ~/webshop/adminProducten.php
+	"	13	27
+	^	13	28
+	.	13	28
+	+	13	28
+
+> ~/webshop/admin_index.php
+	"	17	26
+	^	17	27
+	.	17	27
+	+	17	27
+
+> ~/webshop/admin_header.php
+	"	11	53
+	^	9	53
+	.	11	53
+	+	4	21
+	+	9	70
+	+	10	66
+	+	11	68
+	+	12	0
+	+	11	61
+	+	10	52
+	+	11	47
+	+	9	52
+	+	15	0
+	+	16	0
+	+	10	53
+	+	11	53
+
+> ~/webshop/admin.php
+	"	13	22
+	^	13	28
+	.	13	22
+	+	1	1
+	+	6	41
+	+	13	22
+
+> /var/www/index.html
+	"	1	3
+	^	1	4
+	.	1	3
+	+	4	3
+	+	1	3
+
+> /var/www/.git/COMMIT_EDITMSG
+	"	1	6
+	^	1	7
+	.	1	7
+	+	1	7
+
+> /var/www/style/mainsheet.css
+	"	1	0
+
+> /var/www/index.php
+	"	26	0
+
+> /etc/apache2/sites-available/webdb
+	"	11	25
+	^	9	0
+	.	9	0
+	+	4	18
+	+	4	55
+	+	5	0
+	+	11	0
+	+	12	18
+	+	13	12
+	+	15	0
+	+	14	5
+	+	15	27
+	+	2	0
+	+	15	7
+	+	5	38
+	+	3	0
+	+	15	0
+	+	14	12
+	+	5	0
+	+	4	57
+	+	14	8
+	+	13	23
+	+	12	25
+	+	9	0
+
+> /var/tmp/default.XXuO5r6I
+	"	1	0
+
+> /etc/apache2/sites-available/default
+	"	11	25
+	.	13	8
+	+	2	0
+	+	13	8
+
+> /etc/apache2/httpd.conf
+	"	2	17
+	^	2	18
+	.	2	17
+	+	2	17
+
+> /etc/hosts
+	"	2	16
+	^	2	17
+	.	2	16
+	+	4	0
+	+	2	16
+
+> /etc/apache2/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> /etc/apache2/NERD_tree_2
+	"	7	0
+	.	1	0
+	+	1	0
+
 > ~/.vimrc
-	"	24	26
-	.	20	32
+	"	115	0
+	^	115	0
+	.	115	0
 	+	37	18
 	+	37	0
-	+	38	0
+	+	39	0
 	+	37	26
 	+	37	0
 	+	1	0
@@ -437,7 +1174,7 @@ $\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$",
 	+	29	26
 	+	37	0
 	+	2	0
-	+	36	0
+	+	35	0
 	+	60	59
 	+	61	56
 	+	70	0
@@ -492,6 +1229,86 @@ $\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$",
 	+	14	0
 	+	21	41
 	+	20	32
+	+	65	56
+	+	55	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	66	47
+	+	36	0
+	+	30	0
+	+	38	0
+	+	32	0
+	+	33	0
+	+	34	0
+	+	35	0
+	+	31	0
+	+	32	0
+	+	33	0
+	+	34	0
+	+	35	0
+	+	35	0
+	+	115	36
+	+	114	0
+	+	113	81
+	+	115	0
+
+> ~/Dropbox/uva/webdb/public_html/index.php
+	"	1	0
+
+> /etc/default/apport
+	"	4	8
+	^	4	9
+	.	4	8
+	+	4	8
+
+> ~/.newsbeuter/urls
+	"	5	0
+	^	5	0
+	.	4	124
+	+	1	40
+	+	6	0
+	+	4	124
+
+> ~/Downloads/test.html
+	"	1	0
+
+> /usr/share/vim/vim73/doc/options.txt
+	"	929	41
+	m	4387	0
+
+> /usr/share/vim/vim73/doc/editing.txt
+	"	950	28
+
+> /usr/share/vim/vim73/doc/os_vms.txt
+	"	60	0
+
+> ~/Downloads/sparkup-20091205/vim/test.html
+	"	1	4
+	^	1	5
+	.	1	5
+	+	1	2
+	+	1	5
+
+> ~/Downloads/sparkup-20091205/vim/test.htmk
+	"	1	0
+
+> ~/.vim/test.html
+	"	1	2
+	^	1	3
+	.	1	2
+	+	1	2
+
+> ~/.vim/[Vundle] Installer
+	"	13	0
+	.	1	0
+	+	30	0
+	+	16	0
+	+	1	0
+
+> /tmp/vRx8dxg/12
+	"	57	0
 
 > ~/.vim/bundle/Syntastic/doc/syntastic.txt
 	"	108	0
@@ -611,10 +1428,6 @@ $\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$",
 
 > /usr/share/vim/vim73/doc/motion.txt
 	"	359	15
-
-> /usr/share/vim/vim73/doc/options.txt
-	"	4467	31
-	m	4387	0
 
 > /usr/share/vim/vim73/doc/eval.txt
 	"	2352	28
@@ -922,800 +1735,9 @@ $\=s:ProcessLine(1, submatch(0), "\\V\\^\\(\\s\\{-}\\)\" \\?\\(\\_.\\{-}\\)\\$",
 > ~/.vimr
 	"	1	0
 
-> ~/.bash_aliases
-	"	35	0
-	.	36	0
-	+	1	10
-	+	1	13
-	+	1	10
-	+	1	10
-	+	1	39
-	+	1	0
-	+	1	21
-	+	5	1
-	+	6	34
-	+	6	32
-	+	7	8
-	+	7	35
-	+	36	0
-	+	1	0
-	+	1	0
-	+	14	15
-	+	5	0
-	+	10	9
-	+	11	15
-	+	14	0
-	+	12	0
-	+	14	0
-	+	13	0
-	+	11	0
-	+	1	53
-	+	3	0
-	+	21	26
-	+	11	15
-	+	9	0
-	+	10	0
-	+	7	34
-	+	15	0
-	+	15	6
-	+	14	22
-	+	15	0
-	+	14	10
-	+	17	48
-	+	18	0
-	+	24	30
-	+	17	81
-	+	1	0
-	+	17	16
-	+	7	22
-	+	36	22
-	+	36	25
-	+	27	8
-	+	28	8
-	+	36	0
-	+	28	8
-	+	27	8
-	+	6	30
-	+	7	0
-	+	6	30
-	+	28	30
-	+	5	17
-	+	6	16
-	+	6	17
-	+	6	16
-	+	11	15
-	+	17	0
-	+	31	37
-	+	32	49
-	+	6	0
-	+	20	0
-	+	11	15
-	+	8	59
-	+	11	15
-	+	6	37
-	+	9	0
-	+	6	37
-	+	26	47
-	+	26	0
-	+	26	0
-	+	6	41
-	+	17	0
-	+	32	0
-	+	35	28
-	+	36	0
-
 > ~/Dropbox/uva/pt/javascript/NERD_tree_3
 	"	4	0
 	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/javascript/[Vundle] Installer
-	"	13	0
-	.	1	0
-	+	60	0
-	+	49	0
-	+	37	0
-	+	25	0
-	+	13	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/javascript/[Vundle] clean
-	"	2	0
-	.	1	0
-	+	1	0
-
-> ~/.viminfo
-	"	1	0
-
-> /tmp/v5XBpHf/1
-	"	2	0
-
-> ~/Dropbox/uva/pt/.git/COMMIT_EDITMSG
-	"	2	0
-	^	1	14
-	.	1	13
-	+	1	0
-	+	1	0
-	+	1	12
-	+	1	48
-	+	1	15
-	+	1	22
-	+	1	32
-	+	1	0
-	+	1	0
-	+	1	16
-	+	1	72
-	+	1	13
-
-> ~/NERD_tree_1
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/NERD_tree_2
-	"	25	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/NERD_tree_7
-	"	4	0
-	.	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/javascript/[Vundle] search
-	"	3	0
-	.	1	0
-	+	4	0
-	+	1	0
-
-> /usr/share/vim/vim73/doc/index.txt
-	"	538	52
-
-> /usr/share/vim/vim73/doc/recover.txt
-	"	84	56
-
-> /usr/share/vim/vim73/doc/undo.txt
-	"	34	22
-
-> ~/Desktop/waypoints
-	"	2	0
-
-> ~/Dropbox/uva/pt/javascript/testprograms/test.js
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/javascript/testprograms/test.html
-	"	1	0
-	^	3	31
-	.	1	0
-	+	9	21
-	+	9	20
-	+	9	0
-	+	9	0
-	+	9	9
-	+	9	0
-	+	9	0
-	+	9	8
-	+	9	0
-	+	9	0
-	+	9	0
-	+	9	0
-	+	9	15
-	+	9	17
-	+	9	17
-	+	9	18
-	+	9	16
-	+	9	17
-	+	9	0
-	+	9	13
-	+	9	0
-	+	9	0
-	+	9	20
-	+	9	0
-	+	9	0
-	+	9	21
-	+	9	27
-	+	9	0
-	+	1	41
-	+	1	0
-
-> ~/Dropbox/uva/pt/javascript/testprograms/[Vundle] list
-	"	3	0
-	.	1	0
-	+	1	0
-
-> ~/.vim/bundle/vim-fugitive/doc/fugitive.txt
-	"	11	30
-
-> ~/Dropbox/uva/pt/javascript/testprograms/[Vundle] Installer
-	"	7	0
-	.	1	0
-	+	1	0
-
-> ~/.vim/bundle/vim-easymotion/doc/easymotion.txt
-	"	83	40
-
-> ~/Dropbox/uva/pt/javascript/testprograms/[Vundle] search
-	"	3	0
-	.	1	0
-	+	1	0
-
-> /usr/share/vim/vim73/doc/netbeans.txt
-	"	918	48
-
-> ~/.vim/ftplugin/html/sparkup.vim
-	"	112	0
-
-> ~/.vim/ftplugin/html/sparkup.py
-	"	1	0
-
-> /usr/share/vim/vim73/doc/insert.txt
-	"	1854	0
-
-> ~/.bash_logo
-	"	3086	0
-
-> ~/.bash_lgoo
-	"	1	0
-
-> ~/Dropbox/uva/pt/erlang/boxes.
-	"	1	0
-
-> ~/Dropbox/uva/pt/erlang/NERD_tree_1
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/erlang/NERD_tree_2
-	"	8	0
-	.	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/doctor.beam
-	"	2	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/double.erl
-	"	5	0
-	.	7	0
-	+	8	4
-	+	8	0
-	+	8	0
-	+	8	0
-	+	7	14
-	+	7	0
-
-> ~/Dropbox/uva/pt/erlang/slitherlink.erl
-	"	1	0
-	o	1	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/roulette.erl
-	"	1	0
-	.	11	0
-	+	5	0
-	+	4	0
-	+	7	23
-	+	6	0
-	+	8	52
-	+	7	35
-	+	5	0
-	+	3	18
-	+	4	0
-	+	11	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/roulette.
-	"	1	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/tut.erl
-	"	1	11
-	^	12	0
-	.	1	11
-	+	17	9
-	+	17	10
-	+	20	0
-	+	19	12
-	+	1	27
-	+	1	35
-	+	1	28
-	+	1	14
-	+	14	33
-	+	8	0
-	+	5	0
-	+	3	0
-	+	6	0
-	+	9	0
-	+	12	0
-	+	1	11
-
-> ~/Dropbox/uva/pt/erlang/testprograms/yet_again.erl
-	"	13	15
-	^	9	1
-	.	11	21
-	+	12	0
-	+	14	28
-	+	13	6
-	+	14	25
-	+	14	14
-	+	13	15
-	+	14	15
-	+	14	30
-	+	4	18
-	+	14	0
-	+	6	0
-	+	7	0
-	+	2	9
-	+	9	0
-	+	10	0
-	+	11	0
-	+	4	0
-	+	3	9
-	+	7	20
-	+	11	21
-
-> ~/Dropbox/uva/pt/erlang/testprograms/doctor.erl
-	"	1	0
-	.	12	0
-	+	12	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/coroner.erl
-	"	1	0
-	.	5	0
-	+	5	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/translate.erl
-	"	6	29
-	^	6	30
-	.	6	29
-	+	10	0
-	+	6	29
-
-> ~/Dropbox/uva/ip/.git/COMMIT_EDITMSG
-	"	2	0
-	^	1	36
-	.	1	35
-	+	1	35
-
-> ~/Dropbox/uva/ip/README.md
-	"	4	21
-	^	4	22
-	.	4	22
-	+	2	0
-	+	3	0
-	+	1	22
-	+	4	22
-
-> ~/Dropbox/uva/pt/erlang/testprograms/yet_again.
-	"	1	0
-
-> ~/Dropbox/uva/tutoraat/.git/COMMIT_EDITMSG
-	"	1	9
-	^	1	10
-	.	1	9
-	+	1	18
-	+	2	0
-	+	1	28
-	+	2	0
-	+	1	9
-
-> ~/Dropbox/uva/tutoraat/README.md
-	"	4	0
-	^	4	8
-	.	4	0
-	+	5	0
-	+	4	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/NERD_tree_1
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/NERD_tree_2
-	"	15	2
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/README.md
-	"	1	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/translate_service.erl
-	"	2	0
-
-> ~/Dropbox/uva/pt/erlang/testprograms/basic.erl
-	"	1	0
-
-> ~/Dropbox/uva/pt/prolog/deel3.pl
-	"	88	0
-	^	88	57
-	.	84	40
-	+	21	25
-	+	66	0
-	+	64	9
-	+	68	26
-	+	63	0
-	+	64	0
-	+	21	56
-	+	23	1
-	+	21	7
-	+	23	9
-	+	24	62
-	+	25	22
-	+	26	16
-	+	29	0
-	+	24	13
-	+	84	55
-	+	11	0
-	+	83	6
-	+	81	9
-	+	79	9
-	+	77	9
-	+	75	9
-	+	73	9
-	+	84	13
-	+	11	0
-	+	8	0
-	+	5	0
-	+	8	0
-	+	4	0
-	+	3	0
-	+	2	0
-	+	25	85
-	+	23	11
-	+	23	73
-	+	21	75
-	+	21	75
-	+	21	8
-	+	24	0
-	+	8	0
-	+	7	38
-	+	6	47
-	+	7	53
-	+	15	0
-	+	19	0
-	+	21	8
-	+	21	65
-	+	23	15
-	+	21	16
-	+	25	20
-	+	26	0
-	+	29	0
-	+	29	0
-	+	30	0
-	+	28	0
-	+	27	0
-	+	30	0
-	+	28	46
-	+	32	67
-	+	31	0
-	+	36	0
-	+	35	31
-	+	39	0
-	+	39	0
-	+	38	51
-	+	40	37
-	+	44	0
-	+	43	56
-	+	19	48
-	+	15	67
-	+	7	54
-	+	43	0
-	+	45	26
-	+	49	0
-	+	49	0
-	+	51	47
-	+	49	41
-	+	54	1
-	+	57	0
-	+	54	18
-	+	56	20
-	+	60	0
-	+	61	0
-	+	58	0
-	+	61	0
-	+	62	0
-	+	59	36
-	+	64	18
-	+	66	0
-	+	68	19
-	+	72	12
-	+	75	0
-	+	77	0
-	+	79	0
-	+	81	0
-	+	33	0
-	+	88	12
-	+	86	11
-	+	88	51
-	+	86	20
-	+	84	40
-	a	21	8
-
-> ~/Dropbox/uva/pt/.gitignore
-	"	12	5
-	^	12	6
-	.	12	5
-	+	25	4
-	+	12	5
-
-> ~/.bash_alias
-	"	1	0
-
-> ~/Downloads/bookmarks_11_10_13.html
-	"	56	0
-
-> ~/Dropbox/uva/pt/prolog/deel2.pl
-	"	72	21
-	^	23	105
-	.	24	0
-	+	7	0
-	+	18	0
-	+	19	0
-	+	18	2
-	+	23	104
-	+	73	0
-	+	7	0
-	+	66	32
-	+	2	0
-	+	24	21
-	+	25	0
-	+	26	21
-	+	24	0
-
-> ~/Dropbox/uva/pt/prolog/deel1.tex
-	"	26	0
-	^	25	72
-	.	25	71
-	+	19	62
-	+	12	29
-	+	18	34
-	+	15	17
-	+	17	62
-	+	7	12
-	+	6	21
-	+	17	60
-	+	18	1
-	+	21	68
-	+	18	0
-	+	17	59
-	+	23	0
-	+	23	0
-	+	25	28
-	+	25	0
-	+	25	133
-	+	21	0
-	+	23	101
-	+	27	0
-	+	5	8
-	+	25	36
-	+	25	20
-	+	25	59
-	+	25	58
-	+	19	47
-	+	23	29
-	+	19	47
-	+	23	22
-	+	25	20
-	+	23	21
-	+	24	60
-	+	25	61
-	+	25	14
-	+	25	30
-	+	25	32
-	+	17	57
-	+	4	14
-	+	23	105
-	+	23	0
-	+	23	73
-	+	23	0
-	+	23	0
-	+	19	57
-	+	23	0
-	+	24	0
-	+	22	0
-	+	25	0
-	+	25	134
-	+	22	91
-	+	22	0
-	+	22	94
-	+	19	58
-	+	22	92
-	+	25	0
-	+	25	126
-	+	19	0
-	+	22	0
-	+	25	0
-	+	25	0
-	+	25	125
-	+	22	7
-	+	22	100
-	+	22	4
-	+	25	5
-	+	25	133
-	+	19	42
-	+	22	75
-	+	24	0
-	+	19	38
-	+	12	0
-	+	15	11
-	+	5	0
-	+	2	25
-	+	3	0
-	+	3	0
-	+	1	23
-	+	19	56
-	+	1	19
-	+	12	0
-	+	25	0
-	+	17	49
-	+	25	71
-
-> ~/Dropbox/uva/pt/prolog/NERD_tree_1
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/prolog/NERD_tree_2
-	"	13	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/prolog/NERD_tree_3
-	"	14	0
-	.	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/prolog/NERD_tree_4
-	"	13	0
-	.	1	0
-	+	1	0
-
-> ~/Dropbox/uva/pt/prolog/deel2.BAK.pl
-	"	23	0
-	.	23	0
-	+	23	0
-
-> ~/Dropbox/uva/pt/prolog/deel2.pl.BAK
-	"	3	0
-
-> ~/Dropbox/uva/pt/prolog/deel1.pdf
-	"	1	0
-
-> ~/Dropbox/uva/pt/prolog/deel.tex
-	"	1	0
-
-> ~/Dropbox/uva/pt/prolog/testprograms/natural_language.pl
-	"	19	0
-	^	11	59
-	.	11	58
-	+	17	0
-	+	21	0
-	+	24	0
-	+	27	0
-	+	16	0
-	+	36	0
-	+	18	46
-	+	14	58
-	+	44	52
-	+	22	80
-	+	20	20
-	+	5	0
-	+	4	11
-	+	3	1
-	+	8	2
-	+	6	0
-	+	5	0
-	+	4	3
-	+	3	2
-	+	2	0
-	+	1	0
-	+	3	0
-	+	4	4
-	+	3	3
-	+	1	0
-	+	3	0
-	+	1	2
-	+	2	1
-	+	3	1
-	+	4	1
-	+	5	2
-	+	3	4
-	+	4	4
-	+	1	2
-	+	43	9
-	+	46	9
-	+	72	0
-	+	74	0
-	+	10	0
-	+	12	26
-	+	11	58
-
-> ~/Dropbox/uva/pt/prolog/testprograms/NERD_tree_1
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
 	+	1	0
 	+	1	0
 	+	1	0
