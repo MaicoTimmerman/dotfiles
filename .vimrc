@@ -62,7 +62,9 @@ set visualbell                  " don't beep
 set noerrorbells                " don't beep
 set laststatus=2                " always show the statusbar.
 set t_Co=256                    " set color scheme to 256
-command W w                     " use W to (w)rite aswell
+command W w                     " use W to (w)rite
+command Wq wq                   " use W to (w)rite(q)uit
+command DelTrailing %s/\s\+$//  " command to delete trailing whitespace
 set nobackup                    " set no backups
 
 
