@@ -1,0 +1,28 @@
+[user]
+    name = Maico Timmerman
+    email = maico.timmerman@gmail.com
+[credential]
+    helper = cache
+[core]
+    autocrlf = input
+    editor = vim
+[push]
+    default = simple
+[color]
+    ui = true
+[color "branch"]
+    current = red bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+[diff]
+    tool = vimdiff
