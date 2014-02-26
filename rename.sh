@@ -1,5 +1,8 @@
+#! /bin/bash
+#
 # Rename script by Maico Timmerman
 # ~/rename.sh
+#
 # Usage:
 # rename.sh $1 $2 check the regex expressions $1 and $2.
 # rename.sh -x $1 $2 rename all files using the given regex.
