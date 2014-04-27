@@ -123,5 +123,5 @@ cl() {
     fi
 }
 
-# cat .bash_logo
 export MALLOC_CHECK=3
+shopt -s autocd

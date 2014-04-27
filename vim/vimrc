@@ -4,11 +4,14 @@
 set nocompatible                " must be first
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
+au BufWritePost vimrc so ~/.vimrc
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
-" required!
 Bundle 'gmarik/vundle'
 
 " Installed Bundles
@@ -24,7 +27,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'msanders/snipmate.vim'
 Bundle 'tComment'
 Bundle 'bling/vim-airline'
 " Change the powerline icons to the correct terms.
@@ -33,13 +35,11 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-
+let g:airline#extensions#tabline#enabled = 1
 set ttimeoutlen=50              " Stop the delay in airline when leaving insertmode.
-Bundle 'dag/vim2hs'
-Bundle 'sparkup'
 
-" Sparkup, very easy html programming
-" in ~/.vim/ftplugin
+call vundle#end()
+
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set autoindent                  " After an eol use the previously used indention
 set ruler                       " display the current cursor position in bottomleft
