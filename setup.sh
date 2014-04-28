@@ -28,12 +28,12 @@ sleep 2
 vim
 
 # Setup Symlinks for all files
-ln -s $PWD/bash/bashrc $ORIGINAL_BASHRC
-ln -s $PWD/bash/bash_aliases $ORIGINAL_BASHALIASES
-ln -s $PWD/bash/dircolors $ORIGINAL_DIRCOLORS
-ln -s $PWD/bash/profile $ORIGINAL_PROFILE
-ln -s $PWD/git/gitconfig $ORIGINAL_GITCONFIG
-ln -s $PWD/vim/vimrc $ORIGINAL_VIMRC
+ln -sf $PWD/bash/bashrc $ORIGINAL_BASHRC
+ln -sf $PWD/bash/bash_aliases $ORIGINAL_BASHALIASES
+ln -sf $PWD/bash/dircolors $ORIGINAL_DIRCOLORS
+ln -sf $PWD/bash/profile $ORIGINAL_PROFILE
+ln -sf $PWD/git/gitconfig $ORIGINAL_GITCONFIG
+ln -sf $PWD/vim/vimrc $ORIGINAL_VIMRC
 
 # Install the newest updates for already installed packages
 sudo apt-get --yes --force-yes upgrade
@@ -63,7 +63,7 @@ sudo apt-get --yes install \
     vim git tig htop synapse google-chrome-stable gparted skype audacity powertop zip xclip vlc \
     valgrind unrar unzip ipython python3 qalculate openssh-server newsbeuter keepass2 imagemagick \
     lxappearance compizconfig-settings-manager pipelight-multi dropbox oracle-java8-installer \
-    google-talkplugin
+    google-talkplugin shutter cheese
 
 wget -q -O - http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-1.2.tar.gz | tar zxvf
 sudo python picard-1.2/setup.py install
