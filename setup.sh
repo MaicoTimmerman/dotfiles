@@ -9,7 +9,7 @@ ORIGINAL_PROFILE=$HOME/.profile
 ORIGINAL_GITCONFIG=$HOME/.gitconfig
 ORIGINAL_VIMRC=$HOME/.vimrc
 PACKAGES=(
-    vim git tig htop synapse google-chrome-stable gparted skype audacity powertop zip xclip vlc \
+    vim git tig tree htop synapse google-chrome-stable gparted skype audacity powertop zip xclip vlc \
     valgrind unrar unzip ipython python3 qalculate openssh-server newsbeuter keepass2 imagemagick \
     lxappearance compizconfig-settings-manager pipelight-multi dropbox oracle-java8-installer \
     google-talkplugin shutter cheese
