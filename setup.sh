@@ -26,13 +26,6 @@ $ORIGINAL_GITCONFIG \
 $ORIGINAL_VIMRC \
 $BACKUP_DIR
 
-# Setup Vundle for vim
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-echo 'Run :BundleInstall inside vim'
-sleep 2
-vim
-
 # Setup Symlinks for all files
 ln -sf $PWD/bash/bashrc $ORIGINAL_BASHRC
 ln -sf $PWD/bash/bash_aliases $ORIGINAL_BASHALIASES
@@ -71,6 +64,13 @@ wget -q -O - http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-1.2.tar.gz
 sudo python picard-1.2/setup.py install
 
 sudo pipelight-plugin --enable silverlight
+
+# Setup Vundle for vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+echo 'Run :BundleInstall inside vim'
+sleep 2
+vim
 
 echo 'Do you want all LaTeX packages?'
 sudo apt-get install \
