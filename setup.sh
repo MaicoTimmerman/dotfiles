@@ -8,6 +8,12 @@ ORIGINAL_DIRCOLORS=$HOME/.dircolors
 ORIGINAL_PROFILE=$HOME/.profile
 ORIGINAL_GITCONFIG=$HOME/.gitconfig
 ORIGINAL_VIMRC=$HOME/.vimrc
+PACKAGES=(
+    vim git tig htop synapse google-chrome-stable gparted skype audacity powertop zip xclip vlc \
+    valgrind unrar unzip ipython python3 qalculate openssh-server newsbeuter keepass2 imagemagick \
+    lxappearance compizconfig-settings-manager pipelight-multi dropbox oracle-java8-installer \
+    google-talkplugin shutter cheese
+)
 
 #Move all original rc files to a backup dir.
 mkdir -p $BACKUP_DIR
@@ -59,13 +65,9 @@ sudo sh -c 'echo "deb http://linux.dropbox.com/ubuntu/ trusty main" >> /etc/apt/
 sudo add-apt-repository ppa:webupd8team/java
 
 sudo apt-get update
-sudo apt-get --yes install \
-    vim git tig htop synapse google-chrome-stable gparted skype audacity powertop zip xclip vlc \
-    valgrind unrar unzip ipython python3 qalculate openssh-server newsbeuter keepass2 imagemagick \
-    lxappearance compizconfig-settings-manager pipelight-multi dropbox oracle-java8-installer \
-    google-talkplugin shutter cheese
+sudo apt-get --yes --force-yes install ${PACKAGES[@]}
 
-wget -q -O - http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-1.2.tar.gz | tar zxvf
+wget -q -O - http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-1.2.tar.gz | tar zxvf -
 sudo python picard-1.2/setup.py install
 
 sudo pipelight-plugin --enable silverlight
