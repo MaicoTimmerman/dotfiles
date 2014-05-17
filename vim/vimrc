@@ -52,7 +52,7 @@ set tabstop=4                   " Number of spaces that a <tab> counts for.
 set softtabstop=4               " Number of spaces that a <tab> counts for.
 set expandtab                   " Use number of spaces for <tab>
 set shiftwidth=4                " Number of spaces for 'cindent', >>, << and autoindent
-set number                      " Adds the linenumber infront of the line
+set relativenumber                      " Adds the linenumber infront of the line
 set showmatch                   " Show matching bracket
 set hidden                      " Hides current buffer on opening a new file instead of closing
 set history=1000                " remember more commands and search history
@@ -84,7 +84,6 @@ if has('autocmd')
         autocmd FileType *.md setlocal textwidth=118
         autocmd FileType *.txt setlocal textwidth=118
         autocmd FileType *.tex setlocal textwidth=118
-        autocmd FileType text setlocal textwidth=118
     augroup END
 
     " Automatically remove all trailing whitespace from the file before

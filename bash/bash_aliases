@@ -1,15 +1,21 @@
 #Maico timmerman alias ~/.bash_aliases file for user
 #User specific aliases and functions
 
+# alias to edit all aliases and automatically load them in
+# after editting.
+alias aliases="vim ~/.bash_aliases; source ~/.bash_aliases"
+
 #cd aliases
 alias cduva="cd ~/Dropbox/uva/"
 alias cdcv="cd ~/Dropbox/Curriculum\ Vitea"
 alias cdos="cd ~/Dropbox/uva/os"
 alias cdaft="cd ~/Dropbox/uva/aft/"
 alias cdata="cd /media/maico/DATA/"
-alias cdscheduling="cd ~/Dropbox/uva/os/assignments/assignment2/linux-64"
+alias cdisam="cd ~/Dropbox/uva/os/assignments/assignment3"
+alias cdreview="cd ~/Dropbox/uva/tutoraat/blok5"
 alias hacker="cd /home/maico/Dropbox/hacker.org"
 
+# More aliases!
 alias ls="ls -h --color=auto"
 alias clearl="clear;ll"
 alias xclip="xclip -selection clipboard"
