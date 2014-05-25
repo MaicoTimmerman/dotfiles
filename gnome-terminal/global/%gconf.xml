@@ -2,8 +2,8 @@
 <gconf>
 	<entry name="use_mnemonics" mtime="1389532379" type="bool" value="false"/>
 	<entry name="use_menu_accelerators" mtime="1389532379" type="bool" value="false"/>
-	<entry name="default_profile" mtime="1390333329" type="string">
-		<stringvalue>Default</stringvalue>
+	<entry name="default_profile" mtime="1400586130" type="string">
+		<stringvalue>Profile0</stringvalue>
 	</entry>
 	<entry name="profile_list" mtime="1390333329" type="list" ltype="string">
 		<li type="string">

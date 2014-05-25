@@ -20,6 +20,7 @@ let g:syntastic_warning_symbol='⚠⚠'
 let g:syntastic_style_warning_symbol='⚠⚠'
 let g:syntastic_check_on_open=1
 Plugin 'scrooloose/nerdtree'
+map <F7> :NERDTreeToggle<CR>
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'Lokaltog/vim-easymotion'
@@ -34,8 +35,11 @@ let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
 set ttimeoutlen=50              " Stop the delay in airline when leaving insertmode.
 
-call vundle#end()
+Plugin 'majutsushi/tagbar'
+map <F8> :Tagbar<CR>
+highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
 
+call vundle#end()
 
 if exists('+colorcolumn')
     set colorcolumn=120             " Make the 120th colomn red
@@ -81,9 +85,9 @@ if has('autocmd')
     " For all text files set 'textwidth' to 78 characters.
     augroup SetWrapperForTextFiles
         au!
-        autocmd FileType *.md setlocal textwidth=118
-        autocmd FileType *.txt setlocal textwidth=118
-        autocmd FileType *.tex setlocal textwidth=118
+        au BufRead,BufNewFile *.md set tw=80
+        au BufRead,BufNewFile *.txt set tw=80
+        au BufRead,BufNewFile *.tex set tw=80
     augroup END
 
     " Automatically remove all trailing whitespace from the file before
@@ -92,6 +96,7 @@ if has('autocmd')
         au!
         autocmd BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
     augroup END
+
     augroup ReloadVimrcOnSave
         au!
         " automatically reload vimrc when it's saved
@@ -107,12 +112,10 @@ nnoremap <CR> :noh<CR><CR>
 "ignore *.ext files
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.so,*.a,*.lib,*.obj
 
-" Set the color of the ColorColomn to
 highlight ColorColumn ctermbg=DarkGray
-" Set the color of the line number color to Grey
 highlight LineNr ctermbg=Black
-" Set the SignColumn bg to Black
 highlight SignColumn ctermbg=black
+highlight Search term=reverse cterm=bold
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -131,4 +134,4 @@ filetype plugin indent on
 " " bang (!) is required since we are overwriting the DiffText setting. The
 " highlighting for Todo also looks nice (yellow) if you don't like the MatchParent
 " colors.
-highlight! link DiffText MatchParen
+" highlight! link DiffText MatchParen
