@@ -39,6 +39,8 @@ Plugin 'majutsushi/tagbar'
 map <F8> :Tagbar<CR>
 highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
 
+Plugin 'othree/html5.vim'
+
 call vundle#end()
 
 if exists('+colorcolumn')

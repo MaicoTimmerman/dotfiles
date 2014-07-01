@@ -28,4 +28,5 @@ alias gitcommit="git commit -a"
 alias gitcp="git commit .;git push"
 alias html="google-chrome"
 alias uvavpn='sudo /usr/local/nc/ncsvc -h uvavpn.uva.nl -u 10542590 -r users -f /usr/local/nc/certificaat-uvavpn.der'
-alias androidstudio='/home/maico/Downloads/android-studio/bin/studio.sh'
+
+alias ndkcompile="/home/maico/Downloads/android-ndk-r9d/ndk-build"
