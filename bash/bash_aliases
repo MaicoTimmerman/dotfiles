@@ -6,14 +6,12 @@
 alias aliases="vim ~/.bash_aliases; source ~/.bash_aliases"
 
 #cd aliases
-alias cduva="cd ~/Dropbox/uva/"
-alias cdcv="cd ~/Dropbox/Curriculum\ Vitea"
-alias cdos="cd ~/Dropbox/uva/os"
-alias cdaft="cd ~/Dropbox/uva/aft/"
+alias cduva="cd /media/maico/DATA/Dropbox/uva/"
+alias cdcv="cd /media/maico/DATA/Curriculum\ Vitea"
+alias cdics="cd /media/maico/DATA/Dropbox/uva/ics"
+alias cdaft="cd /media/maico/DATA/Dropbox/uva/aft/"
 alias cdata="cd /media/maico/DATA/"
-alias cdisam="cd ~/Dropbox/uva/os/assignments/assignment3"
-alias cdreview="cd ~/Dropbox/uva/tutoraat/blok5/review"
-alias hacker="cd /home/maico/Dropbox/hacker.org"
+alias hacker="cd /media/maico/DATA/hacker.org"
 
 # More aliases!
 alias ls="ls -h --color=auto"
@@ -28,5 +26,4 @@ alias gitcommit="git commit -a"
 alias gitcp="git commit .;git push"
 alias html="google-chrome"
 alias uvavpn='sudo /usr/local/nc/ncsvc -h uvavpn.uva.nl -u 10542590 -r users -f /usr/local/nc/certificaat-uvavpn.der'
-
 alias ndkcompile="/home/maico/Downloads/android-ndk-r9d/ndk-build"

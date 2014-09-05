@@ -11,10 +11,7 @@ ORIGINAL_VIMRC=$HOME/.vimrc
 ORIGINAL_GNOME_TERMINAL=$HOME/.gconf/apps/gnome-terminal
 ORIGINAL_FONTS=$HOME/.fonts
 PACKAGES=(
-    vim git tig tree htop synapse google-chrome-stable gparted skype audacity powertop zip xclip vlc \
-    valgrind unrar unzip ipython python3 qalculate openssh-server newsbeuter keepass2 imagemagick \
-    lxappearance compizconfig-settings-manager pipelight-multi dropbox oracle-java8-installer \
-    google-talkplugin shutter cheese
+    vim git tig tree htop synapse google-chrome-stable gparted skype audacity powertop zip xclip vlc valgrind unrar unzip ipython python3 qalculate openssh-server newsbeuter keepass2 imagemagick lxappearance compizconfig-settings-manager pipelight-multi dropbox oracle-java8-installer google-talkplugin shutter cheese keepassx ctags python3-numpy nmap python-appindicator ntfs-3g
 )
 
 #Move all original rc files to a backup dir.
@@ -80,9 +77,9 @@ fi
 
 sudo apt-get update
 
-for item in ${PACKAGES[*]}
+for i in "${PACKAGES[@]}"
 do
-    sudo apt-get --yes --force-yes install $ITEM
+    sudo apt-get --yes --force-yes install $i
 done
 
 sudo pipelight-plugin --enable silverlight
