@@ -53,12 +53,10 @@ set ruler                       " display the current cursor position in bottoml
 set showcmd                     " display incomplete commands
 set history=50                  " keep 50 commands 50 patterns in the history
 set incsearch                   " do incremental searching
-set smartindent                 " Do smart autoindenting when starting a new line.
 set tabstop=4                   " Number of spaces that a <tab> counts for.
 set softtabstop=4               " Number of spaces that a <tab> counts for.
 set expandtab                   " Use number of spaces for <tab>
 set shiftwidth=4                " Number of spaces for 'cindent', >>, << and autoindent
-set relativenumber                      " Adds the linenumber infront of the line
 set showmatch                   " Show matching bracket
 set hidden                      " Hides current buffer on opening a new file instead of closing
 set history=1000                " remember more commands and search history
@@ -69,6 +67,7 @@ set noerrorbells                " don't beep
 set laststatus=2                " always show the statusbar.
 set t_Co=256                    " set color scheme to 256
 set nobackup                    " set no backups
+set number                      " set line numbers
 
 if !exists(":W")
     command W w                     " use W to (w)rite
