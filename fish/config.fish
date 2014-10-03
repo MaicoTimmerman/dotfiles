@@ -3,8 +3,8 @@ set fish_path $HOME/.oh-my-fish
 
 # Theme
 # set fish_theme agnoster
-set fish_theme ocean
-# set fish_theme bobthefish
+# set fish_theme ocean
+set fish_theme custom_theme
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
