@@ -1,0 +1,232 @@
+# i3 config file (v4)
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+# Modifier key is Meta(Windows key)
+set $mod Mod4
+
+# Script locations
+set $i3lock /home/maico/.i3/i3lock.sh
+
+# Workspace names
+set $ws1 1:alpha
+set $ws2 2:beta
+set $ws3 3:gamma
+set $ws4 4:delta
+set $ws5 5:epsilon
+set $ws6 6:zeta
+set $ws7 7:eta
+set $ws8 8:theta
+set $ws9 9:lota
+set $ws10 10:kappa
+
+# Floating rules
+set $floating_class "MPlayer|Galculator|Gsimplecal|Viewnior|Alarm-clock|Skype|xpad|Java|Clamtk|Blueman-manager|Spotify|File-roller|Lxappearance|Nitrogen|Arandr|Caffeine|Pavucontrol|emulator64-arm|Transmission-gtk|sublime-text"
+set $floating_title "Preferences|Xfce-notifyd|TrueCrypt|Catfish|Google Keep|Pocket|irssi|Xarchiver"
+set $floating_title_center "Unlock Login Keyring"
+#
+#####
+# Startup programs
+#####
+
+exec --no-startup-id xautolock -time 10 -locker '$i3lock lock'
+exec --no-startup-id nm-applet
+exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id redshift-gtk -l 52.3:4.9 -m randr -t 6500:4800
+exec google-chrome
+exec --no-startup-id numlockx on
+assign [window_role="browser"] $ws3
+
+#####
+# Fn key combinations
+#####
+
+# Support for volume keys in i3
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 -- +5% && killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -- -5% && killall -SIGUSR1 i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle && killall -SIGUSR1 i3status
+
+# Start screen settings with fn+display
+bindsym XF86Display exec arandr
+
+# Start sleep with Fn+F4
+bindsym XF86Sleep exec --no-startup-id $i3lock suspend
+
+# Use scrot for screenshots
+bindsym --release Print exec "scrot '%Y-%m-%d-%R_$wx$h.png' -e 'mv $f ~/Pictures'"
+bindsym --release Shift+Print exec "scrot -s '%Y-%m-%d-%R_$wx$h.png' -e 'mv $f ~/Pictures'"
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below. ISO 10646 = Unicode
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# The font above is very space-efficient, that is, it looks good, sharp and
+# clear in small sizes. However, if you need a lot of unicode glyphs or
+# right-to-left text rendering, you should instead use pango for rendering and
+# chose a FreeType font, such as:
+# font pango:DejaVu Sans Mono 10
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run -p run: -nb black
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# toggle the split direction
+bindsym $mod+semicolon layout toggle split
+
+# Split direction for current window
+bindsym $mod+v split vertical
+bindsym $mod+b split horizontal
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# Set workspace names
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Spawn floating
+for_window [class=$floating_class] floating enable
+for_window [title=$floating_class] floating enable
+for_window [title=$floating_title_center] floating enable,move absolute center
+
+# Special editions
+for_window [class="xpad" instance="scratchpad"] move scratchpad
+for_window [title="File Operation Progress" class="Thunar"] floating enable
+for_window [title="Share a link on Twitter - Mozilla Firefox" class="Firefox"] floating enable
+for_window [title="Press This - Mozilla Firefox" class="Firefox"] floating enable
+for_window [title="TeamViewer|Computers & Contacts"] floating enable
+for_window [window_role="pop-up"] floating enable,move absolute center
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# System mode for system operations
+set $mode_system System (l) lock, (Shift+e) logout, (s) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
+
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $i3lock lock; mode "default"
+    bindsym s exec --no-startup-id $i3lock suspend, mode "default"
+    bindsym Shift+e exec --no-startup-id $i3lock logout, mode "default"
+    bindsym Shift+h exec --no-startup-id $i3lock hibernate, mode "default"
+    bindsym Shift+r exec --no-startup-id $i3lock reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id $i3lock poweroff, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "$mode_system"
+
+# Start i3bar to display a workspace bar (plus the system information i3status # finds out, if available)
+bar {
+    status_command python3.4 /home/maico/.i3/i3status.py
+    workspace_buttons yes
+    position top
+}
+
+# Storage for usefull things
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"

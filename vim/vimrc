@@ -48,6 +48,7 @@ if exists('+colorcolumn')
 end
 
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set shell=bash
 set autoindent                  " After an eol use the previously used indention
 set ruler                       " display the current cursor position in bottomleft
 set showcmd                     " display incomplete commands
