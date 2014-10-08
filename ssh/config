@@ -1,0 +1,11 @@
+host via_git
+    hostname ada.svia.nl
+    identityfile ~/.ssh/id_rsa
+    user git
+    port 40
+
+host via
+    hostname ada.svia.nl
+    identityfile ~/.ssh/id_rsa
+    user maico
+    port 40
