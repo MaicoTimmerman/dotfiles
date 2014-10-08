@@ -40,6 +40,8 @@ map <F8> :Tagbar<CR>
 highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
 
 Plugin 'othree/html5.vim'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
@@ -50,6 +52,7 @@ end
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set shell=bash
 set autoindent                  " After an eol use the previously used indention
+" set smartindent
 set ruler                       " display the current cursor position in bottomleft
 set showcmd                     " display incomplete commands
 set history=50                  " keep 50 commands 50 patterns in the history
@@ -98,14 +101,6 @@ if has('autocmd')
         au!
         autocmd BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
     augroup END
-
-    augroup ReloadVimrcOnSave
-        au!
-        " automatically reload vimrc when it's saved
-        au BufWritePost .vimrc so ~/.vimrc | AirlineRefresh
-        au BufWritePost vimrc so ~/.vimrc | AirlineRefresh
-    augroup END
-
 endif
 
 " Set escape to remove highlighting
