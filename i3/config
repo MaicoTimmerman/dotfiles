@@ -34,8 +34,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id redshift-gtk -l 52.3:4.9 -m randr -t 6500:4800
 exec google-chrome
+exec keepass2
 exec --no-startup-id numlockx on
 assign [window_role="browser"] $ws3
+assign [class="keepass2"] $ws9
 
 #####
 # Fn key combinations
