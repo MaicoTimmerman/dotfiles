@@ -18,5 +18,5 @@ set -g theme display_user yes
 set -g default_user maico
 
 # Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
-. $HOME/dotfiles/fish/aliases.fish
+source $fish_path/oh-my-fish.fish
+source $HOME/dotfiles/fish/aliases.fish

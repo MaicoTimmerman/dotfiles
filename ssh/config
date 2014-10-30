@@ -9,3 +9,8 @@ host via
     identityfile ~/.ssh/id_rsa
     user maico
     port 40
+
+host das4
+    hostname fs2.das4.science.uva.nl
+    user cpp1426
+    identityfile ~/.ssh/id_rsa

@@ -49,6 +49,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'dag/vim-fish'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'suxpert/vimcaps'
+Plugin 'PProvost/vim-ps1'
 
 " Syntax plugins
 Plugin 'hynek/vim-python-pep8-indent'
@@ -66,7 +68,7 @@ Plugin 'digitaltoad/vim-jade'
 call vundle#end()
 
 if exists('+colorcolumn')
-    set colorcolumn=80             " Mark the 100 colomn
+    set colorcolumn=80             " Mark the 80 colomn
 end
 
 if &shell =~# 'fish$'
@@ -127,9 +129,9 @@ if has('autocmd')
     " For all text files set 'textwidth' to 78 characters.
     augroup SetWrapperForTextFiles
         au!
-        au BufRead,BufNewFile *.md set tw=80 spell
-        au BufRead,BufNewFile *.txt set tw=80 spell
-        au BufRead,BufNewFile *.tex set tw=80 spell
+        au BufRead,BufNewFile *.md setlocal tw=80 spell
+        au BufRead,BufNewFile *.txt setlocal tw=80 spell
+        au BufRead,BufNewFile *.tex setlocal tw=80 spell
     augroup END
 
     " Automatically remove all trailing whitespace from the file before
