@@ -11,7 +11,6 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Installed Plugins
-Plugin 'tpope/vim-fugitive'
 
 " Syntax checker
 Plugin 'Syntastic'
@@ -49,7 +48,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'dag/vim-fish'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'suxpert/vimcaps'
 Plugin 'PProvost/vim-ps1'
 
 " Syntax plugins
@@ -62,8 +60,6 @@ Plugin 'groenewege/vim-less'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'syngan/vim-vimlint'
 Plugin 'ynkdir/vim-vimlparser'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'digitaltoad/vim-jade'
 
 call vundle#end()
 
@@ -117,6 +113,7 @@ if !exists(":W")
 
     " Set escape to remove highlighting
     nnoremap <silent><leader>/ :nohls <CR>
+    nnoremap ; :
 
     vnoremap < <gv
     vnoremap > >gv

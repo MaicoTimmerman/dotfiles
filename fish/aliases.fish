@@ -25,3 +25,4 @@ alias die="sudo poweroff"
 alias reboot="sudo reboot"
 alias html="google-chrome"
 alias uvavpn='sudo /usr/local/nc/ncsvc -h uvavpn.uva.nl -u 10542590 -r users -f /usr/local/nc/certificaat-uvavpn.der'
+alias ccat='pygmentize -g'
