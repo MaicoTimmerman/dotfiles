@@ -10,7 +10,17 @@ host via
     user maico
     port 40
 
-host das4
+host das4uva
     hostname fs2.das4.science.uva.nl
     user cpp1426
+    identityfile ~/.ssh/id_rsa
+
+host das4vu
+    hostname fs0.das4.cs.vu.nl
+    user cpp1426
+    identityfile ~/.ssh/id_rsa
+
+host ebicus_pcextreme
+    hostname ssh.pcextreme.nl
+    user ebicus-com
     identityfile ~/.ssh/id_rsa
