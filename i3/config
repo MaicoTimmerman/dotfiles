@@ -21,8 +21,8 @@ set $ws9 9:lota
 set $ws10 10:kappa
 
 # Floating rules
-set $floating_class "MPlayer|Galculator|Gsimplecal|Viewnior|Alarm-clock|Skype|xpad|Java|Clamtk|Blueman-manager|Spotify|File-roller|Lxappearance|Nitrogen|Arandr|Caffeine|Pavucontrol|emulator64-arm|Transmission-gtk|sublime-text"
-set $floating_title "Preferences|Xfce-notifyd|TrueCrypt|Catfish|Google Keep|Pocket|irssi|Xarchiver"
+set $floating_class "MPlayer|Galculator|Gsimplecal|Viewnior|Alarm-clock|Skype|xpad|Java|Clamtk|Blueman-manager|Spotify|File-roller|Lxappearance|Nitrogen|Arandr|Caffeine|Pavucontrol|emulator64-arm|Transmission-gtk"
+set $floating_title "Preferences|Xfce-notifyd|TrueCrypt|Catfish|Pocket|irssi|Xarchiver"
 set $floating_title_center "Unlock Login Keyring"
 #
 #####
@@ -33,12 +33,12 @@ exec --no-startup-id xautolock -time 10 -locker '$i3lock lock'
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id bumblebee-indicator
 exec --no-startup-id redshift-gtk -l 52.3:4.9 -m randr -t 6500:4800
 exec google-chrome
 exec keepass2
 exec --no-startup-id numlockx on
 assign [window_role="browser"] $ws3
-assign [class="keepass2"] $ws9
 
 #####
 # Fn key combinations
