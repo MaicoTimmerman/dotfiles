@@ -178,6 +178,8 @@ for_window [window_role="pop-up"] floating enable,move absolute center
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+# Lock i3
+bindsym $mod+u exec --no-startup-id $i3lock lock
 # exit i3 (logs you out of your X session)
 
 
@@ -208,10 +210,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # System mode for system operations
-set $mode_system System (l) lock, (Shift+e) logout, (s) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
+set $mode_system System (Shift+e) logout, (s) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $i3lock lock; mode "default"
     bindsym s exec --no-startup-id $i3lock suspend, mode "default"
     bindsym Shift+e exec --no-startup-id $i3lock logout, mode "default"
     bindsym Shift+h exec --no-startup-id $i3lock hibernate, mode "default"
