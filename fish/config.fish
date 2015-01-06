@@ -1,5 +1,5 @@
-# Path to your oh-my-fish.
-set fish_path $HOME/.oh-my-fish
+# Path to your custom oh-my-fish folder (default path is $FISH/custom)
+set fish_path /home/maico/dotfiles/oh-my-fish
 
 # Theme
 set fish_theme bobthefish
@@ -17,8 +17,6 @@ set -g theme_display_virtualenv no
 # Example format: set fish_plugins autojump bundler
 set fish_plugins git vundle
 
-# Path to your custom folder (default path is $FISH/custom)
-# set fish_custom $HOME/dotfiles/oh-my-fish
 
 set -g theme display_user yes
 set -g default_user maico
