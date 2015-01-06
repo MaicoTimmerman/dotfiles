@@ -2,9 +2,15 @@
 set fish_path $HOME/.oh-my-fish
 
 # Theme
-# set fish_theme agnoster
-# set fish_theme ocean
-set fish_theme custom_theme
+set fish_theme bobthefish
+
+# Env variables
+set TERMINAL urxvtc
+
+# theme settings
+set theme_display_user yes
+set -g theme_display_ruby no
+set -g theme_display_virtualenv no
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
@@ -20,4 +26,3 @@ set -g default_user maico
 # Load oh-my-fish configuration.
 source $fish_path/oh-my-fish.fish
 source $HOME/dotfiles/fish/aliases.fish
-
