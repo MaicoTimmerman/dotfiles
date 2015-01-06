@@ -1,7 +1,10 @@
 " SELF DEFINED VIM SETTINGS!
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-set nocompatible                " must be first
+
+" -------------- Plugins ---------
+" No need to behave in a strongly vi-compatible way
+set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -11,44 +14,19 @@ call vundle#begin()
 Plugin 'gmarik/vundle.vim'
 
 " Installed Plugins
-
-" Syntax checker
-Plugin 'Syntastic'
-
-scriptencoding utf-8
-let g:syntastic_error_symbol='✗✗'
-let g:syntastic_style_error_symbol='✗✗'
-let g:syntastic_warning_symbol='⚠⚠'
-let g:syntastic_style_warning_symbol='⚠⚠'
-let g:syntastic_check_on_open=1
-
-Plugin 'scrooloose/nerdtree'
-map <F7> :NERDTreeToggle<CR>
-
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tComment'
-
-Plugin 'bling/vim-airline'
-" Change the powerline icons to the correct terms.
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
-let g:airline#extensions#tabline#enabled = 1
-set ttimeoutlen=50              " Stop the delay in airline when leaving insertmode.
-
-Plugin 'majutsushi/tagbar'
-map <F8> :Tagbar<CR>
-highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
-
-Plugin 'airblade/vim-gitgutter'
-Plugin 'kien/ctrlp.vim'
+Plugin 'Syntastic' " Awesome syntax checker.
+Plugin 'scrooloose/nerdtree' " File tree manager (F7).
+Plugin 'tpope/vim-surround' " Surroud selections with anything.
+Plugin 'tpope/vim-repeat' " Support plugin repetition with `.`.
+Plugin 'Lokaltog/vim-easymotion' " Visually marked text object motion
+Plugin 'tComment' " Comment simplifier
+Plugin 'bling/vim-airline' " Statusbar
+Plugin 'majutsushi/tagbar' " Tagbar
+Plugin 'airblade/vim-gitgutter' " Show git diff inline while editting files
+Plugin 'kien/ctrlp.vim' " Fussy-Search file manager
 Plugin 'dag/vim-fish'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'terryma/vim-multiple-cursors' " Allows to work with multiple cursors
+Plugin 'Valloric/YouCompleteMe' " Amazing auto completion
 
 " Syntax plugins
 Plugin 'hynek/vim-python-pep8-indent'
@@ -58,11 +36,41 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
+filetype plugin indent on
+
+" Syntastic
+scriptencoding utf-8
+let g:syntastic_error_symbol='✗✗'
+let g:syntastic_style_error_symbol='✗✗'
+let g:syntastic_warning_symbol='⚠⚠'
+let g:syntastic_style_warning_symbol='⚠⚠'
+let g:syntastic_check_on_open=1
+
+" Nerdtree
+map <F7> :NERDTreeToggle<CR>
+
+" Airline
+let g:airline_powerline_fonts = 1 " Enable powerline icons.
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline#extensions#tabline#enabled = 1
+set ttimeoutlen=50 " Stop the delay in airline when leaving insertmode.
+
+" Tagbar
+map <F8> :Tagbar<CR>
+highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
+
+" -------------- Plugins ---------
 
 if exists('+colorcolumn')
     set colorcolumn=80             " Mark the 80 colomn
+else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 end
 
 if &shell =~# 'fish$'
@@ -95,8 +103,14 @@ set laststatus=2                " always show the statusbar.
 set t_Co=256                    " set color scheme to 256
 set nobackup                    " set no backups
 set number                      " set line numbers
+set hlsearch                    "
 
 let g:mapleader = ','
+
+" Set the solarized colorscheme with dark background cause its nice
+set background=dark
+syntax on
+colorscheme solarized
 
 if !exists(":W")
     command W w                     " use W to (w)rite
@@ -148,11 +162,51 @@ if has('autocmd')
         au!
         autocmd BufWritePost $MYVIMRC source $MYVIMRC
     augroup END
+
+    augroup JumpCursorOnEdit
+        au!
+        autocmd BufReadPost *
+        \ if expand("<afile>:p:h") !=? $TEMP |
+        \   if line("'\"") > 1 && line("'\"") <= line("$") |
+        \     let JumpCursorOnEdit_foo = line("'\"") |
+        \     let b:doopenfold = 1 |
+        \     if (foldlevel(JumpCursorOnEdit_foo) >
+        \               foldlevel(JumpCursorOnEdit_foo - 1)) |
+        \        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
+        \        let b:doopenfold = 2 |
+        \     endif |
+        \     exe JumpCursorOnEdit_foo |
+        \   endif |
+        \ endif
+
+        " Need to postpone using "zv" until after reading the modelines.
+        autocmd BufWinEnter *
+        \ if exists("b:doopenfold") |
+        \   exe "normal zv" |
+        \   if(b:doopenfold > 1) |
+        \       exe  "+".1 |
+        \   endif |
+        \   unlet b:doopenfold |
+        \ endif
+    augroup END
 endif
 
+if exists("+undofile")
+  " undofile - This allows you to use undos after exiting and restarting
+  " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
+  " :help undo-persistence
+  " This is only present in 7.3+
+  if isdirectory($HOME . '/.vim/undo') == 0
+    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+  endif
+  set undodir=./.vim-undo//
+  set undodir+=~/.vim/undo//
+  set undofile
+endif
 
-"ignore *.ext files
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.so,*.a,*.lib,*.obj,*.png,*.jpg,*.gif,*.dll,*.pdf
+" ignore *.ext files
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.so,*.a,
+            \*.lib,*.obj,*.png,*.jpg,*.gif,*.dll,*.pdf
 
 highlight ColorColumn ctermbg=DarkGray
 highlight LineNr ctermbg=Black
@@ -162,21 +216,8 @@ highlight Search term=reverse cterm=bold
 " Highlight merge conflict markers
 match Todo '\v^(\<|\=|\>){7}([^=].+)?$'
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-    syntax on
-    set hlsearch
-endif
-
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
 filetype plugin indent on
-
-" Fix the difficult-to-read default setting for diff text highlighting.  The
-" " bang (!) is required since we are overwriting the DiffText setting. The
-" highlighting for Todo also looks nice (yellow) if you don't like the MatchParent
-" colors.
-" highlight! link DiffText MatchParen
