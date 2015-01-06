@@ -17,7 +17,6 @@ set -g theme_display_virtualenv no
 # Example format: set fish_plugins autojump bundler
 set fish_plugins git vundle
 
-
 set -g theme display_user yes
 set -g default_user maico
 
