@@ -1,5 +1,4 @@
 # i3 config file (v4)
-#
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Modifier key is Meta(Windows key)
@@ -180,7 +179,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # Lock i3
-bindsym $mod+u exec --no-startup-id $i3lock lock
+bindsym $mod+Escape exec --no-startup-id $i3lock lock
 # exit i3 (logs you out of your X session)
 
 
