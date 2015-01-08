@@ -6,6 +6,7 @@ set fish_theme bobthefish
 
 # Env variables
 set TERMINAL urxvtc
+set FISH_CLIPBOARD_CMD "cat"
 
 # theme settings
 set theme_display_user yes
