@@ -1,12 +1,11 @@
-Xft*dpi: 96
-Xft*antialias: True
-Xft*hinting: Full
+Xft.dpi: 96
+Xft*antialias: true
+Xft*hinting: true
 
 ! Set fonts
-URxvt*font:xft:Ubuntu Mono derivative Powerline:size=11
-URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:bold:size=11
-URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:italic:size=11
-! URxvt*boldItalicFont: TODO
+URxvt*font:xft:Ubuntu Mono derivative Powerline:size=9
+URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:bold:size=9
+URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:italic:size=9
 
 ! Scrolling options
 URxvt*scrollBar: false
@@ -19,53 +18,41 @@ URxvt*urlLauncher: google-chrome
 
 ! Extra Options
 URxvt*cursorBlink: true
-URxvt*saveLines: 32767
+URxvt*saveLines: 65536
 URxvt*termName: rxvt
 URxvt*letterspace: -1
+URxvt.iso14755: False
 
 ! Perl extensions
+URxvt.perl-ext-common: default,clipboard,matcher
+
+! Open and highlight urls with the left mouse button
+URxvt.matcher.button: 1
+URxvt.url-launcher: google-chrome
+URxvt.colorUL: lightgreen
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.iso14755: False
-URxvt.perl-ext-common: default, clipboard
 
 ! Solarized colorscheme for Xresources/Xdefaults
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
-
-*background:            S_base03
-*foreground:            S_base00
+*background:            #002b36
+*foreground:            #657b83
 *fading:                40
-*fadeColor:             S_base03
-*cursorColor:           S_base1
-*pointerColorBackground:S_base01
-*pointerColorForeground:S_base1
-*color0:                S_base02
-*color8:                S_base03
-*color1:                S_red
-*color9:                S_orange
-*color2:                S_green
-*color10:               S_base01
-*color3:                S_yellow
-*color11:               S_base00
-*color4:                S_blue
-*color12:               S_base0
-*color5:                S_magenta
-*color13:               S_violet
-*color6:                S_cyan
-*color14:               S_base1
-*color7:                S_base2
-*color15:               S_base3
+*fadeColor:             #002b36
+*cursorColor:           #93a1a1
+*pointerColorBackground:#586e75
+*pointerColorForeground:#93a1a1
+*color0:                #073642
+*color8:                #002b36
+*color1:                #dc322f
+*color9:                #cb4b16
+*color2:                #859900
+*color10:               #586e75
+*color3:                #b58900
+*color11:               #657b83
+*color4:                #268bd2
+*color12:               #839496
+*color5:                #d33682
+*color13:               #6c71c4
+*color6:                #2aa198
+*color14:               #93a1a1
+*color7:                #eee8d5
+*color15:               #fdf6e3

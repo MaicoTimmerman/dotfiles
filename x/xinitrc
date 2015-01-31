@@ -1,2 +1,2 @@
 xmodmap ~/.Xmodmap
-xrdb -load ~/.Xresources
+xrdb -merge ~/.Xresources
