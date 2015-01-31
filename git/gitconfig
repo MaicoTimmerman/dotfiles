@@ -5,9 +5,14 @@
     helper = cache
 [core]
     autocrlf = input
+    excludesfile = ~/dotfiles/git/gitignore
     editor = vim
 [push]
     default = simple
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[help]
+    autocorrect = 1
 [color]
     ui = true
 [color "branch"]
