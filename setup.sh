@@ -27,12 +27,6 @@ $ORIGINAL_GNOME_TERMINAL \
 $ORIGINAL_FONTS \
 $BACKUP_DIR
 
-# Backup the gconftool2 settings
-gconftool-2 --dump "/apps/gnome-terminal" > $BACKUP_DIR/gconftool_gnome-terminal.xml
-
-# Setup the terminal settings
-gconftool-2 --load $PWD/gnome-terminal/gnome-terminal.xml
-
 # Setup Symlinks for all files
 ln -sf $PWD/bash/bashrc $ORIGINAL_BASHRC
 ln -sf $PWD/bash/bash_aliases $ORIGINAL_BASHALIASES
@@ -66,7 +60,7 @@ sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) pa
 # Java
 sudo add-apt-repository ppa:webupd8team/java
 
-# Pipeline
+# Pipelight
 sudo apt-add-repository ppa:pipelight/stable
 
 # Dropbox
