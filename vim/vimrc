@@ -103,6 +103,7 @@ set laststatus=2                " always show the statusbar.
 set t_Co=256                    " set color scheme to 256
 set nobackup                    " set no backups
 set number                      " set line numbers
+set cursorline                  " highlight current cursor line.
 set hlsearch                    "
 
 let g:mapleader = ','
@@ -132,8 +133,8 @@ if !exists(":W")
     vnoremap > >gv
 
     " Allow for blocks to be walked through the code
-    vnoremap J :m '>+1<CR>gv=gv
-    vnoremap K :m '<-2<CR>gv=gv
+    vnoremap <down> :m '>+1<CR>gv=gv
+    vnoremap <up> :m '<-2<CR>gv=gv
 
     " Jump to next/previous merge conflict marker
     nnoremap <silent> ]c /\v^(\<\|\=\|\>){7}([^=].+)?$<CR>
