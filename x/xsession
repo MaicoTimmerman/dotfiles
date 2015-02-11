@@ -1,0 +1,1 @@
+run_once "xbindkeys -f /home/maico/dotfiles/x/xbindrc"
