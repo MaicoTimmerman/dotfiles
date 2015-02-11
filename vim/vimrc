@@ -105,6 +105,7 @@ set nobackup                    " set no backups
 set number                      " set line numbers
 set cursorline                  " highlight current cursor line.
 set hlsearch                    "
+set mouse=a
 
 let g:mapleader = ','
 

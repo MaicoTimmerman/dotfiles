@@ -12,3 +12,9 @@ host ebicus_pcextreme
     hostname ssh.pcextreme.nl
     user ebicus-com
     identityfile ~/.ssh/id_rsa
+
+host raspbmc
+    hostname 192.168.0.102
+    user pi
+    identityfile ~/.ssh/id_rsa
+

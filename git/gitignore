@@ -3,6 +3,7 @@ Compiled source #
 *.com
 *.class
 *.pyc
+.ipynb_checkpoints/
 *.dll
 *.exe
 *.o
@@ -26,6 +27,7 @@ Compiled source #
 ###############
 
 *.aux
+*.pyg
 
 # Logs and databases #
 ######################
