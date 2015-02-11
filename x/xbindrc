@@ -1,0 +1,8 @@
+"capscr"
+    Print
+
+"amixer set Master 2%+"
+    XF86AudioRaiseVolume
+
+"amixer set Master 2%+"
+    XF86AudioRaiseVolume
