@@ -11,15 +11,19 @@ set FISH_CLIPBOARD_CMD "cat"
 # theme settings
 set theme_display_user yes
 set -g theme_display_ruby no
-set -g theme_display_virtualenv no
+
+# Don't show ugly venv
+set VIRTUAL_ENV_DISABLE_PROMPT yes
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
 # Example format: set fish_plugins autojump bundler
-set fish_plugins git vundle
+set fish_plugins git vundle git-flow gi msg jump
 
-set -g theme display_user yes
-set -g default_user maico
+set -g theme_display_user yes
+set -g default_user m
+
+# set -U fish_user_paths $fish_user_paths /...
 
 # Load oh-my-fish configuration.
 source $fish_path/oh-my-fish.fish
