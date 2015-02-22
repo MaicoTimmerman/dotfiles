@@ -31,3 +31,6 @@
     untracked = red bold
 [diff]
     tool = vimdiff
+    submodule = log
+[status]
+    submodulesummary = true
