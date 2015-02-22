@@ -9,34 +9,112 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+    " let Vundle manage Vundle
+    Plugin 'gmarik/vundle.vim'
 
-" let Vundle manage Vundle
-Plugin 'gmarik/vundle.vim'
+    " =================
+    " Installed Plugins
+    " =================
 
-" Installed Plugins
-Plugin 'Syntastic' " Awesome syntax checker.
-Plugin 'scrooloose/nerdtree' " File tree manager (F7).
-Plugin 'tpope/vim-surround' " Surroud selections with anything.
-Plugin 'tpope/vim-repeat' " Support plugin repetition with `.`.
-Plugin 'Lokaltog/vim-easymotion' " Visually marked text object motion
-Plugin 'tComment' " Comment simplifier
-Plugin 'bling/vim-airline' " Statusbar
-Plugin 'majutsushi/tagbar' " Tagbar
-Plugin 'airblade/vim-gitgutter' " Show git diff inline while editting files
-Plugin 'kien/ctrlp.vim' " Fussy-Search file manager
-Plugin 'dag/vim-fish'
-Plugin 'terryma/vim-multiple-cursors' " Allows to work with multiple cursors
-Plugin 'Valloric/YouCompleteMe' " Amazing auto completion
+    " Syntastic is a syntax checking plugin for Vim that runs files through
+    " external syntax checkers and displays any resulting errors to the user.
+    " This can be done on demand, or automatically as files are saved. If
+    " syntax errors are detected, the user is notified and is happy because
+    " they didn't have to compile their code or execute their script to find
+    " them.
+    Plugin 'Syntastic'
 
-" Syntax plugins
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'groenewege/vim-less'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'altercation/vim-colors-solarized'
+    " The NERD tree allows you to explore your filesystem and to open files
+    " and directories. It presents the filesystem to you in the form of a tree
+    " which you manipulate with the keyboard and/or mouse. It also allows you
+    " to perform simple filesystem operations.
+    Plugin 'scrooloose/nerdtree'
+
+    " Tagbar is a Vim plugin that provides an easy way to browse the tags of
+    " the current file and get an overview of its structure. It does this by
+    " creating a sidebar that displays the ctags-generated tags of the current
+    " file, ordered by their scope. This means that for example methods in C++
+    " are displayed under the class they are defined in.
+    Plugin 'majutsushi/tagbar'
+
+    " Surround.vim is all about 'surroundings': parentheses, brackets, quotes,
+    " XML tags, and more. The plugin provides mappings to easily delete,
+    " change and add such surroundings in pairs.
+    Plugin 'tpope/vim-surround'
+
+    " If you've ever tried using the . command after a plugin map, you were
+    " likely disappointed to discover it only repeated the last native command
+    " inside that map, rather than the map as a whole. That disappointment
+    " ends today. Repeat.vim remaps . in a way that plugins can tap into it.
+    Plugin 'tpope/vim-repeat' " Support plugin repetition with `.`.
+
+
+    " EasyMotion provides a much simpler way to use some motions in vim. It
+    " takes the <number> out of <number>w or <number>f{char} by highlighting
+    " all possible choices and allowing you to press one key to jump directly
+    " to the target.
+    Plugin 'Lokaltog/vim-easymotion' " Visually marked text object motion
+
+    " tcomment provides easy to use, file-type sensible comments for Vim. It
+    " can handle embedded syntax.  TComment works like a toggle, i.e., it will
+    " comment out text that contains uncommented lines, and it will remove
+    " comment markup for already commented text (i.e. text that contains no
+    " uncommented lines).
+    Plugin 'tComment'
+
+    " Airline, lean & mean status/tabline for vim that's light as air
+    Plugin 'bling/vim-airline' " Statusbar
+
+    " A Vim plugin which shows a git diff in the 'gutter' (sign column). It
+    " shows whether each line has been added, modified, and where lines have
+    " been removed. You can also stage and revert individual hunks.
+    Plugin 'airblade/vim-gitgutter' " Show git diff inline while editting files
+
+    " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+    Plugin 'kien/ctrlp.vim' " Fussy-Search file manager
+
+    " This is an addon for Vim providing support for editing fish scripts.
+    Plugin 'dag/vim-fish'
+
+    " There have been many attempts at bringing Sublime Text's awesome
+    " multiple selection feature into Vim, but none so far have been in my
+    " opinion a faithful port that is simplistic to use, yet powerful and
+    " intuitive enough for an existing Vim user. vim-multiple-cursors is yet
+    " another attempt at that.
+    Plugin 'terryma/vim-multiple-cursors'
+
+    " YouCompleteMe is a fast, as-you-type, fuzzy-search code completion
+    " engine for Vim. It has several completion engines: an identifier-based
+    " engine that works with every programming language, a semantic,
+    " Clang-based engine that provides native semantic code completion for
+    " C/C++/Objective-C/Objective-C++ (from now on referred to as "the
+    " C-family languages"), a Jedi-based completion engine for Python, an
+    " OmniSharp-based completion engine for C# and an omnifunc-based completer
+    " that uses data from Vim's omnicomplete system to provide semantic
+    " completions for many other languages (Ruby, PHP etc.).
+    Plugin 'Valloric/YouCompleteMe'
+
+    " This small script modifies vim’s indentation behavior to comply with PEP8
+    Plugin 'hynek/vim-python-pep8-indent'
+
+    " Add CSS3 syntax support to Vim's built-in syntax/css.vim.
+    Plugin 'hail2u/vim-css3-syntax'
+
+    " HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim.
+    " Based on the default htmlcomplete.vim.
+    Plugin 'othree/html5.vim'
+
+    " JavaScript bundle for vim, this bundle provides syntax and indent
+    " plugins.
+    Plugin 'pangloss/vim-javascript'
+
+    " Syntax highlighting, matching rules and mappings for the original
+    " Markdown and extensions.
+    Plugin 'plasticboy/vim-markdown'
+
+    " Solarized is a sixteen color palette (eight monotones, eight accent
+    " colors) designed for use with terminal and gui applications.
+    Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -52,7 +130,7 @@ let g:syntastic_check_on_open=1
 " Nerdtree
 map <F7> :NERDTreeToggle<CR>
 
-" Airline
+" Airline, lean & mean status/tabline for vim that's light as air
 let g:airline_powerline_fonts = 1 " Enable powerline icons.
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -66,11 +144,11 @@ map <F8> :Tagbar<CR>
 highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
 
 " -------------- Plugins ---------
-
+"
+" Mark the 80 colomn and everything past it.
 if exists('+colorcolumn')
-    set colorcolumn=80             " Mark the 80 colomn
-else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+    set colorcolumn=80
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
 end
 
 if &shell =~# 'fish$'
@@ -109,10 +187,17 @@ set mouse=a
 
 let g:mapleader = ','
 
-" Set the solarized colorscheme with dark background cause its nice
+" Set the solarized colorscheme with dark background
 set background=dark
 syntax on
 colorscheme solarized
+
+highlight ColorColumn ctermbg=DarkGray
+highlight SignColumn ctermbg=black
+highlight Search term=reverse cterm=bold
+
+" Highlight merge conflict markers
+match Todo '\v^(\<|\=|\>){7}([^=].+)?$'
 
 if !exists(":W")
     command W w                     " use W to (w)rite
@@ -141,57 +226,78 @@ if !exists(":W")
     nnoremap <silent> ]c /\v^(\<\|\=\|\>){7}([^=].+)?$<CR>
     nnoremap <silent> [c ?\v^(\<\|\=\|\>){7}([^=].+)\?$<CR>
 
+    " map j to gj and k to gk, so line navigation ignores line wrap
+    " ...but only if the count is undefined (otherwise, things like 4j
+    " break if wrapped LINES are present)
+    nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+    nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+    xnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+    xnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+
+    " Navigate splits more easily
+    nmap <C-h> <C-w>h
+    nmap <C-j> <C-w>j
+    nmap <C-k> <C-w>k
+    nmap <C-l> <C-w>l
+
 endif
 
-if has('autocmd')
+" For all text files set 'textwidth' to 78 characters.
+augroup SetWrapperForTextFiles
+    au!
+    au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt,tex} setlocal tw=80 spell
+augroup END
 
-    " For all text files set 'textwidth' to 78 characters.
-    augroup SetWrapperForTextFiles
-        au!
-        au BufRead,BufNewFile *.md setlocal tw=80 spell
-        au BufRead,BufNewFile *.txt setlocal tw=80 spell
-        au BufRead,BufNewFile *.tex setlocal tw=80 spell
-    augroup END
+augroup reload_vimrc
+    au!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
 
-    " Automatically remove all trailing whitespace from the file before
-    " saving.
-    augroup RemoveTrailingWhitespace
-        au!
-        autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
-    augroup END
+" Set spell checker in the git commit messages
+augroup GitCommit
+    au!
+    autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
+augroup END
 
-    augroup reload_vimrc
-        au!
-        autocmd BufWritePost $MYVIMRC source $MYVIMRC
-    augroup END
+augroup VimResized
+    au!
+    autocmd VimResized * :wincmd =
+augroup END
 
-    augroup JumpCursorOnEdit
-        au!
-        autocmd BufReadPost *
-        \ if expand("<afile>:p:h") !=? $TEMP |
-        \   if line("'\"") > 1 && line("'\"") <= line("$") |
-        \     let JumpCursorOnEdit_foo = line("'\"") |
-        \     let b:doopenfold = 1 |
-        \     if (foldlevel(JumpCursorOnEdit_foo) >
-        \               foldlevel(JumpCursorOnEdit_foo - 1)) |
-        \        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
-        \        let b:doopenfold = 2 |
-        \     endif |
-        \     exe JumpCursorOnEdit_foo |
-        \   endif |
-        \ endif
+" Automatically remove all trailing whitespace from the file before
+" saving.
+augroup RemoveTrailingWhitespace
+    au!
+    autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+augroup END
 
-        " Need to postpone using "zv" until after reading the modelines.
-        autocmd BufWinEnter *
-        \ if exists("b:doopenfold") |
-        \   exe "normal zv" |
-        \   if(b:doopenfold > 1) |
-        \       exe  "+".1 |
-        \   endif |
-        \   unlet b:doopenfold |
-        \ endif
-    augroup END
-endif
+" Go to remembered position in file if it's on a valid line number
+augroup JumpCursorOnEdit
+    au!
+    autocmd BufReadPost *
+    \ if expand("<afile>:p:h") !=? $TEMP |
+    \   if line("'\"") > 1 && line("'\"") <= line("$") |
+    \     let JumpCursorOnEdit_foo = line("'\"") |
+    \     let b:doopenfold = 1 |
+    \     if (foldlevel(JumpCursorOnEdit_foo) >
+    \               foldlevel(JumpCursorOnEdit_foo - 1)) |
+    \        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
+    \        let b:doopenfold = 2 |
+    \     endif |
+    \     exe JumpCursorOnEdit_foo |
+    \   endif |
+    \ endif
+
+    " Need to postpone using "zv" until after reading the modelines.
+    autocmd BufWinEnter *
+    \ if exists("b:doopenfold") |
+    \   exe "normal zv" |
+    \   if(b:doopenfold > 1) |
+    \       exe  "+".1 |
+    \   endif |
+    \   unlet b:doopenfold |
+    \ endif
+augroup END
 
 if exists("+undofile")
   " undofile - This allows you to use undos after exiting and restarting
@@ -209,14 +315,6 @@ endif
 " ignore *.ext files
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.so,*.a,
             \*.lib,*.obj,*.png,*.jpg,*.gif,*.dll,*.pdf
-
-highlight ColorColumn ctermbg=DarkGray
-highlight LineNr ctermbg=Black
-highlight SignColumn ctermbg=black
-highlight Search term=reverse cterm=bold
-
-" Highlight merge conflict markers
-match Todo '\v^(\<|\=|\>){7}([^=].+)?$'
 
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
