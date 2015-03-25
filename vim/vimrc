@@ -10,7 +10,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     " let Vundle manage Vundle
-    Plugin 'gmarik/vundle.vim'
+    Plugin 'gmarik/Vundle.vim'
 
     " =================
     " Installed Plugins
@@ -143,11 +143,15 @@ set ttimeoutlen=50 " Stop the delay in airline when leaving insertmode.
 map <F8> :Tagbar<CR>
 highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
 
+" Pymode
+let g:pymode_lint_options_mccabe = { 'complexity': 20 }
+
 " -------------- Plugins ---------
 "
 " Mark the 80 colomn and everything past it.
 if exists('+colorcolumn')
     set colorcolumn=80
+else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
 end
 
