@@ -6,6 +6,7 @@
 alias editalias="vim /home/maico/dotfiles/fish/aliases.fish; source /home/maico/dotfiles/fish/aliases.fish"
 alias editi3="vim /home/maico/.i3/config; i3-msg reload"
 alias editfish="vim /home/maico/dotfiles/fish/config.fish; source /home/maico/dotfiles/fish/config.fish"
+alias editvim="vim /home/maico/dotfiles/vim/vimrc;"
 
 #cd aliases
 alias ..="cd .."
@@ -24,3 +25,5 @@ alias reboot="sudo reboot"
 alias html="google-chrome"
 alias uvavpn='sudo /usr/local/nc/ncsvc -h uvavpn.uva.nl -u 10542590 -r users -f /usr/local/nc/certificaat-uvavpn.der'
 alias ccat='pygmentize -g'
+
+alias mountp="mount | column -t"
