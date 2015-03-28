@@ -34,7 +34,7 @@ def process_ing_csv(infile, outfile='/tmp/administratie.csv'):
                 amount = "-" + amount
             # Do str_replace to match google docs notation for amounts
             print(amount)
-            amount.replace(',', '.')  # FIXME: Replace , with .
+            amount = amount.replace(',', '.')
             print(amount)
 
             # If 'Mededelingen' contains 'Omschrijving', It is probally a
