@@ -116,6 +116,13 @@ call vundle#begin()
     " colors) designed for use with terminal and gui applications.
     Plugin 'altercation/vim-colors-solarized'
 
+
+    " Track the engine.
+    Plugin 'SirVer/ultisnips'
+
+    " Snippets are separated from the engine. Add this if you want them:
+    Plugin 'honza/vim-snippets'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -145,6 +152,7 @@ highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
 
 " Pymode
 let g:pymode_lint_options_mccabe = { 'complexity': 20 }
+
 
 " -------------- Plugins ---------
 "
@@ -237,6 +245,8 @@ if !exists(":W")
     nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
     xnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
     xnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+
+    inoremap # x<BS>#
 
     " Navigate splits more easily
     nmap <C-h> <C-w>h
