@@ -73,6 +73,14 @@ status.register(
     format_up="{interface}: {quality:03.0f}% [{essid}] {v4cidr}",
     format_down="{interface}",)
 
+status.register(
+    "network",
+    interface="tun0",
+    color_up=green,
+    color_down=red,
+    format_up="{interface}: {v4cidr}",
+    format_down="{interface}",
+    unknown_up=True,)
 # Shows disk usage of /media/maico/DATA
 # Format:
 # 42/128G [86G]
