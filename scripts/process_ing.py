@@ -19,7 +19,7 @@ def process_ing_csv(infile, outfile='/tmp/administratie.csv'):
 
     to_csv = []
 
-    with open('/home/maico/Documents/NL88INGB0001250318_01-01-2015_31-01-2015.csv', 'r') as csvfile:  # noqa
+    with open(infile, 'r') as csvfile:  # noqa
         csvreader = csv.DictReader(csvfile)
 
         for row in csvreader:
@@ -53,12 +53,13 @@ def process_ing_csv(infile, outfile='/tmp/administratie.csv'):
                 HEADERS[3]: amount,
             })
 
-    with open('/tmp/administratie.csv', 'w') as csvfile:
+    with open(outfile, 'w') as csvfile:
         fieldnames = [HEADERS[0], HEADERS[2], HEADERS[1], HEADERS[3]]
         csvwriter = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
         csvwriter.writeheader()
         csvwriter.writerows(to_csv)
+
     print('Written output to : "%s"' % outfile)
 
 
