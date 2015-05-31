@@ -196,6 +196,7 @@ set number                      " set line numbers
 set cursorline                  " highlight current cursor line.
 set hlsearch                    "
 set mouse=a
+set exrc
 
 let g:mapleader = ','
 
@@ -335,3 +336,4 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.so,*.a,
 " 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
 filetype plugin indent on
+set secure
