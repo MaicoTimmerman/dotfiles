@@ -16,6 +16,10 @@ status.register("clock",
 # Shows your CPU temperature, if you have a Intel CPU
 status.register("temp",
                 format="CPU: {temp:.0f}°C",)
+
+status.register("backlight",
+                format='☀{brightness}')
+
 # Shows pulseaudio default sink volume
 #
 # Note: requires libpulseaudio from PyPI
