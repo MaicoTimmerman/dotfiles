@@ -34,6 +34,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id bumblebee-indicator
 exec --no-startup-id workrave
+exec --no-startup-id workpulse
 exec --no-startup-id redshift-gtk -l 52.3:4.9 -m randr -t 6500:4800
 exec --no-startup-id urxvtd -q -o -f
 exec google-chrome
