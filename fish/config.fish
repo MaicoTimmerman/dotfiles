@@ -1,9 +1,6 @@
 # Path to your custom oh-my-fish folder (default path is $FISH/custom)
 set fish_path $HOME/dotfiles/oh-my-fish
 
-# Theme
-set fish_theme bobthefish
-
 # Env variables
 set -x TERMINAL urxvtc
 set -x EDITOR "urxvtc -e vim"
@@ -22,14 +19,19 @@ set -g theme_display_ruby no
 # Don't show ugly venv
 set VIRTUAL_ENV_DISABLE_PROMPT yes
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
-# Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
-# Example format: set fish_plugins autojump bundler
-set fish_plugins git vundle git-flow gi bundler jump
-
 # Used for defining PATH additions
 # set -U fish_user_paths $fish_user_paths /usr/bin/...
 
 # Load oh-my-fish configuration.
 source $fish_path/oh-my-fish.fish
 source $HOME/dotfiles/fish/aliases.fish
+
+# Theme
+Theme bobthefish
+
+# Plugins
+Plugin "vundle"
+Plugin "git-flow"
+Plugin "gi"
+Plugin "bundler"
+Plugin "jump"
