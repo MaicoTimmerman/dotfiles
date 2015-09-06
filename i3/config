@@ -29,7 +29,6 @@ set $floating_title_center "Unlock Login Keyring"
 #####
 
 exec --no-startup-id xautolock -time 10 -locker '$i3lock lock'
-exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id bumblebee-indicator
@@ -58,8 +57,8 @@ bindsym XF86Display exec arandr
 bindsym XF86Sleep exec --no-startup-id $i3lock suspend
 
 # Use scrot for screenshots
-bindsym --release Print exec "scrot '%Y-%m-%d-%R_$wx$h.png' -e 'mv $f ~/Pictures'"
-bindsym --release Shift+Print exec "scrot -s '%Y-%m-%d-%R_$wx$h.png' -e 'mv $f ~/Pictures'"
+bindsym --release Print exec "scrot '%F_%T_$wx$h.png' -e 'mv $f ~/Pictures/scrot'"
+bindsym --release Shift+Print exec "scrot -s '%F_%T_$wx$h.png' -e 'mv $f ~/Pictures/scrot'"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode

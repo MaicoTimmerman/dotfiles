@@ -116,12 +116,17 @@ call vundle#begin()
     " colors) designed for use with terminal and gui applications.
     Plugin 'altercation/vim-colors-solarized'
 
-
     " Track the engine.
     Plugin 'SirVer/ultisnips'
 
     " Snippets are separated from the engine. Add this if you want them:
     Plugin 'honza/vim-snippets'
+
+    " if you use Vundle, load plugins:
+    Bundle 'ervandew/supertab'
+
+    " Support for Jinja
+    Bundle 'Glench/Vim-Jinja2-Syntax'
 
 call vundle#end()
 filetype plugin indent on
@@ -152,6 +157,16 @@ highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
 
 " Pymode
 let g:pymode_lint_options_mccabe = { 'complexity': 20 }
+
+" make YCM compatible with UltiSnips (using Supertab)
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType='<C-n>'
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>" " better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
 " -------------- Plugins ---------
@@ -266,6 +281,12 @@ augroup END
 augroup reload_vimrc
     au!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
+
+augroup save_folds
+    au!
+    au BufWinLeave *.* mkview
+    au BufWinEnter *.* silent loadview
 augroup END
 
 " Set spell checker in the git commit messages
