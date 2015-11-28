@@ -1,9 +1,17 @@
 #!/bin/sh
 
+FILE=/tmp/screen_locked.png
+BLURTYPE="5x7"
+
+
 lock() {
-    scrot /tmp/screen_locked.png
-    mogrify -scale 5% -scale 2000% /tmp/screen_locked.png
-    i3lock -i /tmp/screen_locked.png
+
+    scrot $FILE
+    convert $FILE -level 0%,100%,0.6 -blur $BLURTYPE  -pointsize 12 -fill white -level -85% -gravity center -annotate +0+100 'This computer is locked!' - | composite -gravity center $HOME/dotfiles/i3/lock.png - $FILE
+
+    # mogrify -scale 5% -scale 2000% $FILE
+    i3lock -i $FILE
+    rm $FILE
 }
 
 case "$1" in

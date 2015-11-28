@@ -33,7 +33,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id bumblebee-indicator
 exec --no-startup-id workrave
-exec --no-startup-id workpulse
+exec --no-startup-id whatpulse
 exec --no-startup-id redshift-gtk -l 52.3:4.9 -m randr -t 6500:4800
 exec --no-startup-id urxvtd -q -o -f
 exec google-chrome
@@ -79,7 +79,8 @@ bindsym $mod+Return exec urxvtc
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -p run: -nb black
+exec --no-startup-id rofi -key-run mod4+d -key-ssh mod4+c
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.

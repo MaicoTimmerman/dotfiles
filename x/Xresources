@@ -32,6 +32,8 @@ URxvt.url-launcher: google-chrome
 URxvt.colorUL: lightgreen
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
+rofi.terminal: urxvtc
+
 ! Solarized colorscheme for Xresources/Xdefaults
 *background:            #002b36
 *foreground:            #657b83
