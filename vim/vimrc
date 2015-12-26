@@ -191,6 +191,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
+set breakindent
 
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set ruler                       " display the current cursor position in bottomleft
@@ -209,9 +210,12 @@ set t_Co=256                    " set color scheme to 256
 set nobackup                    " set no backups
 set number                      " set line numbers
 set cursorline                  " highlight current cursor line.
+set pastetoggle=<F2>            "
 set hlsearch                    "
 set mouse=a
 set exrc
+set ignorecase
+set smartcase
 
 let g:mapleader = ','
 
@@ -237,6 +241,15 @@ if !exists(":W")
     command Wqa wqa                 " ...
     command WQa wqa                 " ...
     command WQA wqa                 " ...
+
+    noremap <C-h> <C-w>h
+    noremap <C-j> <C-w>j
+    noremap <C-k> <C-w>k
+    noremap <C-l> <C-w>l
+    inoremap <C-h> <C-o><C-w>h
+    inoremap <C-j> <C-o><C-w>j
+    inoremap <C-k> <C-o><C-w>k
+    inoremap <C-l> <C-o><C-w>l
 
     " Set escape to remove highlighting
     nnoremap <silent><leader>/ :nohls <CR>
