@@ -16,6 +16,10 @@ set -g default_user m
 # Do not display the ruby part of the prompt
 set -g theme_display_ruby no
 
+# Folder location on the filesystem
+set -g sharedvmfolder "$HOME/VirtualBox VMs/Shared Media/mvtovm/"
+set -g scrotfolder "$HOME/Pictures/scrot"
+
 # Don't show ugly venv
 set VIRTUAL_ENV_DISABLE_PROMPT yes
 

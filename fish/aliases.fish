@@ -17,7 +17,7 @@ alias ......="cd ../../../.."
 
 # More aliases!
 alias ls="ls -h --color=auto"
-alias clearl="clear;ls"
+alias cl="clear;ls"
 alias xcopy="xclip -selection clipboard"
 alias poweroff="sudo poweroff"
 alias die="sudo poweroff"
@@ -25,5 +25,6 @@ alias reboot="sudo reboot"
 alias html="google-chrome"
 alias uvavpn='sudo /usr/local/nc/ncsvc -h uvavpn.uva.nl -u 10542590 -r users -f /usr/local/nc/certificaat-uvavpn.der'
 alias ccat='pygmentize -g'
+alias ip3='ipython3'
 
 alias mountp="mount | column -t"
