@@ -1,3 +1,6 @@
 [submodule "private_dotfiles"]
 	path = private_dotfiles
 	url = git@github.com:MaicoTimmerman/private_dotfiles.git
+[submodule "omf_dotfiles"]
+	path = fish/.local/share/omf
+	url = git@github.com:oh-my-fish/oh-my-fish.git
