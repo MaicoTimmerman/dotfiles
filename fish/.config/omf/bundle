@@ -1,0 +1,6 @@
+package bundler
+package gi
+package git-flow
+package vundle
+theme bobthefish
+theme default
