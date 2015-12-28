@@ -28,7 +28,7 @@ set VIRTUAL_ENV_DISABLE_PROMPT yes
 
 # Load oh-my-fish configuration.
 source $fish_path/oh-my-fish.fish
-source $HOME/dotfiles/fish/aliases.fish
+source $HOME/dotfiles/fish/.config/fish/aliases.fish
 
 # Theme
 Theme bobthefish
