@@ -1,9 +1,15 @@
+""" pdf_splitter.py
+
+Usage: python3 pdf_splitter.py splitablefile.pdf {page_nrs} {opt: newfilename}
+Example: python3 pdf_splitter splitablefile.pdf 3-11
+"""
 import os
 import re
 import sys
 
 
 def make_new_filename():
+    """Generate a new filename based on the existing files in the directory"""
     ptrn = re.compile('[0-9]{3}\.pdf$')
     filelist = os.listdir('.')
     files = [fname for fname in filelist if ptrn.match(fname)]
@@ -18,6 +24,7 @@ def make_new_filename():
 
 
 def extract(file_from, pages, file_to):
+    """Call pdftk to split the pages"""
     pages = ' '.join(pages.split(','))
 
     return os.system('pdftk %s cat %s output %s' % (file_from, pages, file_to))

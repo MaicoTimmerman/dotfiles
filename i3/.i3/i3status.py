@@ -25,7 +25,7 @@ status.register("backlight",
 # Note: requires libpulseaudio from PyPI
 status.register("pulseaudio",
                 format="♪{volume}",
-                format_muted="♪M")
+                format_muted="♪M{volume}")
 
 # The battery monitor has many formatting options, see README for details
 
