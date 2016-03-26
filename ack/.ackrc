@@ -1,0 +1,3 @@
+# Always color the output
+--color
+--ignore-dir=venv
