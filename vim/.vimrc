@@ -128,6 +128,10 @@ call vundle#begin()
     " Support for Jinja
     Bundle 'Glench/Vim-Jinja2-Syntax'
 
+    " incsearch.vim incrementally highlights ALL pattern matches unlike default
+    " 'incsearch'.
+    Bundle 'haya14busa/incsearch.vim'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -162,12 +166,16 @@ let g:pymode_lint_options_mccabe = { 'complexity': 20 }
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType='<C-n>'
+let g:ycm_show_diagnostics_ui = 0
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>" " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+let g:ctrlp_custom_ignore = {
+    \ 'dir': 'build\|node_modules\|vender\|venv\|python2_source\|_minted-\|2011\|2012\|2013\|2014\|2015',
+    \ 'file': '.\(exe\|o|dll\|toc\|log\|out\|pdf\|fls\|bcf\|bbl\|blg\|fdb_latexmk\|gls\|glg\|alg\|acr\|run.xml\|ist\|glo\|upb\|upa\|acn\)$' }
 
 " -------------- Plugins ---------
 "
@@ -216,8 +224,9 @@ set mouse=a
 set exrc
 set ignorecase
 set smartcase
+set listchars=tab:»-,eol:¬  " Chars show in list mode
 
-let g:mapleader = ','
+    let g:mapleader = ','
 
 " Set the solarized colorscheme with dark background
 set background=dark
@@ -313,11 +322,13 @@ augroup VimResized
     autocmd VimResized * :wincmd =
 augroup END
 
+
 " Automatically remove all trailing whitespace from the file before
 " saving.
 augroup RemoveTrailingWhitespace
     au!
     autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+    retab
 augroup END
 
 " Go to remembered position in file if it's on a valid line number
