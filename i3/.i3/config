@@ -21,7 +21,7 @@ set $ws10 10:kappa
 
 # Floating rules
 set $floating_class "MPlayer|Galculator|Gsimplecal|Viewnior|Alarm-clock|Skype|xpad|Java|Clamtk|Blueman-manager|Spotify|File-roller|Lxappearance|Nitrogen|Arandr|Caffeine|Pavucontrol|emulator64-arm|Transmission-gtk"
-set $floating_title "Preferences|Xfce-notifyd|TrueCrypt|Catfish|Pocket|irssi|Xarchiver"
+set $floating_title "Preferences|Xfce-notifyd|TrueCrypt|Catfish|Pocket|irssi|Xarchiver|Triangle rasterization"
 set $floating_title_center "Unlock Login Keyring"
 #
 #####
@@ -133,6 +133,12 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
 # focus the child container
 #bindsym $mod+d focus child
