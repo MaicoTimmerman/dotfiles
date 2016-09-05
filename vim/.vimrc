@@ -132,6 +132,8 @@ call vundle#begin()
     " 'incsearch'.
     Bundle 'haya14busa/incsearch.vim'
 
+    Bundle 'chase/vim-ansible-yaml'
+
 call vundle#end()
 filetype plugin indent on
 

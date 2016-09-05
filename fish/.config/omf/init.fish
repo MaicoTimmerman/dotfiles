@@ -46,5 +46,6 @@ alias ip3='ipython3'
 alias td='t display'
 alias ti='t in'
 alias to='t out'
+alias p='ncmpcpp'
 
 alias mountp="mount | column -t"

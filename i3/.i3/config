@@ -50,6 +50,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 -- +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -- -5% && killall -SIGUSR1 i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle && killall -SIGUSR1 i3status
 
+# bindsym XF86AudioPlay exec --no-statup-id ncmpcpp play
+# bindsym XF86AudioPause exec --no-statup-id ncmpcpp pause
+# bindsym XF86AudioNext exec --no-statup-id ncmpcpp next
+# bindsym XF86AudioPrev exec --no-statup-id ncmpcpp prev
+
 # Start screen settings with fn+display
 bindsym XF86Display exec arandr
 

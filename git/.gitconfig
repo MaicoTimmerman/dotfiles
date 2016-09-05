@@ -34,3 +34,5 @@
     submodule = log
 [status]
     submodulesummary = true
+[gitreview]
+	remote = origin
