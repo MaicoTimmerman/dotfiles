@@ -1,0 +1,1 @@
+/home/maico/.fzf/shell/key-bindings.fish

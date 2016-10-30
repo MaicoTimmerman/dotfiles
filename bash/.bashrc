@@ -127,3 +127,5 @@ export MALLOC_CHECK=3
 shopt -s autocd
 
 PATH=/home/maico/android-studio/bin:$PATH
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
