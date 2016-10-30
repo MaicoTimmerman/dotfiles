@@ -7,81 +7,76 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-    " let Vundle manage Vundle
-    Plugin 'gmarik/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
     " =================
     " Installed Plugins
     " =================
-
     " Syntastic is a syntax checking plugin for Vim that runs files through
     " external syntax checkers and displays any resulting errors to the user.
     " This can be done on demand, or automatically as files are saved. If
     " syntax errors are detected, the user is notified and is happy because
     " they didn't have to compile their code or execute their script to find
     " them.
-    Plugin 'Syntastic'
+    Plug 'Syntastic'
 
     " The NERD tree allows you to explore your filesystem and to open files
     " and directories. It presents the filesystem to you in the form of a tree
     " which you manipulate with the keyboard and/or mouse. It also allows you
     " to perform simple filesystem operations.
-    Plugin 'scrooloose/nerdtree'
+    Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
 
     " Tagbar is a Vim plugin that provides an easy way to browse the tags of
     " the current file and get an overview of its structure. It does this by
     " creating a sidebar that displays the ctags-generated tags of the current
     " file, ordered by their scope. This means that for example methods in C++
     " are displayed under the class they are defined in.
-    Plugin 'majutsushi/tagbar'
+    Plug 'majutsushi/tagbar', {'on': 'Tagbar' }
 
     " Surround.vim is all about 'surroundings': parentheses, brackets, quotes,
     " XML tags, and more. The plugin provides mappings to easily delete,
     " change and add such surroundings in pairs.
-    Plugin 'tpope/vim-surround'
+    Plug 'tpope/vim-surround'
 
     " If you've ever tried using the . command after a plugin map, you were
     " likely disappointed to discover it only repeated the last native command
     " inside that map, rather than the map as a whole. That disappointment
     " ends today. Repeat.vim remaps . in a way that plugins can tap into it.
-    Plugin 'tpope/vim-repeat' " Support plugin repetition with `.`.
+    Plug 'tpope/vim-repeat' " Support plugin repetition with `.`.
 
 
     " EasyMotion provides a much simpler way to use some motions in vim. It
     " takes the <number> out of <number>w or <number>f{char} by highlighting
     " all possible choices and allowing you to press one key to jump directly
     " to the target.
-    Plugin 'Lokaltog/vim-easymotion' " Visually marked text object motion
+    Plug 'Lokaltog/vim-easymotion' " Visually marked text object motion
 
     " tcomment provides easy to use, file-type sensible comments for Vim. It
     " can handle embedded syntax.  TComment works like a toggle, i.e., it will
     " comment out text that contains uncommented lines, and it will remove
     " comment markup for already commented text (i.e. text that contains no
     " uncommented lines).
-    Plugin 'tComment'
+    Plug 'tComment'
 
     " Airline, lean & mean status/tabline for vim that's light as air
-    Plugin 'bling/vim-airline' " Statusbar
+    Plug 'bling/vim-airline' " Statusbar
 
     " A Vim plugin which shows a git diff in the 'gutter' (sign column). It
     " shows whether each line has been added, modified, and where lines have
     " been removed. You can also stage and revert individual hunks.
-    Plugin 'airblade/vim-gitgutter' " Show git diff inline while editting files
+    Plug 'airblade/vim-gitgutter' " Show git diff inline while editting files
 
     " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
-    Plugin 'kien/ctrlp.vim' " Fussy-Search file manager
+    Plug 'kien/ctrlp.vim' " Fussy-Search file manager
 
     " This is an addon for Vim providing support for editing fish scripts.
-    Plugin 'dag/vim-fish'
+    Plug 'dag/vim-fish'
 
     " There have been many attempts at bringing Sublime Text's awesome
     " multiple selection feature into Vim, but none so far have been in my
     " opinion a faithful port that is simplistic to use, yet powerful and
     " intuitive enough for an existing Vim user. vim-multiple-cursors is yet
     " another attempt at that.
-    Plugin 'terryma/vim-multiple-cursors'
+    Plug 'terryma/vim-multiple-cursors'
 
     " YouCompleteMe is a fast, as-you-type, fuzzy-search code completion
     " engine for Vim. It has several completion engines: an identifier-based
@@ -92,49 +87,50 @@ call vundle#begin()
     " OmniSharp-based completion engine for C# and an omnifunc-based completer
     " that uses data from Vim's omnicomplete system to provide semantic
     " completions for many other languages (Ruby, PHP etc.).
-    Plugin 'Valloric/YouCompleteMe'
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
     " This small script modifies vim’s indentation behavior to comply with PEP8
-    Plugin 'hynek/vim-python-pep8-indent'
+    Plug 'hynek/vim-python-pep8-indent'
 
     " Add CSS3 syntax support to Vim's built-in syntax/css.vim.
-    Plugin 'hail2u/vim-css3-syntax'
+    Plug 'hail2u/vim-css3-syntax'
 
     " HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim.
     " Based on the default htmlcomplete.vim.
-    Plugin 'othree/html5.vim'
+    Plug 'othree/html5.vim'
 
     " JavaScript bundle for vim, this bundle provides syntax and indent
     " plugins.
-    Plugin 'pangloss/vim-javascript'
+    Plug 'pangloss/vim-javascript'
 
     " Syntax highlighting, matching rules and mappings for the original
     " Markdown and extensions.
-    Plugin 'plasticboy/vim-markdown'
+    Plug 'plasticboy/vim-markdown'
 
     " Solarized is a sixteen color palette (eight monotones, eight accent
     " colors) designed for use with terminal and gui applications.
-    Plugin 'altercation/vim-colors-solarized'
+    Plug 'altercation/vim-colors-solarized'
 
     " Track the engine.
-    Plugin 'SirVer/ultisnips'
+    Plug 'SirVer/ultisnips'
 
     " Snippets are separated from the engine. Add this if you want them:
-    Plugin 'honza/vim-snippets'
+    Plug 'honza/vim-snippets'
 
     " if you use Vundle, load plugins:
-    Bundle 'ervandew/supertab'
+    Plug 'ervandew/supertab'
 
     " Support for Jinja
-    Bundle 'Glench/Vim-Jinja2-Syntax'
+    Plug 'Glench/Vim-Jinja2-Syntax'
 
     " incsearch.vim incrementally highlights ALL pattern matches unlike default
     " 'incsearch'.
-    Bundle 'haya14busa/incsearch.vim'
+    Plug 'haya14busa/incsearch.vim'
 
-    Bundle 'chase/vim-ansible-yaml'
+    Plug 'chase/vim-ansible-yaml'
+    Plug 'rking/ag.vim'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " Syntastic
@@ -176,7 +172,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:ctrlp_custom_ignore = {
-    \ 'dir': 'build\|node_modules\|vender\|venv\|python2_source\|_minted-\|2011\|2012\|2013\|2014\|2015',
+    \ 'dir': 'dist\|build\|node_modules\|vender\|venv\|python2_source\|_minted-\|2011\|2012\|2013\|2014\|2015',
     \ 'file': '.\(exe\|o|dll\|toc\|log\|out\|pdf\|fls\|bcf\|bbl\|blg\|fdb_latexmk\|gls\|glg\|alg\|acr\|run.xml\|ist\|glo\|upb\|upa\|acn\)$' }
 
 " -------------- Plugins ---------
@@ -257,6 +253,8 @@ if !exists(":W")
     noremap <C-j> <C-w>j
     noremap <C-k> <C-w>k
     noremap <C-l> <C-w>l
+    noremap <leader>c :w<CR>:!pdflatex -shell-escape %<CR><CR>
+    noremap <leader>m :make<CR><CR>
     inoremap <C-h> <C-o><C-w>h
     inoremap <C-j> <C-o><C-w>j
     inoremap <C-k> <C-o><C-w>k
@@ -299,7 +297,14 @@ endif
 " For all text files set 'textwidth' to 78 characters.
 augroup SetWrapperForTextFiles
     au!
-    au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt,tex} setlocal tw=80 spell
+    au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setlocal tw=80 spell
+augroup END
+
+
+augroup FixDollarsInTex
+    au!
+    au FileType tex xnoremap i$ :<C-u>normal! T$vt$<CR>
+    au FileType tex onoremap i$ :normal vi$<CR>
 augroup END
 
 augroup reload_vimrc
