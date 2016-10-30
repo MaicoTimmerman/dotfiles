@@ -35,4 +35,4 @@
 [status]
     submodulesummary = true
 [gitreview]
-	remote = origin
+    remote = origin
