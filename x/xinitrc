@@ -1,3 +1,0 @@
-xmodmap ~/.Xmodmap
-xrdb -merge ~/.Xresources
-xset s off
