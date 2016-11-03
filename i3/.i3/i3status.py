@@ -58,20 +58,21 @@ status.register(
 # displayed in red (defaults of format_down and color_down)
 #
 # Note: the network module requires PyPI package netifaces
-status.register("network",
-                interface="eth0",
-                color_up=green,
-                color_down=red,
-                format_up="{interface}: {v4cidr}",
-                format_down="{interface}",)
+status.register(
+    "network",
+    interface="enp14s0",
+    color_up=green,
+    color_down=red,
+    format_up="{interface}: {v4cidr}",
+    format_down="{interface}",)
 
 # Has all the options of the normal network and adds some wireless specific
 # things like quality and network names.
 #
 # Note: requires both netifaces and basiciw
 status.register(
-    "wireless",
-    interface="wlan0",
+    "network",
+    interface="wlp13s0",
     color_up=green,
     color_down=red,
     format_up="{interface}: {quality:03.0f}% [{essid}] {v4cidr}",
@@ -90,9 +91,18 @@ status.register(
 # 42/128G [86G]
 status.register(
     "disk",
-    path="/media/maico/DATA",
+    path="/home",
     critical_color=red,
-    format="HDD: [{avail}G]",)
+    format="/home: {avail}G",)
+
+# Shows disk usage of /media/maico/DATA
+# Format:
+# 42/128G [86G]
+status.register(
+    "disk",
+    path="/mnt/data",
+    critical_color=red,
+    format="/mnt/data: {avail}G",)
 
 # Shows disk usage of /
 # Format:
@@ -101,6 +111,6 @@ status.register(
     "disk",
     path="/",
     critical_color=red,
-    format="SSD: [{avail}G]",)
+    format="/: {avail}G",)
 
 status.run()
