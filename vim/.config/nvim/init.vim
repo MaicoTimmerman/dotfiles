@@ -66,7 +66,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter' " Show git diff inline while editting files
 
     " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
-    Plug 'kien/ctrlp.vim' " Fussy-Search file manager
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
 
     " This is an addon for Vim providing support for editing fish scripts.
     Plug 'dag/vim-fish'
@@ -292,6 +293,8 @@ if !exists(":W")
     nmap <C-k> <C-w>k
     nmap <C-l> <C-w>l
 
+    nnoremap <C-p> :FZF<cr>
+
 endif
 
 " For all text files set 'textwidth' to 78 characters.
@@ -312,11 +315,6 @@ augroup reload_vimrc
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
-augroup save_folds
-    au!
-    au BufWinLeave *.* mkview
-    au BufWinEnter *.* silent loadview
-augroup END
 
 " Set spell checker in the git commit messages
 augroup GitCommit
@@ -380,8 +378,26 @@ if exists("+undofile")
 endif
 
 " ignore *.ext files
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.so,*.a,
-            \*.lib,*.obj,*.png,*.jpg,*.gif,*.dll,*.pdf
+set wildignore+=*.so,*.swp,*.zip,*.exe,*.dll,*.pyc,*.pdf,*.dvi,*.aux
+set wildignore+=*.png,*.jpg,*.gif,*.class,*.o,*.so,*.a,*.lib,*obj
+
+let g:extesions_ignore = ['exe'
+            \'bcf', 'bbl', 'blg', 'fdb_latexmk', 'gls', 'glg', 'alg', 'acr',
+            \'run.xml', 'ist', 'glo', 'upb', 'upa', 'acn', 'svg', 'jpeg', 'jpg',
+            \'png', 'dll', 'pyc', 'class', 'o', 'so', 'obj', 'dvi', 'aux']
+let g:ignore_dirs = ['build', 'node_modules', 'venv', 'python2_source',
+            \'_minted-', '.sass-cache', 'dist',
+            \'.git', '.svn', '.hg']
+"ctrlp ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir': 'build\|node_modules\|venv\|python2_source\|_minted-\|\.sass-cache\|dist',
+  \ 'file': '.\(exe\|o|dll\|toc\|log\|out\|fls\|bcf\|bbl\|blg\|fdb_latexmk\|gls\|glg\|alg\|acr\|run.xml\|ist\|glo\|upb\|upa\|acn\|svg\|jpeg\|jpg\|png\)$'
+  \ }
+
+let $FZF_DEFAULT_COMMAND = 'ag --hidden ' .
+            \'--ignore "*.' . join(g:extesions_ignore, '" --ignore "*.') . '" ' .
+            \'--ignore "' . join(g:ignore_dirs, '" --ignore "') . '" ' .
+            \'-g ""'
 
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
