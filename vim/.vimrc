@@ -165,6 +165,7 @@ let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType='<C-n>'
 let g:ycm_show_diagnostics_ui = 0
+let g:ycm_python_binary_path = 'python'
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>" " better key bindings for UltiSnipsExpandTrigger
@@ -253,7 +254,6 @@ if !exists(":W")
     noremap <C-j> <C-w>j
     noremap <C-k> <C-w>k
     noremap <C-l> <C-w>l
-    noremap <leader>c :w<CR>:!pdflatex -shell-escape %<CR><CR>
     noremap <leader>m :make<CR><CR>
     inoremap <C-h> <C-o><C-w>h
     inoremap <C-j> <C-o><C-w>j
@@ -300,6 +300,10 @@ augroup SetWrapperForTextFiles
     au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setlocal tw=80 spell
 augroup END
 
+augroup CompileLaTeX
+    au!
+    au BufRead,BufNewFile *.tex map <leader>c :w<CR>:!pdflatex -shell-escape %<CR><CR>
+augroup END
 
 augroup FixDollarsInTex
     au!

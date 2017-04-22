@@ -8,139 +8,52 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
-    " =================
-    " Installed Plugins
-    " =================
-    " Syntastic is a syntax checking plugin for Vim that runs files through
-    " external syntax checkers and displays any resulting errors to the user.
-    " This can be done on demand, or automatically as files are saved. If
-    " syntax errors are detected, the user is notified and is happy because
-    " they didn't have to compile their code or execute their script to find
-    " them.
     Plug 'Syntastic'
-
-    " The NERD tree allows you to explore your filesystem and to open files
-    " and directories. It presents the filesystem to you in the form of a tree
-    " which you manipulate with the keyboard and/or mouse. It also allows you
-    " to perform simple filesystem operations.
     Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
-
-    " Tagbar is a Vim plugin that provides an easy way to browse the tags of
-    " the current file and get an overview of its structure. It does this by
-    " creating a sidebar that displays the ctags-generated tags of the current
-    " file, ordered by their scope. This means that for example methods in C++
-    " are displayed under the class they are defined in.
     Plug 'majutsushi/tagbar', {'on': 'Tagbar' }
-
-    " Surround.vim is all about 'surroundings': parentheses, brackets, quotes,
-    " XML tags, and more. The plugin provides mappings to easily delete,
-    " change and add such surroundings in pairs.
     Plug 'tpope/vim-surround'
-
-    " If you've ever tried using the . command after a plugin map, you were
-    " likely disappointed to discover it only repeated the last native command
-    " inside that map, rather than the map as a whole. That disappointment
-    " ends today. Repeat.vim remaps . in a way that plugins can tap into it.
-    Plug 'tpope/vim-repeat' " Support plugin repetition with `.`.
-
-
-    " EasyMotion provides a much simpler way to use some motions in vim. It
-    " takes the <number> out of <number>w or <number>f{char} by highlighting
-    " all possible choices and allowing you to press one key to jump directly
-    " to the target.
-    Plug 'Lokaltog/vim-easymotion' " Visually marked text object motion
-
-    " tcomment provides easy to use, file-type sensible comments for Vim. It
-    " can handle embedded syntax.  TComment works like a toggle, i.e., it will
-    " comment out text that contains uncommented lines, and it will remove
-    " comment markup for already commented text (i.e. text that contains no
-    " uncommented lines).
+    Plug 'tpope/vim-repeat'
     Plug 'tComment'
-
-    " Airline, lean & mean status/tabline for vim that's light as air
-    Plug 'bling/vim-airline' " Statusbar
-
-    " A Vim plugin which shows a git diff in the 'gutter' (sign column). It
-    " shows whether each line has been added, modified, and where lines have
-    " been removed. You can also stage and revert individual hunks.
+    Plug 'bling/vim-airline'
     Plug 'airblade/vim-gitgutter' " Show git diff inline while editting files
-
-    " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
-
-    " This is an addon for Vim providing support for editing fish scripts.
-    Plug 'dag/vim-fish'
-
-    " There have been many attempts at bringing Sublime Text's awesome
-    " multiple selection feature into Vim, but none so far have been in my
-    " opinion a faithful port that is simplistic to use, yet powerful and
-    " intuitive enough for an existing Vim user. vim-multiple-cursors is yet
-    " another attempt at that.
     Plug 'terryma/vim-multiple-cursors'
-
-    " YouCompleteMe is a fast, as-you-type, fuzzy-search code completion
-    " engine for Vim. It has several completion engines: an identifier-based
-    " engine that works with every programming language, a semantic,
-    " Clang-based engine that provides native semantic code completion for
-    " C/C++/Objective-C/Objective-C++ (from now on referred to as "the
-    " C-family languages"), a Jedi-based completion engine for Python, an
-    " OmniSharp-based completion engine for C# and an omnifunc-based completer
-    " that uses data from Vim's omnicomplete system to provide semantic
-    " completions for many other languages (Ruby, PHP etc.).
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-
-    " This small script modifies vim’s indentation behavior to comply with PEP8
-    Plug 'hynek/vim-python-pep8-indent'
-
-    " Add CSS3 syntax support to Vim's built-in syntax/css.vim.
-    Plug 'hail2u/vim-css3-syntax'
-
-    " HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim.
-    " Based on the default htmlcomplete.vim.
-    Plug 'othree/html5.vim'
-
-    " JavaScript bundle for vim, this bundle provides syntax and indent
-    " plugins.
-    Plug 'pangloss/vim-javascript'
-
-    " Syntax highlighting, matching rules and mappings for the original
-    " Markdown and extensions.
-    Plug 'plasticboy/vim-markdown'
-
-    " Solarized is a sixteen color palette (eight monotones, eight accent
-    " colors) designed for use with terminal and gui applications.
     Plug 'altercation/vim-colors-solarized'
-
-    " Track the engine.
     Plug 'SirVer/ultisnips'
-
-    " Snippets are separated from the engine. Add this if you want them:
     Plug 'honza/vim-snippets'
-
-    " if you use Vundle, load plugins:
-    Plug 'ervandew/supertab'
-
-    " Support for Jinja
-    Plug 'Glench/Vim-Jinja2-Syntax'
-
-    " incsearch.vim incrementally highlights ALL pattern matches unlike default
-    " 'incsearch'.
-    Plug 'haya14busa/incsearch.vim'
-
-    Plug 'chase/vim-ansible-yaml'
     Plug 'rking/ag.vim'
+
+    " Syntax
+    Plug 'dag/vim-fish'
+    Plug 'hynek/vim-python-pep8-indent'
+    Plug 'hail2u/vim-css3-syntax'
+    Plug 'othree/html5.vim'
+    Plug 'pangloss/vim-javascript'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'Glench/Vim-Jinja2-Syntax'
+    Plug 'haya14busa/incsearch.vim'
+    Plug 'chase/vim-ansible-yaml'
+    Plug 'rust-lang/rust.vim'
+
+    " Auto complete
+    Plug 'davidhalter/jedi-vim'
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'zchee/deoplete-jedi'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'Yggdroot/indentLine'
+
 
 call plug#end()
 filetype plugin indent on
 
 " Syntastic
-scriptencoding utf-8
+
 let g:syntastic_error_symbol='✗✗'
 let g:syntastic_style_error_symbol='✗✗'
 let g:syntastic_warning_symbol='⚠⚠'
 let g:syntastic_style_warning_symbol='⚠⚠'
-let g:syntastic_check_on_open=1
+
 
 " Nerdtree
 map <F7> :NERDTreeToggle<CR>
@@ -158,19 +71,17 @@ set ttimeoutlen=50 " Stop the delay in airline when leaving insertmode.
 map <F8> :Tagbar<CR>
 highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
 
-" Pymode
-let g:pymode_lint_options_mccabe = { 'complexity': 20 }
+" Deoplete
+let g:jedi#completions_enabled = 0
+let g:deoplete#enable_at_startup = 1
 
-" make YCM compatible with UltiSnips (using Supertab)
-let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType='<C-n>'
-let g:ycm_show_diagnostics_ui = 0
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>" " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "UltiSnipsExtra"]
+
 
 let g:ctrlp_custom_ignore = {
     \ 'dir': 'dist\|build\|node_modules\|vender\|venv\|python2_source\|_minted-\|2011\|2012\|2013\|2014\|2015',
@@ -225,7 +136,9 @@ set ignorecase
 set smartcase
 set listchars=tab:»-,eol:¬  " Chars show in list mode
 
-    let g:mapleader = ','
+let g:mapleader = ','
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python'
 
 " Set the solarized colorscheme with dark background
 set background=dark
@@ -238,6 +151,7 @@ highlight Search term=reverse cterm=bold
 
 " Highlight merge conflict markers
 match Todo '\v^(\<|\=|\>){7}([^=].+)?$'
+
 
 if !exists(":W")
     command W w                     " use W to (w)rite
@@ -254,7 +168,6 @@ if !exists(":W")
     noremap <C-j> <C-w>j
     noremap <C-k> <C-w>k
     noremap <C-l> <C-w>l
-    noremap <leader>c :w<CR>:!pdflatex -shell-escape %<CR><CR>
     noremap <leader>m :make<CR><CR>
     inoremap <C-h> <C-o><C-w>h
     inoremap <C-j> <C-o><C-w>j
@@ -298,43 +211,24 @@ if !exists(":W")
 endif
 
 " For all text files set 'textwidth' to 78 characters.
-augroup SetWrapperForTextFiles
-    au!
-    au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setlocal tw=80 spell
-augroup END
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setlocal tw=80 spell
 
+au FileType tex xnoremap i$ :<C-u>normal! T$vt$<CR>
+au FileType tex onoremap i$ :normal vi$<CR>
+au FileType tex noremap <leader>c :w<CR>:!pdflatex -shell-escape %<CR><CR>
 
-augroup FixDollarsInTex
-    au!
-    au FileType tex xnoremap i$ :<C-u>normal! T$vt$<CR>
-    au FileType tex onoremap i$ :normal vi$<CR>
-augroup END
-
-augroup reload_vimrc
-    au!
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END
-
+au FileType c,cpp,cs,java,js noremap <C-T> :pyf /usr/share/clang/clang-format.py<cr>
 
 " Set spell checker in the git commit messages
-augroup GitCommit
-    au!
-    autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
-augroup END
+autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
 
-augroup VimResized
-    au!
-    autocmd VimResized * :wincmd =
-augroup END
-
+autocmd VimResized * :wincmd =
+au BufRead,BufNewFile *.cvc set syntax=c
 
 " Automatically remove all trailing whitespace from the file before
 " saving.
-augroup RemoveTrailingWhitespace
-    au!
-    autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
-    retab
-augroup END
+autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+retab
 
 " Go to remembered position in file if it's on a valid line number
 augroup JumpCursorOnEdit
@@ -398,6 +292,18 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden ' .
             \'--ignore "*.' . join(g:extesions_ignore, '" --ignore "*.') . '" ' .
             \'--ignore "' . join(g:ignore_dirs, '" --ignore "') . '" ' .
             \'-g ""'
+
+fun! MatchCaseTag()
+    let ic = &ic
+    set noic
+    try
+        exe 'tjump ' . expand('<cword>')
+    finally
+        let &ic = ic
+    endtry
+endfun
+
+nnoremap <silent> <c-]> :call MatchCaseTag()<CR>
 
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
