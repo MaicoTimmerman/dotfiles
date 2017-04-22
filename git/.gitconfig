@@ -41,3 +41,7 @@
     rebase = true
 [rebase]
     autoStash = true
+
+[tig]
+    main-options = -n100
+    log-options = -n100
