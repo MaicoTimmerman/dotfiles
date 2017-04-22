@@ -7,6 +7,7 @@
     autocrlf = input
     excludesfile = ~/.gitignore_global
     editor = vim
+    quotepath = false
 [push]
     default = simple
 [alias]
@@ -36,3 +37,7 @@
     submodulesummary = true
 [gitreview]
     remote = origin
+[pull]
+    rebase = true
+[rebase]
+    autoStash = true

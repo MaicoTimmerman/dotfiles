@@ -48,7 +48,6 @@ call plug#end()
 filetype plugin indent on
 
 " Syntastic
-
 let g:syntastic_error_symbol='✗✗'
 let g:syntastic_style_error_symbol='✗✗'
 let g:syntastic_warning_symbol='⚠⚠'
@@ -198,6 +197,7 @@ if !exists(":W")
     xnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
     xnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 
+    " Fix shitty python behaviour of jumping to start of rule when entering '#'
     inoremap # x<BS>#
 
     " Navigate splits more easily
@@ -213,16 +213,21 @@ endif
 " For all text files set 'textwidth' to 78 characters.
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setlocal tw=80 spell
 
+" Latex add $ as a text object.
 au FileType tex xnoremap i$ :<C-u>normal! T$vt$<CR>
 au FileType tex onoremap i$ :normal vi$<CR>
+" Save and compile ompile latex using ",c"
 au FileType tex noremap <leader>c :w<CR>:!pdflatex -shell-escape %<CR><CR>
 
-au FileType c,cpp,cs,java,js noremap <C-T> :pyf /usr/share/clang/clang-format.py<cr>
+au FileType c,cpp,cs,java,js noremap <leader>f :pyf /usr/share/clang/clang-format.py<cr>
 
 " Set spell checker in the git commit messages
 autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
 
+" Fix windows sized on resizing vim.
 autocmd VimResized * :wincmd =
+
+" CiviC see has C syntax.
 au BufRead,BufNewFile *.cvc set syntax=c
 
 " Automatically remove all trailing whitespace from the file before

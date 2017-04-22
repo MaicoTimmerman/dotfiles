@@ -17,9 +17,6 @@ status.register("clock",
 status.register("temp",
                 format="CPU: {temp:.0f}°C",)
 
-status.register("backlight",
-                format='☀{brightness}')
-
 # Shows pulseaudio default sink volume
 #
 # Note: requires libpulseaudio from PyPI
@@ -40,7 +37,7 @@ status.register(
     "battery",
     format="BAT:|{bar}| {status}{percentage:.2f}% {remaining:%E%hh:%Mm}",
     alert=True,
-    alert_percentage=5,
+    alert_percentage=15,
     full_color=green,
     charging_color=green,
     critical_color=red,
