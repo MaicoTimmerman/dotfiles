@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 from i3pystatus import Status
 
 status = Status(standalone=True)
@@ -16,6 +17,13 @@ status.register("clock",
 # Shows your CPU temperature, if you have a Intel CPU
 status.register("temp",
                 format="CPU: {temp:.0f}°C",)
+
+if os.path.isfile("/proc/acpi/bbswitch"):
+    status.register(
+        "shell", format="GPU: {output: >3s}",
+        interval=1, color="#00ff00",
+        on_rightclick="/home/maico/dotfiles/i3/.i3/i3pystatus_toggle_gpu",
+        command="/home/maico/dotfiles/i3/.i3/i3pystatus_gpu.sh")
 
 # Shows pulseaudio default sink volume
 #
