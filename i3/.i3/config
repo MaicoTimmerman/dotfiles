@@ -2,8 +2,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Modifier key is Meta(Windows key)
-# set $mod Mod4
-set $mod Mod1
+set $mod Mod4
 
 # Script locations
 set $i3lock /home/maico/.i3/i3lock.sh
@@ -19,6 +18,7 @@ set $ws7 7:eta
 set $ws8 8:theta
 set $ws9 9:lota
 set $ws10 10:kappa
+workspace_auto_back_and_forth yes
 
 #####
 # Startup programs
@@ -33,7 +33,10 @@ exec --no-startup-id whatpulse
 exec --no-startup-id redshift-gtk
 exec google-chrome
 exec --no-startup-id numlockx on
+exec --no-startup-id termite
+exec --no-startup-id xmodmap /home/maico/.Xmodmap > /home/maico/xmodmaplog
 assign [window_role="browser"] $ws3
+assign [class="Pdfpc" window_role="presentation"] "pdfpc-presentation"
 
 #####
 # Fn key combinations
@@ -43,7 +46,7 @@ assign [window_role="browser"] $ws3
 new_window 1pixel
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pactl set-sink-volume 1 +5% && killall -SIGUSR1 i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pactl set-sink-volume 1 -5% && killall -SIGUSR1 i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && killall -SIGUSR1 i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle && killall -SIGUSR1 i3status
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
 
@@ -59,8 +62,8 @@ bindsym XF86Display exec arandr
 bindsym XF86Sleep exec --no-startup-id $i3lock suspend
 
 # Use scrot for screenshots
-bindsym --release Print exec "scrot '%F_%T_$wx$h.png' -e 'mv $f ~/scrot'"
-bindsym --release Shift+Print exec "scrot -s '%F_%T_$wx$h.png' -e 'mv $f ~/scrot'"
+bindsym --release Print exec "spectacle -b -f"
+bindsym --release Shift+Print exec "spectacle -b -r"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode

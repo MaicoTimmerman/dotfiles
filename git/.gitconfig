@@ -12,6 +12,12 @@
     default = simple
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[log]
+    date = relative
+[format]
+    pretty = format:%C(auto,yellow)%h%C(auto,magenta)%  %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(10,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
+
 [help]
     autocorrect = 1
 [color]
@@ -43,5 +49,11 @@
     autoStash = true
 
 [tig]
-    main-options = -n100
-    log-options = -n100
+    main-options = -n10000
+    log-options = -n10000
+
+[tig "bind"]
+    status = D ?git clean -f %(file)
+[filter "clean_ipynb"]
+	clean = ipynb_drop_output
+	smudge = cat

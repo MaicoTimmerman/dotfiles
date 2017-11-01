@@ -17,7 +17,7 @@ set -g scrotfolder "$HOME/scrot"
 # Don't show ugly venv
 set VIRTUAL_ENV_DISABLE_PROMPT yes
 
-set PATH /home/maico/.local/bin/ /home/maico/uva/cb/bin /home/maico/.gem/ruby/2.3.0/bin $PATH
+set PATH /home/maico/.local/bin/ /home/maico/uva/cb/bin /home/maico/.gem/ruby/2.3.0/bin /usr/local/bin/ $PATH
 #cd aliases
 alias ..="cd .."
 alias ...="cd ../.."
@@ -38,3 +38,6 @@ alias p='ncmpcpp'
 alias uvavpn='sudo openconnect --juniper -u 10542590 uvavpn.uva.nl'
 
 alias mountp="mount | column -t"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/maico/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/home/maico/google-cloud-sdk/path.fish.inc'; else; . '/home/maico/google-cloud-sdk/path.fish.inc'; end; end

@@ -3,9 +3,9 @@ Xft*antialias: true
 Xft*hinting: true
 
 ! Set fonts
-URxvt*font:xft:Ubuntu Mono derivative Powerline:size=9
-URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:bold:size=9
-URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:italic:size=9
+URxvt*font:xft:Ubuntu Mono derivative Powerline:size=10
+URxvt*boldFont:xft:Ubuntu Mono derivative Powerline:bold:size=10
+URxvt*italicFont:xft:Ubuntu Mono derivative Powerline:italic:size=10
 
 ! Scrolling options
 URxvt*scrollBar: false

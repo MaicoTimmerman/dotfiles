@@ -23,6 +23,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'rking/ag.vim'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'Yggdroot/indentLine'
+    Plug 'terryma/vim-expand-region'
 
     " Syntax
     Plug 'dag/vim-fish'
@@ -34,14 +37,16 @@ call plug#begin('~/.vim/plugged')
     Plug 'Glench/Vim-Jinja2-Syntax'
     Plug 'haya14busa/incsearch.vim'
     Plug 'chase/vim-ansible-yaml'
+    Plug 'MaicoTimmerman/ast.vim'
     Plug 'rust-lang/rust.vim'
+    " Plug 'LaTeX-Box-Team/LaTeX-Box'
+    Plug 'udalov/kotlin-vim'
+    Plug 'posva/vim-vue'
 
     " Auto complete
     Plug 'davidhalter/jedi-vim'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'zchee/deoplete-jedi'
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'Yggdroot/indentLine'
 
 
 call plug#end()
@@ -86,6 +91,10 @@ let g:ctrlp_custom_ignore = {
     \ 'dir': 'dist\|build\|node_modules\|vender\|venv\|python2_source\|_minted-\|2011\|2012\|2013\|2014\|2015',
     \ 'file': '.\(exe\|o|dll\|toc\|log\|out\|pdf\|fls\|bcf\|bbl\|blg\|fdb_latexmk\|gls\|glg\|alg\|acr\|run.xml\|ist\|glo\|upb\|upa\|acn\)$' }
 
+" Expand region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
 " -------------- Plugins ---------
 "
 " Mark the 80 colomn and everything past it.
@@ -107,6 +116,7 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set shiftround
 set smarttab
 set breakindent
 
@@ -134,8 +144,16 @@ set exrc
 set ignorecase
 set smartcase
 set listchars=tab:»-,eol:¬  " Chars show in list mode
+set conceallevel=0
 
-let g:mapleader = ','
+let g:vim_markdown_conceal = 0
+let g:tex_conceal = ""
+let g:LatexBox_latexmk_options = "-shell-escape -bibtex -xelatex"
+let g:vim_markdown_math = 1
+
+
+let g:mapleader=" "
+let g:maplocalleader=" "
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python'
 
@@ -207,18 +225,45 @@ if !exists(":W")
     nmap <C-l> <C-w>l
 
     nnoremap <C-p> :FZF<cr>
+    nnoremap <leader>o :FZF<cr>
+    nnoremap <leader>w :w<cr>
+
+    "Space pasting and yanking is to clipboard
+    nmap <Leader>y "+yy
+    nmap <Leader>d "+dd
+    nmap <Leader>p "+p
+    nmap <Leader>P "+P
+    vmap <Leader>y "+y
+    vmap <Leader>d "+d
+    vmap <Leader>p "+p
+    vmap <Leader>P "+P
+
+    " Map \ to start searching for ag
+    nnoremap \ :Ag<space>
+    vnoremap \ "xy:Ag<space>"<C-r>x"<CR>
+
+
+    " No last command windows!
+    nnoremap q: :q<CR>
+
+    " No execute mode, instead text format the paragraph
+    nnoremap Q gqip
+
+    " Enable spell check
+    nnoremap <Leader>s :set spell<CR>
+
+    " Show a list of buffers
+    nnoremap <Leader><Leader> :Buffers<CR>
+    nnoremap <Leader>ll :!latexmk -shell-escape -xelatex %<CR>
+
+    noremap <Leader>gf :vsp <cfile><CR>
 
 endif
 
 " For all text files set 'textwidth' to 78 characters.
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setlocal tw=80 spell
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt,tex} setl tw=80 spell
 
-" Latex add $ as a text object.
-au FileType tex xnoremap i$ :<C-u>normal! T$vt$<CR>
-au FileType tex onoremap i$ :normal vi$<CR>
-" Save and compile ompile latex using ",c"
-au FileType tex noremap <leader>c :w<CR>:!pdflatex -shell-escape %<CR><CR>
-
+" Format c(++) and java code using clang formatter
 au FileType c,cpp,cs,java,js noremap <leader>f :pyf /usr/share/clang/clang-format.py<cr>
 
 " Set spell checker in the git commit messages
@@ -230,10 +275,12 @@ autocmd VimResized * :wincmd =
 " CiviC see has C syntax.
 au BufRead,BufNewFile *.cvc set syntax=c
 
+" CiviC see has C syntax.
+au BufRead,BufNewFile *.vue set shiftwidth=2 softtabstop=2
+
 " Automatically remove all trailing whitespace from the file before
 " saving.
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
-retab
 
 " Go to remembered position in file if it's on a valid line number
 augroup JumpCursorOnEdit
@@ -262,6 +309,7 @@ augroup JumpCursorOnEdit
     \   unlet b:doopenfold |
     \ endif
 augroup END
+
 
 if exists("+undofile")
   " undofile - This allows you to use undos after exiting and restarting
@@ -309,6 +357,15 @@ fun! MatchCaseTag()
 endfun
 
 nnoremap <silent> <c-]> :call MatchCaseTag()<CR>
+
+"disable syntastic on a per buffer basis (some work files blow it up)
+function! SyntasticDisableBuffer()
+    let b:syntastic_mode = "passive"
+    SyntasticReset
+    echo 'Syntastic disabled for this buffer'
+endfunction
+
+command! SyntasticDisableBuffer call SyntasticDisableBuffer()
 
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
