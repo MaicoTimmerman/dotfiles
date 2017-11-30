@@ -1,5 +1,3 @@
 function lastscrot --description 'Get the filename of the last screenshot'
-    cd $scrotfolder
-    ls -Art -d -1 $PWD/* | tail -n 1
-    cd $pwd
+    ls -Art -d -1 $scrotfolder/* | tail -n 1
 end
