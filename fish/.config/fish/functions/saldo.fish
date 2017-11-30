@@ -3,6 +3,6 @@ function saldo --description 'Get POS saldo'
     stty -echo
     head -n 1 - | read -l pin
     echo
-    echo "Saldo: " (curl -s "http://dev.automatis.nl/pos/api/?action=get_user_balance&pin=$pin&user=17")
+    echo "Saldo: " (curl -s "http://dev.automatis.nl/pos/api/?action=get_user_balance&pin=$pin&user=17" -H 'Referer: http://dev.automatis.nl/')
     stty echo
 end
