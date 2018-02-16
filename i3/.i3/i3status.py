@@ -5,7 +5,7 @@ from i3pystatus import Status
 status = Status(standalone=True)
 red = "#FF0000"
 orange = "#FF8200"
-green = "#00FF00"
+green = "#4CAF50"
 gray = "7A7A7A"
 
 # Displays clock like this:
@@ -17,6 +17,12 @@ status.register("clock",
 # Shows your CPU temperature, if you have a Intel CPU
 status.register("temp",
                 format="CPU: {temp:.0f}°C",)
+
+
+status.register("mem",
+                divisor=10**9,
+                color=green,
+                format="{used_mem} / {total_mem} G")
 
 if os.path.isfile("/proc/acpi/bbswitch"):
     status.register(
@@ -43,7 +49,7 @@ status.register("pulseaudio",
 # goes below 5 percent while discharging. The block will also color RED.
 status.register(
     "battery",
-    format="BAT:|{bar}| {status}{percentage:.2f}% {remaining:%E%hh:%Mm}",
+    format="BAT:|{bar_design}| {status}{percentage_design:.2f}% {remaining:%E%hh:%Mm}",
     alert=True,
     alert_percentage=15,
     full_color=green,

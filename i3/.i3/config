@@ -29,9 +29,9 @@ exec --no-startup-id workrave
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock -- dotfiles/i3/.i3/i3lock.sh lock
-exec --no-startup-id whatpulse
 exec --no-startup-id redshift-gtk
 exec google-chrome
+exec telegram-desktop
 exec --no-startup-id numlockx on
 exec --no-startup-id termite
 exec --no-startup-id xmodmap /home/maico/.Xmodmap > /home/maico/xmodmaplog
@@ -62,8 +62,8 @@ bindsym XF86Display exec arandr
 bindsym XF86Sleep exec --no-startup-id $i3lock suspend
 
 # Use scrot for screenshots
-bindsym --release Print exec "spectacle -b -f"
-bindsym --release Shift+Print exec "spectacle -b -r"
+bindsym --release Print exec "spectacle -b -f  -o ~/scrot/scrot-$(date -Iseconds).png; xclip -selection clipboard -t image/png -i $(ls -Art -1 ~/scrot/* | tail -n 1)"
+bindsym --release Shift+Print exec "spectacle -b -r -o ~/scrot/scrot-$(date -Iseconds).png; xclip -selection clipboard -t image/png -i $(ls -Art -1 ~/scrot/* | tail -n 1)"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode

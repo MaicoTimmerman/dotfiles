@@ -275,6 +275,10 @@ autocmd VimResized * :wincmd =
 " CiviC see has C syntax.
 au BufRead,BufNewFile *.cvc set syntax=c
 
+" NetLogo
+au BufRead,BufNewFile *.nlogo set syntax=nlogo
+au BufRead,BufNewFile *.nls set syntax=nlogo
+
 " CiviC see has C syntax.
 au BufRead,BufNewFile *.vue set shiftwidth=2 softtabstop=2
 

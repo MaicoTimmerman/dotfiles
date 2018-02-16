@@ -51,3 +51,6 @@ Thumbs.db
 .*.*.*.sw?
 .*.*.sw?
 .*.sw?
+
+# Intellij folder
+.idea/
