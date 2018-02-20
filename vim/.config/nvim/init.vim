@@ -8,12 +8,12 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
-    Plug 'Syntastic'
+    Plug 'vim-scripts/Syntastic'
     Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
     Plug 'majutsushi/tagbar', {'on': 'Tagbar' }
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-repeat'
-    Plug 'tComment'
+    Plug 'vim-scripts/tComment'
     Plug 'bling/vim-airline'
     Plug 'airblade/vim-gitgutter' " Show git diff inline while editting files
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
