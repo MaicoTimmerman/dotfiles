@@ -17,7 +17,7 @@ set -g scrotfolder "$HOME/scrot"
 # Don't show ugly venv
 set VIRTUAL_ENV_DISABLE_PROMPT yes
 
-set PATH /home/maico/.local/bin/ /home/maico/.gem/ruby/2.3.0/bin /usr/local/bin/ $PATH
+set -U fish_user_paths /home/maico/.local/bin/ /usr/local/bin/ (ruby -e 'print Gem.user_dir')/bin $fish_user_paths
 #cd aliases
 alias ..="cd .."
 alias ...="cd ../.."
