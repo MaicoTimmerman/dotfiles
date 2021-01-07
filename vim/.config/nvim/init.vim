@@ -279,9 +279,6 @@ au BufRead,BufNewFile *.cvc set syntax=c
 au BufRead,BufNewFile *.nlogo set syntax=nlogo
 au BufRead,BufNewFile *.nls set syntax=nlogo
 
-" CiviC see has C syntax.
-au BufRead,BufNewFile *.vue set shiftwidth=2 softtabstop=2
-
 " Automatically remove all trailing whitespace from the file before
 " saving.
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
