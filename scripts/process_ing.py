@@ -5,13 +5,6 @@ import csv
 import argparse
 
 DESCRIPTION = "Omschrijving:"
-HEADERS = [
-    'Datum',
-    'Mededelingen',
-    'Naam / Omschrijving',
-    'Bedrag (EUR)',
-    'Af Bij',
-]
 
 
 def process_ing_csv(infile, outfile='/tmp/administratie.csv'):
@@ -20,16 +13,16 @@ def process_ing_csv(infile, outfile='/tmp/administratie.csv'):
     to_csv = []
 
     with open(infile, 'r') as csvfile:  # noqa
-        csvreader = csv.DictReader(csvfile)
+        csvreader = csv.DictReader(csvfile, delimiter=';')
 
         for row in csvreader:
             # Convert the yyyymmdd to yyyy-mm-dd
-            raw_date = row[HEADERS[0]]
+            raw_date = row["Datum"]
             date = raw_date[:4] + "-" + raw_date[4:6] + "-" + raw_date[6:]
 
             # Integrate the debit/credit into the value
-            amount = row[HEADERS[3]]
-            sign = row[HEADERS[4]]
+            amount = row["Bedrag (EUR)"]
+            sign = row["Af Bij"]
             if sign == "Af":
                 amount = "-" + amount
             # Do str_replace to match google docs notation for amounts
@@ -39,7 +32,7 @@ def process_ing_csv(infile, outfile='/tmp/administratie.csv'):
 
             # If 'Mededelingen' contains 'Omschrijving', It is probally a
             # better representation of the transfer.
-            description = row[HEADERS[1]]
+            description = row["Naam / Omschrijving"]
             index = description.find(DESCRIPTION)
             if index is not -1:
                 description = description[index+len(DESCRIPTION)+1:]
@@ -47,14 +40,14 @@ def process_ing_csv(infile, outfile='/tmp/administratie.csv'):
                 description = ""
 
             to_csv.append({
-                HEADERS[0]: date,
-                HEADERS[2]: row[HEADERS[2]],
-                HEADERS[1]: description,
-                HEADERS[3]: amount,
+                **row,
+                "Date": date,
+                "Description": description,
+                "Deposit": amount,
             })
 
     with open(outfile, 'w') as csvfile:
-        fieldnames = [HEADERS[0], HEADERS[2], HEADERS[1], HEADERS[3]]
+        fieldnames = ["Date", "Description", "Deposit"] + list(row.keys())
         csvwriter = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
         csvwriter.writeheader()
