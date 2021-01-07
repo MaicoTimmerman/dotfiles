@@ -6,12 +6,13 @@
 [core]
     autocrlf = input
     excludesfile = ~/.gitignore_global
-    editor = vim
+    editor = nvim
     quotepath = false
 [push]
     default = simple
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    reauthor = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --author='$2'\" $1' --
 
 [log]
     date = relative
@@ -44,7 +45,7 @@
 [gitreview]
     remote = origin
 [pull]
-    rebase = true
+	rebase = false
 [rebase]
     autoStash = true
 
@@ -60,3 +61,10 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[sendemail]
+    smtpEncryption = tls
+    smtpServer = smtp.gmail.com
+    smtpUser = maico.timmerman@gmail.com
+    smtpServerPort = 587
+[fetch]
+	prune = true
