@@ -14,29 +14,25 @@ gray = "7A7A7A"
 status.register("clock",
                 format="%a %-d %b %X KW%V",)
 
-# Shows your CPU temperature, if you have a Intel CPU
-status.register("temp",
-                format="CPU: {temp:.0f}°C",)
-
 
 status.register("mem",
                 divisor=10**9,
                 color=green,
-                format="{used_mem} / {total_mem} G")
+                format="{avail_mem} G free")
 
 if os.path.isfile("/proc/acpi/bbswitch"):
     status.register(
         "shell", format="GPU: {output: >3s}",
-        interval=1, color="#00ff00",
-        on_rightclick="/home/maico/dotfiles/i3/.i3/i3pystatus_toggle_gpu",
-        command="/home/maico/dotfiles/i3/.i3/i3pystatus_gpu.sh")
+        interval=1, color=green,
+        on_rightclick="/home/maico/dotfiles/i3/.config/i3/i3pystatus_toggle_gpu",
+        command="/home/maico/dotfiles/i3/.config/i3/i3pystatus_gpu.sh")
 
 # Shows pulseaudio default sink volume
 #
 # Note: requires libpulseaudio from PyPI
 status.register("pulseaudio",
-                format="♪{volume}",
-                format_muted="♪M{volume}")
+                format="♪ VOL: {volume}%",
+                format_muted="♪ VOL: M{volume}%")
 
 # The battery monitor has many formatting options, see README for details
 
@@ -83,7 +79,7 @@ status.register(
 # Note: requires both netifaces and basiciw
 status.register(
     "network",
-    interface="wlp13s0",
+    interface="wlp2s0",
     color_up=green,
     color_down=red,
     format_up="{interface}: {quality:03.0f}% [{essid}] {v4cidr}",
