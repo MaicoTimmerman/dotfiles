@@ -68,3 +68,5 @@
     smtpServerPort = 587
 [fetch]
 	prune = true
+[branch]
+	sort = -committerdate
