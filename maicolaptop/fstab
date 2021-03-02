@@ -1,14 +1,13 @@
-# /etc/fstab: static file system information.
-#
-# Use 'blkid' to print the universally unique identifier for a
-# device; this may be used with UUID= as a more robust way to name devices
-# that works even if disks are added and removed. See fstab(5).
-#
-# <file system> <mount point>   <type>  <options>       <dump>  <pass>
-# / was on /dev/sda1 during installation
-UUID=c9f7fe21-2aa7-44fc-9955-31fc1d8431aa /               ext4    errors=remount-ro 0       1
-# swap was on /dev/sda5 during installation
-UUID=e6b1f751-0c87-438f-a378-515752b4a915 none            swap    sw              0       0
+# Static information about the filesystems.
+# See fstab(5) for details.
 
-#Automount my secondary drive please
-UUID=82C4D58DC4D58437 /media/maico/DATA ntfs users,defaults 0 0
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/mapper/xps15-root
+UUID=e8914408-396e-44af-aa84-57a708e2c0f1	/         	ext4      	rw,relatime,data=ordered	0 1
+
+# /dev/mapper/xps15-home
+UUID=88636f2d-4e3f-4a2f-81d4-ead3dcfbcf72	/home     	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/nvme0n1p1 LABEL=ESP
+UUID=92F5-EDA4      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
+
