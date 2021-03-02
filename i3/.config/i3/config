@@ -69,7 +69,7 @@ bindsym --release Shift+Print exec "spectacle -b -r -o ~/scrot/scrot-$(date -Ise
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:Ubuntu Mono derivative Powerline 12
+font pango:UbuntuMono Nerd Font 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -230,7 +230,7 @@ bindsym $mod+Shift+e mode "$mode_system"
 bar {
     status_command python3 /home/maico/.config/i3/i3status.py
     workspace_buttons yes
-    font pango:Ubuntu Mono derivative Powerline 12
+    font pango:UbuntuMono Nerd Font 12
     position top
     tray_output eDP1
 }

@@ -22,7 +22,7 @@ status.register("mem",
 
 if os.path.isfile("/proc/acpi/bbswitch"):
     status.register(
-        "shell", format="GPU: {output: >3s}",
+        "shell", format=" GPU: {output: >3s}",
         interval=1, color=green,
         on_rightclick="/home/maico/dotfiles/i3/.config/i3/i3pystatus_toggle_gpu",
         command="/home/maico/dotfiles/i3/.config/i3/i3pystatus_gpu.sh")
@@ -82,17 +82,9 @@ status.register(
     interface="wlp2s0",
     color_up=green,
     color_down=red,
-    format_up="{interface}: {quality:03.0f}% [{essid}] {v4cidr}",
-    format_down="{interface}",)
+    format_up="  {interface}: {quality:03.0f}% [{essid}] {v4cidr}",
+    format_down="  {interface}",)
 
-status.register(
-    "network",
-    interface="tun0",
-    color_up=green,
-    color_down=red,
-    format_up="{interface}: {v4cidr}",
-    format_down="{interface}",
-    unknown_up=True,)
 # Shows disk usage of /media/maico/DATA
 # Format:
 # 42/128G [86G]
@@ -100,16 +92,7 @@ status.register(
     "disk",
     path="/home",
     critical_color=red,
-    format="/home: {avail}G",)
-
-# Shows disk usage of /media/maico/DATA
-# Format:
-# 42/128G [86G]
-status.register(
-    "disk",
-    path="/mnt/data",
-    critical_color=red,
-    format="/mnt/data: {avail}G",)
+    format=" /home: {avail}G",)
 
 # Shows disk usage of /
 # Format:
@@ -118,6 +101,6 @@ status.register(
     "disk",
     path="/",
     critical_color=red,
-    format="/: {avail}G",)
+    format=" /: {avail}G",)
 
 status.run()
