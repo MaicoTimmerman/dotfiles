@@ -1,0 +1,4 @@
+configuration {
+	terminal: "termite";
+	theme: "/usr/share/rofi/themes/solarized.rasi";
+}
