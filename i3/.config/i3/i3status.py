@@ -59,20 +59,6 @@ status.register(
         "FULL": "=",
     },)
 
-# Shows the address and up/down state of eth0. If it is up the address is shown
-# in green (the default value of color_up) and the CIDR-address is shown (i.e.
-# 10.10.10.42/24).  If it's down just the interface name (eth0) will be
-# displayed in red (defaults of format_down and color_down)
-#
-# Note: the network module requires PyPI package netifaces
-status.register(
-    "network",
-    interface="enp14s0",
-    color_up=green,
-    color_down=red,
-    format_up="{interface}: {v4cidr}",
-    format_down="{interface}",)
-
 # Has all the options of the normal network and adds some wireless specific
 # things like quality and network names.
 #
