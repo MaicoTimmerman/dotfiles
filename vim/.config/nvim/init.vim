@@ -233,8 +233,8 @@ if !exists(":W")
     vmap <Leader>P "+P
 
     " Map \ to start searching for ag
-    nnoremap \ :Ag<space>
-    vnoremap \ "xy:Ag<space>"<C-r>x"<CR>
+    nnoremap \ :Ag!<space>
+    vnoremap \ "xy:Ag!<space>"<C-r>x"<CR>
 
 
     " No last command windows!
