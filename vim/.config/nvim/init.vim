@@ -8,7 +8,7 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
-    Plug 'vim-scripts/Syntastic'
+    Plug 'dense-analysis/ale'
     Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
     Plug 'majutsushi/tagbar', {'on': 'Tagbar' }
     Plug 'tpope/vim-surround'
@@ -51,13 +51,6 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 filetype plugin indent on
-
-" Syntastic
-let g:syntastic_error_symbol='✗✗'
-let g:syntastic_style_error_symbol='✗✗'
-let g:syntastic_warning_symbol='⚠⚠'
-let g:syntastic_style_warning_symbol='⚠⚠'
-
 
 " Nerdtree
 map <F7> :NERDTreeToggle<CR>
