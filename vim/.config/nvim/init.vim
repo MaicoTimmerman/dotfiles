@@ -277,6 +277,10 @@ au BufRead,BufNewFile *.nls set syntax=nlogo
 " saving.
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
+" Do not remmber the position in git commit files.
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+
+
 " Go to remembered position in file if it's on a valid line number
 augroup JumpCursorOnEdit
     au!
