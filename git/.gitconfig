@@ -45,9 +45,10 @@
 [gitreview]
     remote = origin
 [pull]
-	rebase = false
+    rebase = false
 [rebase]
     autoStash = true
+    autoSquash = true
 
 [tig]
     main-options = -n10000
@@ -56,19 +57,20 @@
 [tig "bind"]
     status = D ?git clean -f %(file)
     status = I ?echo %(file) >> .gitignore
+    status = V !feh %(file)
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [sendemail]
     smtpEncryption = tls
     smtpServer = smtp.gmail.com
     smtpUser = maico.timmerman@gmail.com
     smtpServerPort = 587
 [fetch]
-	prune = true
+    prune = true
 [branch]
-	sort = -committerdate
+    sort = -committerdate
 [init]
-	defaultBranch = main
+    defaultBranch = main
