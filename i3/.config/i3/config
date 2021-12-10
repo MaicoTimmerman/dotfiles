@@ -31,7 +31,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock -- /home/maico/dotfiles/i3/.config/i3/i3lock.sh lock
 exec google-chrome-stable
 exec telegram-desktop
-exec --no-startup-id termite
+exec --no-startup-id alacritty
 assign [class="google-chrome"] $ws3
 assign [class="Pdfpc" window_role="presentation"] "pdfpc-presentation"
 
@@ -75,7 +75,7 @@ font pango:UbuntuMono Nerd Font 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
