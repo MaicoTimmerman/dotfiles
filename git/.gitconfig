@@ -53,6 +53,7 @@
 [tig]
     main-options = -n10000
     log-options = -n10000
+    wrap-lines = true
 
 [tig "bind"]
     status = D ?git clean -f %(file)
