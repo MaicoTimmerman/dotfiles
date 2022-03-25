@@ -4,7 +4,10 @@ FILE=/tmp/screen_locked.png
 BLURTYPE="0x6"
 
 lock() {
-    physlock
+    scrot $FILE
+    mogrify -scale %5 -scale 2000% $FILE
+    i3lock -n -i $FILE
+    rm $FILE
 }
 
 case "$1" in
