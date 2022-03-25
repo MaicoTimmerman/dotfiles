@@ -139,6 +139,7 @@ set smartcase
 set listchars=tab:»-,eol:¬  " Chars show in list mode
 set conceallevel=0
 set nofoldenable
+set linebreak
 
 let g:vim_markdown_conceal = 0
 let g:tex_conceal = ""
