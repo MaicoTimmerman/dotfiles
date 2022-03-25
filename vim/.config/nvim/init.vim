@@ -255,7 +255,7 @@ if !exists(":W")
 endif
 
 " For all text files set 'textwidth' to 78 characters.
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt,tex} setl tw=80 spell
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt,tex} setl spell colorcolumn=0
 
 " Format c(++) and java code using clang formatter
 au FileType c,cpp,cs,java,js noremap <leader>f :pyf /usr/share/clang/clang-format.py<cr>
