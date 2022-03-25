@@ -78,7 +78,7 @@ schemes:
       white:   '0xfdf6e3'
 
 
-colors: *light
+colors: *dark
 
 key_bindings:
   - { key: T, mods: Control|Shift, action: SpawnNewInstance }
