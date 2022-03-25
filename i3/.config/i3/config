@@ -21,7 +21,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock -- /home/maico/dotfiles/i3/.config/i3/i3lock.sh lock
 exec google-chrome-stable
 exec telegram-desktop
-exec --no-startup-id alacritty
 exec_always /home/maico/.config/i3/autoname_workspaces.py &
 assign [class="google-chrome"] workspace number 3
 assign [class="Pdfpc" window_role="presentation"] "pdfpc-presentation"
