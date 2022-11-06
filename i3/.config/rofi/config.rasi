@@ -1,5 +1,5 @@
 configuration {
-	terminal: "termite";
+	terminal: "alacritty";
 }
 
 @theme "/usr/share/rofi/themes/solarized.rasi"
