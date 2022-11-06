@@ -50,6 +50,7 @@
 [rebase]
     autoStash = true
     autoSquash = true
+    updateRefs = true
 
 [tig]
     main-options = -n10000
