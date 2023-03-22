@@ -10,6 +10,7 @@
     quotepath = false
 [push]
     default = simple
+    autoSetupRemote = true
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     reauthor = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --author='$2'\" $1' --
