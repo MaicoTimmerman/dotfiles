@@ -61,6 +61,7 @@
     status = D ?git clean -f %(file)
     status = I ?echo %(file) >> .gitignore
     status = V !feh %(file)
+    generic = + !git commit --fixup %(commit)
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
