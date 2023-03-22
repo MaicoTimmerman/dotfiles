@@ -32,6 +32,7 @@ alias ip3='ipython3'
 alias uvavpn='sudo openconnect --juniper -u 10542590 uvavpn.uva.nl'
 
 alias mountp="mount | column -t"
+alias k="kubectl"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/maico/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/home/maico/google-cloud-sdk/path.fish.inc'; else; . '/home/maico/google-cloud-sdk/path.fish.inc'; end; end
