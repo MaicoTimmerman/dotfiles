@@ -7,11 +7,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-scripts/tComment'
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'lewis6991/gitsigns.nvim'
-    Plug 'altercation/vim-colors-solarized'
-    Plug 'rking/ag.vim'
+
+    Plug 'tjdevries/colorbuddy.nvim'
+    Plug 'svrana/neosolarized.nvim'
+
     Plug 'jiangmiao/auto-pairs'
+
     Plug 'Yggdroot/indentLine'
-    Plug 'terryma/vim-expand-region'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -39,27 +41,70 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 require("lualine").setup()
-require("gitsigns").setup()
+require("colorbuddy").setup()
+require("neosolarized").setup()
+
+require("gitsigns").setup({
+	on_attach = function(bufnr)
+		local gs = package.loaded.gitsigns
+
+		local function map(mode, l, r, opts)
+			opts = opts or {}
+			opts.buffer = bufnr
+			vim.keymap.set(mode, l, r, opts)
+		end
+
+		map("n", "]c", function()
+			if vim.wo.diff then
+				return "]c"
+			end
+			vim.schedule(function()
+				gs.next_hunk()
+			end)
+			return "<Ignore>"
+		end, { expr = true })
+
+		map("n", "[c", function()
+			if vim.wo.diff then
+				return "[c"
+			end
+			vim.schedule(function()
+				gs.prev_hunk()
+			end)
+			return "<Ignore>"
+		end, { expr = true })
+
+		map("n", "<leader>hs", gs.stage_hunk)
+		map("n", "<leader>hr", gs.reset_hunk)
+		map("v", "<leader>hs", function()
+			gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+		end)
+		map("v", "<leader>hr", function()
+			gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+		end)
+		map("n", "<leader>hS", gs.stage_buffer)
+		map("n", "<leader>hu", gs.undo_stage_hunk)
+		map("n", "<leader>hp", gs.preview_hunk)
+		map("n", "<leader>hb", function()
+			gs.blame_line({ full = true })
+		end)
+		map("n", "<leader>tb", gs.toggle_current_line_blame)
+		map("n", "<leader>hd", gs.diffthis)
+		map("n", "<leader>hD", function()
+			gs.diffthis("~")
+		end)
+		map("n", "<leader>td", gs.toggle_deleted)
+
+		-- Text object
+		map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
+	end,
+})
 
 local telescope = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", telescope.find_files, {})
 vim.keymap.set("n", "<leader>fg", telescope.live_grep, {})
 vim.keymap.set("n", "<leader>fb", telescope.buffers, {})
 vim.keymap.set("n", "<leader>fh", telescope.help_tags, {})
-
--- vim.cmd([[
--- highlight TagbarHighlight term=underline ctermfg=130 ctermbg=0 guifg=Brown
--- ]])
-
--- Expand region
-vim.keymap.set("v", "v", "<Plug>(expand_region_expand)", {})
-vim.keymap.set("v", "<C-v>", "<Plug>(expand_region_shrink)", {})
-
-vim.cmd([[
-if &shell =~# 'fish$'
-    set shell=bash
-endif
-]])
 
 -- Indenting like a boss
 vim.opt.smartindent = true
@@ -98,6 +143,7 @@ vim.opt.conceallevel = 0
 vim.opt.foldenable = false
 vim.opt.linebreak = true
 vim.opt.colorcolumn = "80"
+vim.opt.termguicolors = true
 
 vim.g.vim_markdown_conceal = 0
 
@@ -116,9 +162,6 @@ vim.opt.undofile = true
 -- ignore *.ext files
 vim.opt.wildignore:append({ "*.so,*.swp,*.zip,*.exe,*.dll,*.pyc,*.pdf,*.dvi,*.aux" })
 vim.opt.wildignore:append({ "*.png,*.jpg,*.gif,*.class,*.o,*.so,*.a,*.lib,*obj" })
-
--- Set the solarized colorscheme with dark background
-vim.cmd("colorscheme solarized")
 
 -- TODO Highlight merge conflict markers
 -- vim.cmd("match Todo '\v^(\<|\=|\>){7}([^=].+)?$'")
