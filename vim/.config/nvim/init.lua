@@ -1,7 +1,8 @@
 --  -------------- Plugins ---------
 vim.cmd([[
 call plug#begin('~/.vim/plugged')
-    Plug 'dense-analysis/ale'
+    " Plug 'dense-analysis/ale'
+    Plug 'neovim/nvim-lspconfig'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-repeat'
     Plug 'vim-scripts/tComment'
@@ -43,6 +44,26 @@ vim.g.maplocalleader = " "
 require("lualine").setup()
 require("colorbuddy").setup()
 require("neosolarized").setup()
+-- require("lspconfig").pyright.setup()
+require("lspconfig").pyright.setup({})
+
+actions = require("telescope.actions")
+require("telescope").setup({
+	defaults = {
+		mappings = {
+			i = {
+				["<C-j>"] = actions.move_selection_next,
+				["<C-k>"] = actions.move_selection_previous,
+			},
+		},
+	},
+})
+
+local telescope = require("telescope.builtin")
+vim.keymap.set("n", "<leader>o", telescope.find_files, {})
+vim.keymap.set("n", "<leader>fg", telescope.live_grep, {})
+vim.keymap.set("n", "<leader><leader>", telescope.buffers, {})
+vim.keymap.set("n", "<leader>ts", telescope.treesitter, {})
 
 require("gitsigns").setup({
 	on_attach = function(bufnr)
@@ -90,21 +111,42 @@ require("gitsigns").setup({
 		end)
 		map("n", "<leader>tb", gs.toggle_current_line_blame)
 		map("n", "<leader>hd", gs.diffthis)
-		map("n", "<leader>hD", function()
-			gs.diffthis("~")
-		end)
-		map("n", "<leader>td", gs.toggle_deleted)
 
 		-- Text object
 		map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
 	end,
 })
 
-local telescope = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", telescope.find_files, {})
-vim.keymap.set("n", "<leader>fg", telescope.live_grep, {})
-vim.keymap.set("n", "<leader>fb", telescope.buffers, {})
-vim.keymap.set("n", "<leader>fh", telescope.help_tags, {})
+-- Use LspAttach autocommand to only map the following keys
+-- after the language server attaches to the current buffer
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+	callback = function(ev)
+		-- Enable completion triggered by <c-x><c-o>
+		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
+
+		-- Buffer local mappings.
+		-- See `:help vim.lsp.*` for documentation on any of the below functions
+		local opts = { buffer = ev.buf }
+		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+		-- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+		-- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+		-- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+		-- vim.keymap.set('n', '<space>wl', function()
+		--   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+		-- end, opts)
+		vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
+		vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
+		vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
+		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+		vim.keymap.set("n", "<space>f", function()
+			vim.lsp.buf.format({ async = true })
+		end, opts)
+	end,
+})
 
 -- Indenting like a boss
 vim.opt.smartindent = true
@@ -223,10 +265,6 @@ vim.keymap.set("v", "<leader>p", "+p", {})
 vim.keymap.set("v", "<leader>P", "+P", {})
 vim.keymap.set("n", "<leader>w", ":w<cr>", {})
 
--- Map \ to start searching for ag
-vim.keymap.set("n", "\\", ":Ag!<space>", { noremap = true })
-vim.keymap.set("v", "\\", '"xy:Ag!<space>"<C-r>x"<CR>', { noremap = true })
-
 -- No last command windows!
 vim.keymap.set("n", "q:", ":q<CR>", { noremap = true })
 
@@ -235,10 +273,6 @@ vim.keymap.set("n", "Q", "gqip", { noremap = true })
 
 -- Enable spell check
 vim.keymap.set("n", "<leader>s", ":set spell<CR>", { noremap = true })
-
--- Show a list of buffers
-vim.keymap.set("n", "<leader><leader>", ":Buffers<CR>", { noremap = true })
-vim.keymap.set("n", "<leader><leader>", ":Buffers<CR>", { noremap = true })
 
 vim.keymap.set("n", "<leader>gf", ":vsp <cfile><CR>", { noremap = true })
 
