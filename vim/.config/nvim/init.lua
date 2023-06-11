@@ -46,6 +46,9 @@ require("colorbuddy").setup()
 require("neosolarized").setup()
 -- require("lspconfig").pyright.setup()
 require("lspconfig").pyright.setup({})
+require("lspconfig").volar.setup({
+	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+})
 
 actions = require("telescope.actions")
 require("telescope").setup({
@@ -95,22 +98,22 @@ require("gitsigns").setup({
 			return "<Ignore>"
 		end, { expr = true })
 
-		map("n", "<leader>hs", gs.stage_hunk)
-		map("n", "<leader>hr", gs.reset_hunk)
+		map("n", "<leader>hs", gs.stage_hunk, { desc = "[H]unk [S]tage" })
+		map("n", "<leader>hr", gs.reset_hunk, { desc = "[H]unk [R]eset" })
 		map("v", "<leader>hs", function()
 			gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
-		end)
+		end, { desc = "[H]unk [S]tage" })
 		map("v", "<leader>hr", function()
 			gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
-		end)
+		end, { desc = "[H]unk [R]eset" })
 		map("n", "<leader>hS", gs.stage_buffer)
-		map("n", "<leader>hu", gs.undo_stage_hunk)
+		map("n", "<leader>hu", gs.undo_stage_hunk, { desc = "[H]unk [U]nstage" })
 		map("n", "<leader>hp", gs.preview_hunk)
-		map("n", "<leader>hb", function()
+		map("n", "<leader>bl", function()
 			gs.blame_line({ full = true })
-		end)
-		map("n", "<leader>tb", gs.toggle_current_line_blame)
-		map("n", "<leader>hd", gs.diffthis)
+		end, { desc = "[B]lame [L]ine" })
+		map("n", "<leader>tb", gs.toggle_current_line_blame, { desc = "[T]oggle [B]lame " })
+		map("n", "<leader>dt", gs.diffthis, { desc = "[D]iff [T]his" })
 
 		-- Text object
 		map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
