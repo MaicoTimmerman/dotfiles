@@ -195,13 +195,6 @@ vim.g.vim_markdown_conceal = 0
 -- undofile - This allows you to use undos after exiting and restarting
 -- This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
 -- :help undo-persistence
-vim.cmd([[
-if isdirectory($HOME . '/.vim/undo') == 0
-    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
-endif
-]])
-vim.opt.undodir = "./.vim-undo//"
-vim.opt.undodir:append({ "~/.vim/undo//" })
 vim.opt.undofile = true
 
 -- ignore *.ext files
