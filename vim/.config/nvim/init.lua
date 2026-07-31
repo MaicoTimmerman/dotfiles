@@ -43,12 +43,13 @@ vim.g.maplocalleader = " "
 
 require("lualine").setup()
 require("colorbuddy").setup()
-require("neosolarized").setup()
--- require("lspconfig").pyright.setup()
-require("lspconfig").pyright.setup({})
-require("lspconfig").volar.setup({
+
+require("neosolarized").setup({})
+vim.lsp.config('pyright', {})
+vim.lsp.config('volar', {
 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
 })
+vim.lsp.enable({ 'pyright', 'volar' })
 
 actions = require("telescope.actions")
 require("telescope").setup({
@@ -177,7 +178,6 @@ vim.opt.laststatus = 2 -- always show the statusbar.
 vim.opt.backup = false -- set no backups
 vim.opt.number = true -- set line numbers
 vim.opt.cursorline = true -- highlight current cursor line.
-vim.opt.pastetoggle = "<F2>" --
 vim.opt.hlsearch = true --
 vim.opt.mouse = "a"
 vim.opt.exrc = true
