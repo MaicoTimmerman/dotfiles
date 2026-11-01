@@ -1,100 +1,93 @@
-# vim: noexpand sw=8
+# vim: noexpandtab list
 [user]
-    name = Maico Timmerman
-    email = maico.timmerman@gmail.com
-
+	name = Maico Timmerman
 [include]
-    path = ~/.gitconfig-work
+	path = ~/.gitconfig-work
 [credential]
-    helper = cache
+	helper = cache
 [core]
-    autocrlf = input
-    excludesfile = ~/.gitignore_global
-    editor = nvim
-    quotepath = false
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+	editor = nvim
+	quotepath = false
 [push]
-    default = simple
-    autoSetupRemote = true
+	default = simple
+	autoSetupRemote = true
 [pull]
-    rebase = true
+	rebase = true
 [alias]
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    lb = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 40 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[37m %s\\033[0m\\n\", substr($2, 1, length($2)-1), $1)}'
-    sw = !git checkout $(git branch --sort=-committerdate | fzf)
-    reauthor = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --author='$2'\" $1' --
-    fixup = commit --fixup
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lb = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 40 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[37m %s\\033[0m\\n\", substr($2, 1, length($2)-1), $1)}'
+	sw = !git checkout $(git branch --sort=-committerdate | fzf)
+	reauthor = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --author='$2'\" $1' --
+	fixup = commit --fixup
 
 [grep]
-    lineNumber = true
+	lineNumber = true
 [log]
-    date = relative
+	date = relative
 [format]
-    pretty = format:%C(auto,yellow)%h%C(auto,magenta)%  %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(10,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
+	pretty = format:%C(auto,yellow)%h%C(auto,magenta)%  %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(10,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
 
 [rerere]
 	enabled = true
 [help]
-    autocorrect = prompt
+	autocorrect = prompt
 
 # Coloring
 [color]
-    ui = true
+	ui = true
 [color "branch"]
-    current = red bold
-    local = green bold
-    remote = cyan bold
+	current = red bold
+	local = green bold
+	remote = cyan bold
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-    whitespace = red reverse
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 [color "status"]
-    added = green bold
-    changed = yellow bold
-    untracked = red bold
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
 [diff]
-    tool = vimdiff
-    submodule = log
+	tool = nvimdiff
+	submodule = log
 [status]
-    submodulesummary = true
+	submodulesummary = true
 [remote "origin"]
-    prune = true
+	prune = true
 [rebase]
-    autoStash = true
-    autoSquash = true
-    updateRefs = true
+	autoStash = true
+	autoSquash = true
+	updateRefs = true
 
 
 [filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [fetch]
-    prune = true
+	prune = true
 [branch]
-    sort = -committerdate
+	sort = -committerdate
 [init]
-    defaultBranch = main
+	defaultBranch = main
 
 # Git based tooling
 [tig]
-    main-options = -n10000
-    log-options = -n10000
-    wrap-lines = true
-    refresh-mode = periodic
-    refresh-interval = 5
+	main-options = -n10000
+	log-options = -n10000
+	wrap-lines = true
+	refresh-mode = periodic
+	refresh-interval = 5
 
 [tig "bind"]
-    status = D ?git clean -f %(file)
-    status = I ?echo %(file) >> .gitignore
-    status = V !feh %(file)
-    generic = + !git commit --fixup %(commit)
-    generic = R !git rebase -i %(commit)
-[sendemail]
-    smtpEncryption = tls
-    smtpServer = smtp.gmail.com
-    smtpUser = maico.timmerman@gmail.com
-    smtpServerPort = 587
-#
+	status = D ?git clean -f %(file)
+	status = I ?echo %(file) >> .gitignore
+	status = V !feh %(file)
+	generic = + !git commit --fixup %(commit)
+	generic = R !git rebase -i %(commit)
+
