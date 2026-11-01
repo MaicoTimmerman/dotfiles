@@ -16,7 +16,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'Yggdroot/indentLine'
     Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.2.2' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 
